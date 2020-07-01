@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="527" height="354" viewBox="0 0 527 354">
+  <defs>
+    <style>
+      .cls-1, .cls-3, .cls-4, .cls-5, .cls-7 {
+        fill: #3f3d56;
+      }
+
+      .cls-1 {
+        font-size: 64px;
+        font-family: Poppins-Bold, Poppins;
+        font-weight: 700;
+      }
+
+      .cls-2, .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-5 {
+        font-size: 49px;
+      }
+
+      .cls-2 {
+        font-family: JosefinSans-Regular, Josefin Sans;
+      }
+
+      .cls-3 {
+        font-size: 24px;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        font-family: Poppins-Regular, Poppins;
+      }
+
+      .cls-4 {
+        font-size: 30px;
+      }
+
+      .cls-6 {
+        font-size: 47px;
+      }
+
+      .cls-7 {
+        font-size: 35px;
+      }
+    </style>
+  </defs>
+  <g id="Body_lotion_text" data-name="Body lotion text" transform="translate(-1198 -1177)">
+    <text id="Coconut_Milk" data-name="Coconut Milk" class="cls-1" transform="translate(1198 1296)"><tspan x="0" y="0">Coconut Milk</tspan></text>
+    <text id="_" data-name="&amp;" class="cls-2" transform="translate(1369 1340)"><tspan x="0" y="0">&amp;</tspan></text>
+    <text id="Aloevera" class="cls-1" transform="translate(1305 1385)"><tspan x="0" y="0">Aloevera</tspan></text>
+    <text id="_2" data-name="&amp;" class="cls-3" transform="translate(1400 1458)"><tspan x="0" y="0">&amp;</tspan></text>
+    <text id="_for_a" data-name=" for a" class="cls-4" transform="translate(1198 1455)"><tspan x="0" y="0" xml:space="preserve"> for a</tspan></text>
+    <text id="Soft" class="cls-5" transform="translate(1290 1458)"><tspan x="0" y="0">Soft</tspan></text>
+    <text id="Moisture" class="cls-5" transform="translate(1432 1458)"><tspan x="0" y="0">Moisture</tspan></text>
+    <text id="for_everyone" data-name="for everyone" class="cls-6" transform="translate(1429 1515)"><tspan x="0" y="0">for everyone</tspan></text>
+    <text id="skin" class="cls-7" transform="translate(1657 1454)"><tspan x="0" y="0">skin</tspan></text>
+    <text id="with" class="cls-6" transform="translate(1198 1226)"><tspan x="0" y="0">with</tspan></text>
+  </g>
+</svg>

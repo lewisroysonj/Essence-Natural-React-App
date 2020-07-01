@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2603.909" height="358.158" viewBox="0 0 2603.909 358.158">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-dasharray: 16;
+      }
+
+      .cls-2 {
+        fill: #3f3d56;
+      }
+    </style>
+  </defs>
+  <g id="Dotted_curve_divider" data-name="Dotted curve divider" transform="translate(341.546 -3426.434)">
+    <path id="Dotted_curve_divider-2" data-name="Dotted curve divider" class="cls-1" d="M-326.309,3622.518S251.755,3311.7,452.5,3419.788s256.154,296.463,438.9,331.184,389.67-220.778,638.544-216.23,442.344,229.724,584.407,201.929,162.525-185.1,162.525-185.1" transform="translate(-15 30)"/>
+    <path id="Icon_material-navigate-next" data-name="Icon material-navigate-next" class="cls-2" d="M15.834,9l-1.073,1.266,11.4,11.347L14.785,33.121l1.049.975L28.382,21.548Z" transform="matrix(0.875, 0.485, -0.485, 0.875, 1891.266, 3677.572)"/>
+  </g>
+</svg>

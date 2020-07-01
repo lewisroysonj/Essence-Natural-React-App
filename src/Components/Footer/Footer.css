@@ -1,0 +1,103 @@
+.footerBG {
+    z-index: 4;
+    position: absolute;
+    left: -34vw;
+    top: 1vw;
+    height: 50vw;
+}
+
+.footer {
+    position: relative;
+    top: 0vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50.2vw;
+}
+
+
+
+.bottomFooterBG {
+    height: 40vw;
+    background-color: #3F3D56;
+    width: 110vw;
+    position: absolute;
+    z-index: 2;
+    top: 11vw;
+    margin-bottom: 0rem;
+    border-bottom: 0rem;
+}
+
+.EssenceDarkbgfooter {
+    position: absolute;
+    left: 13vw;
+    z-index: 10;
+    top: 15vw;
+    height: 10vw;
+}
+
+.footer p {
+    position: relative;
+    z-index: 10;
+    font-size: 1.4vw;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+}
+
+.companyAddress {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 29vw;
+    left: 13vw;
+}
+
+.footerSocialLinks {
+    position: absolute;
+    z-index: 10;
+    top: 20vw;
+    left: 65vw;
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.footerSocialLinks h1 {
+    font-size: 2.5vw;
+    color: #3F3D56;
+
+}
+
+.footerSocialLinks ul {
+    display: flex;
+
+
+}
+
+.footerSocialLinks li {
+    font-size: 3vw;
+    color: white;
+    margin-right: 1.3vw ;
+    margin-left: 1.3vw;
+    position: relative;
+    z-index: 2;
+    list-style: none;
+    
+}
+
+.copyrightInfo {
+    font-size: 1.4vw;
+    position: absolute;
+    top: 47.7vw;
+    z-index: 3;
+    opacity: 0.8;
+    color: white;
+    font-weight: 300;
+
+}
+

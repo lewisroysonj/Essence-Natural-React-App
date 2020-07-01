@@ -1,0 +1,264 @@
+.homePage {
+    position: relative;
+    background-color: #6ED782;
+
+}
+
+
+
+.bgDiv1 {
+    background-color: #6ED782;
+    height: 90vw;
+}
+
+.bgDiv2 {
+    background-color: #3F3D56;
+    height: 120vw;
+}
+
+.bgDiv3 {
+    background-color: #6ED782;
+    height: 120vw;
+}
+
+
+.HomeHeroArt1 {
+    z-index: 2;
+    position: absolute;
+    width: 121vw;
+    right: -12vw;
+    top: -18vw;
+}
+
+.HomeWhite2 {
+    z-index: 3;
+    position: absolute;
+    top: 40.5vw;
+    left: -15vw;
+    height: 95vw;
+}
+
+.HomeWhite3 {
+    z-index: 3;
+    position: absolute;
+    top: 42.5vw;
+    left: -18vw;
+    height: 95vw;
+}
+
+.BodyLotionImage {
+    position: absolute;
+    z-index: 5;
+    top: 55vw;
+    left: 9.5vw;
+}
+
+.BodyLotionImage img, .FacewashImage img, .ProteinBarImage img {
+    position: relative;
+    top: -37vw;
+    left: -18vw;
+    height: 47vw;
+
+}
+
+.FacewashImage img {
+    left: -7vw;
+    top: -36vw;
+
+}
+
+.ProteinBarImage img {
+    height: 30vw;
+    left: 4vw;
+    top: -29vw;
+}
+
+.ProductBG1, .ProductBG2, .ProductBG3 {
+    height: 25vw;  
+    background-color: #3F3D56;
+    width: 25vw;
+    border-radius: 50%;
+    position: relative;
+
+}
+
+.ProductBG2 {
+    background-color: #6ED782;
+}
+
+.ProteinBarImage {
+    position: absolute;
+    z-index: 5;
+    top: 97vw;
+    left: 65.5vw;
+}
+
+.FacewashImage {
+    position: absolute;
+    z-index: 5;
+    top: 148vw;
+    left: 9.5vw; 
+}
+
+.BodyLotionText {
+    z-index: 4;
+    position: absolute;
+    top: 53vw;
+    left: 59.7vw;
+
+    
+
+}
+
+.BodyLotionText img {
+    height: 18vw;
+}
+
+
+.BodyLotionText button, .ProteinBarText button, .FacewashText button {
+    font-family: Poppins, 'Sans-Serif';
+    position: absolute;
+    top: 18.8vw;
+    right: 0vw;
+    width: 13vw;
+    height: 2.7vw;
+    border-radius: 1rem;
+    border: none;
+    background-color: #3F3D56;
+    color: white;
+    font-size: 1.4vw;
+    font-weight: 500;
+    box-shadow: 0px 5px 10px #00000029;
+
+}
+
+.ProteinBarText button {
+    background-color: #6ED782;
+}
+
+.FacewashText button {
+    background-color: #6ED782;
+}
+
+.ProteinBarText {
+    z-index: 4;
+    position: absolute;
+    top: 103vw;
+    left: 15.7vw;
+
+}
+
+.ProteinBarText img {
+    height: 18vw;
+}
+
+.EssenceDarkbg {
+    position: absolute;
+    z-index: 4;
+    top: 85vw;
+    left: 45.5vw;
+    height: 9vw;
+
+}
+
+.FacewashText {
+    z-index: 4;
+    position: absolute;
+    top: 145vw;
+    right: 7.7vw;
+}
+
+.FacewashText img {
+    height: 18vw;
+}
+
+.HomeWhite4 {
+    z-index: 3;
+    position: absolute;
+    top: 131.5vw;
+    left: -7vw;
+    height: 95vw;
+}
+
+.DottedCurveDivider {
+    z-index: 4;
+    position: absolute;
+    top: 182vw;
+    right: -19vw;
+    height: 20vw;
+}
+
+.newsletterBG {
+    z-index: 3;
+    position: absolute;
+    top: 188vw;
+    right: -19vw;
+
+}
+
+.newsletterBG img {
+    height: 83vw;
+}
+
+.newsletterForm {
+    position: absolute;
+    top: 43vw;
+    right: 33.6vw;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletterForm :first-child {
+    height: 3.6vw;
+    width: 26vw;
+    border: none;
+    border-radius: 0.5vw;
+    background-color: #3F3D56;
+    font-size: 1.6vw;
+    font-family: Poppins, 'Sans-serif';
+    font-weight: 500;
+    color: white;
+    padding-left: 1.5vw;
+
+    
+
+}
+
+::placeholder {
+    color:white;
+}
+
+.newsletterForm :nth-child(2) {
+    height: 2.7vw;
+    width: 10vw;
+    margin-top: 0.7vw;
+    border: none;
+    border-radius: 0.5vw;
+    background-color: white;
+    font-size: 1.4vw;
+    font-family: Poppins, 'Sans-serif';
+    font-weight: 500;
+    color: #6ED782;
+
+}
+
+.customerReviews {
+    z-index: 5;
+    position: absolute;
+    top: 238vw;
+}
+
+.customerReviews :nth-child(1) {
+    position: absolute;
+    left: -27vw;
+    top: 0vw;
+    height: 105vw;
+}
+
+
+
+
+
+
+

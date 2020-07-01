@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2402.781" height="1829.259" viewBox="0 0 2402.781 1829.259">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        filter: url(#HomeWhite_bg2);
+      }
+    </style>
+    <filter id="HomeWhite_bg2" x="0" y="0" width="2402.781" height="1829.259" filterUnits="userSpaceOnUse">
+      <feOffset dx="19" dy="-20" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="11.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g class="cls-2" transform="matrix(1, 0, 0, 1, 0, 0)">
+    <path id="HomeWhite_bg2-2" data-name="HomeWhite bg2" class="cls-1" d="M341.5,0c188.605,0,343.628,154.72,343.628,342.908,0,37.6-8.063,122.787,5.731,223.162,33.166,152.032,175.8,249.511,342.736,252.509,132.068,1.228,618.306,3.446,738.875,0,210.828,129.035,72.529,941.141,0,941.141-32.817,0-381.073-.792-555.4,0-164.832-6.845-307.529-176.492-311.225-361.638-4.229-211.834-34.16-441.544-399.488-445.228-154.839-.309-654.656,1.5-683.414-.22-335-280.752-266.494-714-266.494-791.824C-443.556,81.4-404.468-.343-203.526-.51S232.486,0,341.5,0Z" transform="translate(464.83 55.04)"/>
+  </g>
+</svg>

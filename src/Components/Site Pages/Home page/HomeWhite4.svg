@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2142.633" height="1705.573" viewBox="0 0 2142.633 1705.573">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        filter: url(#HomeWhite4);
+      }
+    </style>
+    <filter id="HomeWhite4" x="0" y="0" width="2142.633" height="1705.573" filterUnits="userSpaceOnUse">
+      <feOffset dx="17" dy="-25" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g class="cls-2" transform="matrix(1, 0, 0, 1, 0, 0)">
+    <path id="HomeWhite4-2" data-name="HomeWhite4" class="cls-1" d="M341.5,0C550.267.523,683,152.223,683,340c12.035,120.448-42.536,450.568,379.555,462.982,115.174-.435,525.4-.434,663.418-.915-28.968,46.8,185.806,727.047-59.075,829.267-145.392,60.691-1846.167-154.216-1861.273-154.216-188.605,0-63.143-1476.471,0-1477.118S132.733-.523,341.5,0Z" transform="translate(308.56 56.94)"/>
+  </g>
+</svg>

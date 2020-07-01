@@ -1,0 +1,162 @@
+.regBody {
+    width: 100vw;
+    position: absolute;
+    top: -20vw;
+    z-index: 1;
+    background-color: #6ED782 ;
+}
+
+.register {
+    height: 94vw;
+    position: relative;
+}
+
+
+.registerBG {
+    top: -4vw;
+    position: absolute;
+    left: -10vw;
+    z-index: 5;
+    height: 110vw;
+}
+
+.registerArt {
+    position: absolute;
+    z-index: 5;
+    top: 36vw;
+    left: 4vw;
+    height: 27vw;
+}
+
+.signupSection {
+    position: absolute;
+    top: 30vw;
+    left: 50vw;
+    z-index: 7;
+    height: 37.9vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.signupBG {
+    background-color: #3F3D56;
+    height: 37.75vw;
+    width: 30.12vw;
+    position: absolute;
+    top: 0vw;
+    left: 0vw;
+    border-radius: 1.2vw;
+
+}
+
+.register form {
+    position: relative;
+    z-index: 6;
+    top: -3vw;
+    left: 0vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30.12vw;
+    height: 37.75vw;
+    justify-content: center;;
+}
+
+.register form input {
+    z-index: 2;
+    position: relative;
+    width: 17vw;
+    border: none;
+    margin-top: 0.7vw;
+    height: 2.4vw;
+    border-radius: 0.3vw;
+    font-size: 1vw;
+    padding-left: 0.8vw;
+    font-family: Poppins, 'Sans-serif';
+
+}
+
+.register form label {
+    z-index: 2;
+    position: relative;
+    width: 17vw;
+    margin-top: 0.3vw;
+    height: 1.1vw;
+    color: #6ED782;
+    font-size: 1vw;
+    font-family: Poppins, 'Sans-serif';
+
+}
+
+#signupSubmit {
+    background-color: #6ED782;
+    font-size: 1.2vw;
+    color: #3F3D56;
+    font-weight: 700;
+    font-family: Poppins, 'Sans-serif';
+    width: 9vw;
+    height: 2vw;
+    margin-top: 0.9vw;
+
+
+
+
+}
+
+.OAuth {
+    position: absolute;
+    top: 29vw;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginIcons {
+    display: flex;
+
+}
+
+.OAuth p, .OAuth h3 {
+    color: white;
+    margin-right: 0.3vw ;
+    margin-left:  0.3vw;
+    margin-top: 0.5vw;
+    font-size: 1vw;
+}
+
+.OAuth h3 {
+    font-size: 1.5vw;
+}
+
+
+.signupAgreement {
+    position: absolute;
+    top: 36vw;
+    z-index: 10;
+    font-size: 0.7vw;
+    color: white;
+
+}
+
+.signUpHeading   {
+    z-index: 10;
+    font-size: 1.8vw;
+    position: relative;
+    top: 6rem;
+    color: white;
+
+}
+
+.signInSubHeading {
+    z-index: 10;
+    color: #6ED782;
+    font-size: 1.1vw;
+    position: absolute;
+    right: 1vw;
+    top: 0.5vw;
+
+}
+

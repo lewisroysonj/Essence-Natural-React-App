@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="614" height="377" viewBox="0 0 614 377">
+  <defs>
+    <style>
+      .cls-1, .cls-3, .cls-5, .cls-7 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        font-size: 64px;
+        font-family: Poppins-Bold, Poppins;
+        font-weight: 700;
+      }
+
+      .cls-2, .cls-6 {
+        fill: #57d16e;
+      }
+
+      .cls-2, .cls-5 {
+        font-size: 49px;
+      }
+
+      .cls-2 {
+        font-family: JosefinSans-Regular, Josefin Sans;
+      }
+
+      .cls-3 {
+        font-size: 24px;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        font-family: Poppins-Regular, Poppins;
+      }
+
+      .cls-4 {
+        fill: #3f3d56;
+        font-size: 30px;
+      }
+
+      .cls-6 {
+        font-size: 47px;
+      }
+
+      .cls-7 {
+        font-size: 35px;
+      }
+    </style>
+  </defs>
+  <g id="Facewash_text_area" data-name="Facewash text area" transform="translate(-1155 -1158)">
+    <text id="Tea_tree_Oil" data-name="Tea tree Oil" class="cls-1" transform="translate(1155 1287)"><tspan x="0" y="0">Tea tree Oil</tspan></text>
+    <text id="_" data-name="&amp;" class="cls-2" transform="translate(1375 1333)"><tspan x="0" y="0">&amp;</tspan></text>
+    <text id="Mint_extracts" data-name="Mint extracts" class="cls-1" transform="translate(1295 1380)"><tspan x="0" y="0">Mint extracts</tspan></text>
+    <text id="_2" data-name="&amp;" class="cls-3" transform="translate(1377 1445)"><tspan x="0" y="0">&amp;</tspan></text>
+    <text id="_for_a" data-name=" for a" class="cls-4" transform="translate(1195 1524)"><tspan x="0" y="0" xml:space="preserve"> for a</tspan></text>
+    <text id="fresh" class="cls-5" transform="translate(1233 1445)"><tspan x="0" y="0">fresh</tspan></text>
+    <text id="energizing" class="cls-5" transform="translate(1414 1445)"><tspan x="0" y="0">energizing</tspan></text>
+    <text id="All_day" data-name="All day" class="cls-6" transform="translate(1612 1509)"><tspan x="0" y="0">All day</tspan></text>
+    <text id="face" class="cls-7" transform="translate(1689 1449)"><tspan x="0" y="0">face</tspan></text>
+    <text id="with" class="cls-6" transform="translate(1155 1207)"><tspan x="0" y="0">with</tspan></text>
+  </g>
+</svg>

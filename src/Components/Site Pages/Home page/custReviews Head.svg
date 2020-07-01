@@ -1,0 +1,21 @@
+<svg id="custReviews_Head" data-name="custReviews Head" xmlns="http://www.w3.org/2000/svg" width="1031.484" height="83" viewBox="0 0 1031.484 83">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3f3d56;
+        font-size: 59px;
+        font-family: Poppins-Bold, Poppins;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #707070;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <text id="WHAT_OUR_CUSTOMERS_SAY_" data-name="WHAT OUR CUSTOMERS SAY " class="cls-1" transform="translate(520.287 62)"><tspan x="-417.042" y="0">WHAT OUR CUSTOMERS SAY </tspan></text>
+  <line id="Line_7" data-name="Line 7" class="cls-2" x1="76.444" transform="translate(0 41.28)"/>
+  <line id="Line_8" data-name="Line 8" class="cls-2" x1="76.444" transform="translate(955.04 41.28)"/>
+</svg>

@@ -1,0 +1,123 @@
+<svg id="Subscribe_form" data-name="Subscribe form" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2484.253" height="1032.221" viewBox="0 0 2484.253 1032.221">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #6ed782;
+      }
+
+      .cls-2, .cls-5 {
+        fill: none;
+        stroke-width: 6px;
+      }
+
+      .cls-2 {
+        stroke: #3f3d56;
+      }
+
+      .cls-2, .cls-3 {
+        opacity: 0.86;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4, .cls-6 {
+        fill: #3f3d56;
+      }
+
+      .cls-5 {
+        stroke: #fff;
+      }
+
+      .cls-5, .cls-6, .cls-7 {
+        opacity: 0.9;
+      }
+
+      .cls-7 {
+        fill: #6ed781;
+      }
+
+      .cls-8 {
+        filter: url(#Path_723);
+      }
+
+      .cls-9 {
+        filter: url(#Rectangle_17);
+      }
+
+      .cls-10 {
+        filter: url(#Rectangle_16);
+      }
+
+      .cls-11 {
+        filter: url(#Rectangle_15);
+      }
+    </style>
+    <filter id="Rectangle_15" x="228.535" y="314.38" width="362.252" height="329.836" filterUnits="userSpaceOnUse">
+      <feOffset dx="4" dy="11" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_16" x="466.545" y="435.762" width="364.233" height="319.072" filterUnits="userSpaceOnUse">
+      <feOffset dx="4" dy="11" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_17" x="542.956" y="181.517" width="201.41" height="304.562" filterUnits="userSpaceOnUse">
+      <feOffset dx="4" dy="11" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_723" x="802.089" y="370.231" width="20.603" height="20.603" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-4"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="Subscribe_form_BG" data-name="Subscribe form BG" class="cls-1" d="M-58.736,3670s357.207-165.78,594,19.226,282.5,336.216,599.068,123.8c210.575-150.255,460.634-164.227,1017.041,215.369,235.833,226.925,19.833,4.993,19.833,4.993v375.579s-292.966-334.641-598.881-108.183-496.8,111.551-659.695,47.984S661.494,4345.4,411.2,4520.208s-633.86,96-633.86,96Z" transform="translate(222.661 -3601.702)"/>
+  <g id="Subscribe_form_illustration" data-name="Subscribe form illustration" transform="translate(167.661 -3522.702)">
+    <g id="Group_38" data-name="Group 38" transform="translate(-97 35)">
+      <ellipse id="Ellipse_32" data-name="Ellipse 32" class="cls-2" cx="27.325" cy="27.325" rx="27.325" ry="27.325" transform="translate(591.118 3923.713)"/>
+      <g class="cls-11" transform="matrix(1, 0, 0, 1, -70.66, 3487.7)">
+        <path id="Rectangle_15-2" data-name="Rectangle 15" class="cls-3" d="M0,0H132A148,148,0,0,1,280,148v0a0,0,0,0,1,0,0H148A148,148,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="matrix(0.82, -0.57, 0.57, 0.82, 248.54, 487.98)"/>
+      </g>
+      <g class="cls-10" transform="matrix(1, 0, 0, 1, -70.66, 3487.7)">
+        <path id="Rectangle_16-2" data-name="Rectangle 16" class="cls-4" d="M0,0H132A148,148,0,0,1,280,148v0a0,0,0,0,1,0,0H148A148,148,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(726.55 719.83) rotate(-149)"/>
+      </g>
+      <g class="cls-9" transform="matrix(1, 0, 0, 1, -70.66, 3487.7)">
+        <path id="Rectangle_17-2" data-name="Rectangle 17" class="cls-3" d="M0,0H105A149,149,0,0,1,254,149v0a0,0,0,0,1,0,0H149A149,149,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(562.96 448.48) rotate(-89)"/>
+      </g>
+      <ellipse id="Ellipse_33" data-name="Ellipse 33" class="cls-5" cx="27.326" cy="27.326" rx="27.326" ry="27.326" transform="translate(398.399 4011.987)"/>
+      <g id="Group_28" data-name="Group 28" transform="translate(333.368 3799.82)">
+        <ellipse id="Ellipse_29" data-name="Ellipse 29" class="cls-6" cx="32.204" cy="32.204" rx="32.204" ry="32.204" transform="translate(73.813)"/>
+      </g>
+    </g>
+    <ellipse id="Ellipse_36" data-name="Ellipse 36" class="cls-6" cx="8.801" cy="8.801" rx="8.801" ry="8.801" transform="translate(148.928 3811.434)"/>
+    <g class="cls-8" transform="matrix(1, 0, 0, 1, -167.66, 3522.7)">
+      <path id="Path_723-2" data-name="Path 723" class="cls-6" d="M8.8,0A8.8,8.8,0,1,1,0,8.8,8.8,8.8,0,0,1,8.8,0Z" transform="translate(802.59 370.73)"/>
+    </g>
+    <ellipse id="Ellipse_39" data-name="Ellipse 39" class="cls-6" cx="8.801" cy="8.801" rx="8.801" ry="8.801" transform="translate(479.928 4294.434)"/>
+    <ellipse id="Ellipse_40" data-name="Ellipse 40" class="cls-6" cx="8.801" cy="8.801" rx="8.801" ry="8.801" transform="translate(421.928 3599.434)"/>
+    <ellipse id="Ellipse_41" data-name="Ellipse 41" class="cls-6" cx="8.801" cy="8.801" rx="8.801" ry="8.801" transform="translate(45.928 4051.434)"/>
+    <ellipse id="Ellipse_42" data-name="Ellipse 42" class="cls-6" cx="8.801" cy="8.801" rx="8.801" ry="8.801" transform="translate(94.928 4471.434)"/>
+    <ellipse id="Ellipse_37" data-name="Ellipse 37" class="cls-7" cx="8.801" cy="8.801" rx="8.801" ry="8.801" transform="translate(705.289 3793.525)"/>
+    <ellipse id="Ellipse_43" data-name="Ellipse 43" class="cls-7" cx="8.801" cy="8.801" rx="8.801" ry="8.801" transform="translate(151.289 3617.525)"/>
+    <ellipse id="Ellipse_44" data-name="Ellipse 44" class="cls-7" cx="8.801" cy="8.801" rx="8.801" ry="8.801" transform="translate(112.289 4260.525)"/>
+    <ellipse id="Ellipse_45" data-name="Ellipse 45" class="cls-7" cx="8.801" cy="8.801" rx="8.801" ry="8.801" transform="translate(340.289 4367.525)"/>
+    <ellipse id="Ellipse_46" data-name="Ellipse 46" class="cls-2" cx="10.325" cy="10.325" rx="10.325" ry="10.325" transform="translate(810.29 4024.687)"/>
+    <ellipse id="Ellipse_47" data-name="Ellipse 47" class="cls-2" cx="10.325" cy="10.325" rx="10.325" ry="10.325" transform="translate(96.29 3602.687)"/>
+    <ellipse id="Ellipse_48" data-name="Ellipse 48" class="cls-2" cx="10.325" cy="10.325" rx="10.325" ry="10.325" transform="translate(254.29 3662.687)"/>
+    <ellipse id="Ellipse_49" data-name="Ellipse 49" class="cls-2" cx="10.325" cy="10.325" rx="10.325" ry="10.325" transform="translate(393.29 4061.687)"/>
+    <ellipse id="Ellipse_50" data-name="Ellipse 50" class="cls-2" cx="10.325" cy="10.325" rx="10.325" ry="10.325" transform="translate(213.29 4255.687)"/>
+    <ellipse id="Ellipse_51" data-name="Ellipse 51" class="cls-2" cx="10.325" cy="10.325" rx="10.325" ry="10.325" transform="translate(723.29 3887.687)"/>
+  </g>
+</svg>
