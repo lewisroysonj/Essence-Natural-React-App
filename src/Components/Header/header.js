@@ -12,12 +12,12 @@ class Header extends React.Component {
           </ul>
           <ul className="nav_links">
             <li><NavLink exact activeClassName="current" to="/" >Home</NavLink></li>
-            <li><NavLink exact activeClassName="current" to="/register" >Register</NavLink></li>
+            <li><NavLink exact activeClassName="current" to="/signup" >SignUp</NavLink></li>
             <li><NavLink exact activeClassName="current" to="/About" >About</NavLink></li>
             <li><NavLink exact activeClassName="current" to="/contact" >Contact</NavLink></li>
           </ul>
           <ul className="header_icons">
-            <h1 ><NavLink exact activeClassName="NavIconCurrent" to="/search" ><i class="fas fa-search"></i></NavLink></h1>
+            <li><NavLink exact activeClassName="NavIconCurrent" to="/search" ><i class="fas fa-search"></i></NavLink></li>
             <li><NavLink exact activeClassName="NavIconCurrent" to="/cart" ><i  class="fas fa-shopping-cart"></i></NavLink></li>
           </ul>
         </nav>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2399.069" height="297.336" viewBox="0 0 2399.069 297.336">
+  <defs>
+    <filter id="footerOverBG" x="0" y="0" width="2399.069" height="297.336" filterUnits="userSpaceOnUse">
+      <feOffset dx="20" dy="20" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#footerOverBG)">
+    <path id="footerOverBG-2" data-name="footerOverBG" d="M1387.133,1239.64c-7.532,6.819,278.364,267.347,0,159.919-421.326-179.208-1295.339,237.723-2214.465,0-1.914.527-4.61-55.614,0-159.919C-76.152,1231.657,436.216,1250.336,1387.133,1239.64Z" transform="translate(839.87 -1227.59)" fill="#fff"/>
+  </g>
+</svg>

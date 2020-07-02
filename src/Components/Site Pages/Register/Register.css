@@ -1,14 +1,15 @@
+
 .regBody {
     width: 100vw;
-    position: absolute;
-    top: -20vw;
-    z-index: 1;
+    height: 90vw;
+    position: relative;
+    top: -27vw;
+    z-index: 7;
     background-color: #6ED782 ;
 }
 
 .register {
     height: 94vw;
-    position: relative;
 }
 
 
@@ -64,6 +65,8 @@
     justify-content: center;;
 }
 
+
+
 .register form input {
     z-index: 2;
     position: relative;
@@ -83,9 +86,9 @@
     position: relative;
     width: 17vw;
     margin-top: 0.3vw;
-    height: 1.1vw;
+    height: 1vw;
     color: #6ED782;
-    font-size: 1vw;
+    font-size: 0.9vw;
     font-family: Poppins, 'Sans-serif';
 
 }
@@ -98,7 +101,8 @@
     font-family: Poppins, 'Sans-serif';
     width: 9vw;
     height: 2vw;
-    margin-top: 0.9vw;
+    margin-top: 1.7vw;
+    padding-left: 0;
 
 
 
@@ -145,7 +149,7 @@
     z-index: 10;
     font-size: 1.8vw;
     position: relative;
-    top: 6rem;
+    top: 4vw;
     color: white;
 
 }
@@ -157,6 +161,11 @@
     position: absolute;
     right: 1vw;
     top: 0.5vw;
+    text-decoration: none;
 
 }
 
+.agreementHL {
+    color: #6ED782;
+    font-weight: 700;
+}
