@@ -45,7 +45,7 @@ export default class MyCart extends React.Component {
                     <div className="itemListing">
                         <img src={BodyLotionImage} alt="Essence Body lotion" className="productImage"></img>
                         <div className="productListDetails" >
-                            <h1>Essence Coconut oil Body Lotion</h1>
+                        <NavLink to="./product_details" ><h1>Essence Coconut oil Body Lotion</h1></NavLink>
                             <div className="starRatings">
                             <span><i class="fas fa-star"></i></span>
                               <span><i class="fas fa-star"></i></span>
@@ -70,7 +70,7 @@ export default class MyCart extends React.Component {
                     <div className="itemListing">
                         <img src={FacewashImage} alt="Essence Facewash" className="productImage"></img>
                         <div className="productListDetails" >
-                            <h1>Essence Tea tree oil facewash</h1>
+                      <NavLink to="./product_details" ><h1>Essence Tea tree oil facewash</h1></NavLink>
                             <div className="starRatings">
                             <span><i class="fas fa-star"></i></span>
                               <span><i class="fas fa-star"></i></span>

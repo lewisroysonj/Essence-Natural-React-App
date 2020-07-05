@@ -1,5 +1,5 @@
-.myCartBody {
-    height: 81.5vw;
+.productDetailsBody {
+    height: 153vw;
     position: relative;
     display: flex;
     align-items: center;
@@ -9,11 +9,215 @@
     
 }
 
+.productDetailsSection {
+    display: flex;
+    justify-content: center;
+    height: 60vw;
+    position: relative;
+    top: 2vw;
+}
+
+.productImageDisplay {
+    height: 31.4vw;
+    width: 38.71vw;
+    position: relative;
+    top: 2vw;
+    left: -1vw;
+}
+
+.productMainImage {
+    height: 23.75vw;
+    width: 38.7vw;
+}
+
+.productMainImage img {
+    position: relative;
+    top: -5vw;
+    left: -2vw;
+    height: 32vw;
+}
+
+.productSubImagesContainer  {
+    height: 7.65vw;
+    width: 38.7vw;
+    display: flex;
+    justify-content: space-between;
 
 
-.whiteBG10 {
+}
+
+.productSubImages {
+    background-color: rgb(230, 230, 230);
+    height: 7.65vw;
+    width: 12vw;
+    
+}
+
+.productSubImages img {
+    height: 9vw;
+    position: relative;
+    top: -0.5vw;
+}
+
+.productDetailsInfo {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 3vw;
+    top: 1vw;
+    height: 46.5vw;
+    width: 38.7vw;
+    align-items: baseline;
+    justify-content: space-evenly ;
+
+}
+
+.productName {
+    font-size: 2.8vw;
+    position: relative;
+    font-weight: 500;
+    line-height: 3.7vw;
+}
+
+.productPriceAndRating {
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+    position: relative;
+    left: 0vw;
+    top: 1vw;
+    align-items: center;
+}
+
+.productOfferPrice {
+    font-size: 2vw ;
+    font-weight: 700;
+    color: #3F3D56;
+}
+
+.dollarSign {
+    font-size: 1.5vw;
+}
+
+.productActualPrice {
+    font-size: 1.5vw ;
+    font-weight: 500;
+    text-decoration: line-through;
+    color: #3F3D56;
+    position: relative;
+    left: 0vw;
+}
+
+.ratingStars {
+    color: #F8C629;
+    font-size: 1.2vw;
+    position: relative;
+    left: 1vw;
+}
+
+.ratingCounter {
+    font-size: 1.15vw;
+    left: 1vw;
+    position: relative;
+}
+
+
+.buyAndCartButtons {
+    width: 16vw;
+    height: 4vw;
+    position: relative;
+    top: 2vw;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+
+
+
+.buyAndCartButtons button {
+    position: relative;
+    height: 2.5vw;
+    border: none;
+    width: 7.5vw;
+    border-radius: 0.4vw;
+    font-size: 1vw;
+    background-color: #6ED782;
+    color: white;
+    font-weight: 700;
+    font-family: POppins, 'Sans-serif';
+}
+
+.buyAndCartButtons :nth-child(2) {
+    border: #6ED782 3px solid;
+    background-color: #ffffff;
+    color: #3F3D56 ;
+}
+
+.availableOptions {
+    height: 25vw;
+    position: relative;
+    top: 2.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.productDetailsInfo h2 {
+    font-size: 1.35vw;
+}
+
+.optionContents1, .optionContents2, .optionContents3 {
+    display: flex;
+    align-items: center;
+    width: 11vw;
+    height: 3vw;
+    justify-content: first baseline;
+}
+
+.colorBox {
+    width: 1.8vw;
+    height: 1.8vw;
+    background-color: #3F3D56 ;
+    position: relative;
+    display: inline-flex;
+    margin-right: 1vw;
+}
+
+.optionContents2 .colorBox {
+    background-color: #6ED782;
+}
+
+.optionContents3 .colorBox {
+    background-color: #f5ff6d;
+}
+
+
+
+.productDetailsInfo h3 {
+    font-size: 1.25vw;
+    font-weight: 500;
+}
+
+.productQuantity {
+    position: relative;
+    top: 2vw;
+}
+
+.productDescription {
+    position: relative;
+    top: 4vw;
+}
+
+.productDescription li {
+    font-size: 1.31vw;
+}
+
+.whiteBGProductDetails {
     position: relative ;
-    height: 120vw;
+    height: 240vw;
     top: 1.5vw;
     width: 100vw;
     background-color: #ffffff;
@@ -24,176 +228,46 @@
 
 }
 
-.cartHeading {
+.productDetailsHeading {
     font-size: 4vw ;
     position: relative;
     color: white;
 }
 
-.cartHeadingSpan {
+.productDetailsHeadingSpan {
     color: #3F3D56;
 }
 
-.myCartContent {
-    z-index: 15;
+
+
+.productDetailsDivider {
     position: absolute;
+    left: -74vw;
+    top: 40vw;
+}
+
+.similarProducts {
     display: flex;
     flex-direction: column;
     align-items: center;
-    top: 10vw;
-    width: 75vw;
-    height: 100vw;
-
-}
-
-.itemListing {
     position: relative;
-    display: flex;
-    flex-direction: row;
-    width: 75vw;
-    justify-content: center;
-    top: 4vw;
-    margin-bottom: 5vw;
-
-
+    top: 12vw;
 }
 
-.itemListing img {
-    height: 18vw;
-    position: relative;
-    left: -19vw;
-}
-
-.cartQuantity {
-    position: relative;
-    top: 0vw;
-    font-size: 1.845vw;
-    font-weight: 500;
-
-}
-
-.productListDetails {
-    position: absolute;
-    left: 34vw;
-}
-
-.productListDetails h1 {
-    font-size: 2.7vw;
+.similarHeading {
+    font-size: 3vw;
     font-weight: 500;
 }
 
-.starRatings {
-    margin-top: 1vw ;
-}
-
-.starRatings span {
-    color: #F8C629;
-    font-size: 1.2vw;
-}
-
-#ratingCounter {
-    color: black;
-    display: inline;
-    font-size: 1vw;
-}
-
-.listPrice {
-    display: flex;
-    position: relative;
-    top: 1vw;
-    width: 20vw;
 
 
-}
 
-.listItemPrice {
-    font-size: 2vw;
-    font-weight: 500;
-}
-
-.listItemMRP {
-    font-size: 1.2vw;
-    padding-left: 0.8vw;
-    padding-top: 0.4vw;
-    text-decoration: line-through;
-}
-
-.qtySection {
-    position: relative;
-    top: 2.2vw;
-    font-size: 1vw;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-
-}
-
-.qtyMinus {
-    margin-left: 0.5vw;
-    margin-right: 0.5vw;
-    font-size: 1.4vw;
-    font-weight: 500;
-    border: none;
-    background-color: #3F3D56;
-    color: #ffffff;
-    padding: 0.3vw 0.6vw;
-}
-
-.qtyPlus {
-    margin-left: 0.5vw;
-    margin-right: 0.5vw;
-    font-size: 1.4vw;
-    font-weight: 500;
-    border: none;
-    background-color: #3F3D56;
-    color: #ffffff;
-    padding: 0.3vw 0.45vw;
-
-}
-
-.qtySection input {
-    width: 2vw;
-    height: 2.2vw;
-    border: 0.12vw solid black;
-    padding: 0.5vw;
-    font-size: 1vw;
-    font-weight: 500;
-}
-
-.cartTotalSection {
-    display: flex;
-    flex-direction: row;
-    width: 70vw;
-    top: 8vw;
-    position: relative;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 10;
-}
-
-.cartTotalSection span {
-    font-size: 1.6vw;
-    padding-top: 0.5vw;
-}
-
-.cartTotalSection button {
-    font-size: 1.4vw;
-    padding: 0.5vw 2.4vw;
-    border: none;
-    z-index: 10;
-    font-weight: 700;
-    background-color: #6ED782;
-    color: white;
-    border-radius: 0.3vw;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.274) ;
-}
-
-.footerOverBGCart {
+.footerOverBGProductDetails {
     height: 20vw;
     position: relative;
     left: 10vw;
-    top: -3vw;
-    z-index: -10;
+    top: 0vw;
+    z-index: 5;
 }
 
 

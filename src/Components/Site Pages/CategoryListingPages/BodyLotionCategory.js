@@ -6,6 +6,7 @@ import ProteinBarProductImg from './Protein bar Image.png';
 import BodyLotionImage from './Essence body lotion.png';
 import FacewashImage from './essence facewash image.svg';
 import FooterOverBG from './footerOverBG.svg';
+import { NavLink } from 'react-router-dom';
 
 
 export default class SearchResults extends React.Component {
@@ -19,7 +20,7 @@ export default class SearchResults extends React.Component {
                 <div className="itemListing">
                     <img src={ProteinBarProductImg} alt="essence Protein bar" className="productImage"></img>
                     <div className="productListDetails" >
-                        <h1>Essence Protein Bar</h1>
+                    <NavLink to="./product_details" ><h1>Essence Protein Bar</h1></NavLink>
                         <div className="starRatings">
                           <span><i class="fas fa-star"></i></span>
                           <span><i class="fas fa-star"></i></span>
@@ -41,7 +42,7 @@ export default class SearchResults extends React.Component {
                 <div className="itemListing">
                     <img src={BodyLotionImage} alt="essence Protein bar" className="productImage"></img>
                     <div className="productListDetails" >
-                        <h1>Essence Coconut Oil Body Lotion</h1>
+                    <NavLink to="./product_details" ><h1>Essence Coconut Oil Body Lotion</h1></NavLink>
                         <div className="starRatings">
                           <span><i class="fas fa-star"></i></span>
                           <span><i class="fas fa-star"></i></span>
@@ -63,7 +64,7 @@ export default class SearchResults extends React.Component {
                 <div className="itemListing">
                     <img src={FacewashImage} alt="essence Protein bar" className="productImage"></img>
                     <div className="productListDetails" >
-                        <h1>Essence Facewash with Tea Tree Oil</h1>
+                    <NavLink to="./product_details" > <h1>Essence Facewash with Tea Tree Oil</h1></NavLink>
                         <div className="starRatings">
                           <span><i class="fas fa-star"></i></span>
                           <span><i class="fas fa-star"></i></span>

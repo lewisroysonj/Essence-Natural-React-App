@@ -77,9 +77,11 @@
     left: 34vw;
 }
 
-.productListDetails h1 {
+.productListDetails h1,.productListDetails a {
     font-size: 2.7vw;
     font-weight: 500;
+    color:#3F3D56;
+    text-decoration: none;
 }
 
 .starRatings {
