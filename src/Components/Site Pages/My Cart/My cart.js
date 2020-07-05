@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import './My cart.css';
 import Footer from '../../Footer/Footer';
@@ -14,13 +15,13 @@ export default class MyCart extends React.Component {
             <div className="myCart">
                 <div className="myCartBody" >
                 <h1 className="cartHeading" >My <span className="cartHeadingSpan" >Cart</span></h1>
-                <div className="whiteBG20"></div>  
+                <div className="whiteBG10"></div>  
                 <div className="myCartContent">
                     <p className="cartQuantity" >3 items</p>
                     <div className="itemListing">
                         <img src={ProteinBarProductImg} alt="essence Protein bar" className="productImage"></img>
                         <div className="productListDetails" >
-                            <h1>Essence Protein Bar</h1>
+                            <NavLink to="./product_details" ><h1>Essence Protein Bar</h1></NavLink>
                             <div className="starRatings">
                               <span><i class="fas fa-star"></i></span>
                               <span><i class="fas fa-star"></i></span>
@@ -95,7 +96,7 @@ export default class MyCart extends React.Component {
                       <span className="totalCounter" >Cart Total: <strong>$36.00</strong></span>
                       <button className="checkoutButton" >CheckOut</button>
                     </div>
-                    <img className="footerOverBG" src={FooterOverBG} alt="bg" ></img>
+                    <img className="footerOverBGCart" src={FooterOverBG} alt="bg" ></img>
                 </div>
 
                   

@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="3038.268" height="797.37" viewBox="0 0 3038.268 797.37">
-  <defs>
-    <filter id="Footer_bg" x="0" y="0" width="3038.268" height="797.37" filterUnits="userSpaceOnUse">
-      <feOffset dx="20" dy="20" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="17.5" result="blur"/>
-      <feFlood flood-opacity="0.18"/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Footer_bg)">
-    <path id="Footer_bg-2" data-name="Footer bg" d="M1629.062,967.4c-133.2,201.823,45.638,543.144-241.928,432.165-444.533-139.19-1306,251.181-2225.126,13.458-1.914.527-182.384-229.1-460.913-356.5-38.739-17.719,139.4-151.042,471.574-186.875C25.567,1022.4,1641.02,570.071,1629.062,967.4Z" transform="translate(1336.64 -766.8)" fill="#6ed782"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2026.861" height="797.238" viewBox="0 0 2026.861 797.238"><defs><filter id="a" x="0" y="0" width="2026.861" height="797.238" filterUnits="userSpaceOnUse"><feOffset dx="20" dy="20" input="SourceAlpha"/><feGaussianBlur stdDeviation="17.5" result="b"/><feFlood flood-opacity="0.18"/><feComposite operator="in" in2="b"/><feComposite in="SourceGraphic"/></filter></defs><g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#a)"><path d="M1132.877,1369.118S-23.616,1615.529-788.328,1417.744c-1.914.527,1.083-297.148,0-542.733,545.851,97.763,1920.08-72.649,1920.08-72.649Z" transform="translate(821.48 -769.86)" fill="#6ed782"/></g></svg>

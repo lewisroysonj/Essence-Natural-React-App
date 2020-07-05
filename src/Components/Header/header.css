@@ -8,9 +8,8 @@ nav {
   background-color: white;
   height: 5.15vw;
   box-shadow: 0px 18px 20px #00000029;
-
   width: 100vw;
-  z-index: 10;
+  z-index: 100;
 
 
 }
@@ -48,6 +47,11 @@ nav ul li {
   font-weight: 700;
 }
 
+.navIconCurrent li  {
+  color: #6ED782;
+
+}
+
 .nav_links {
   display: flex;
   position: relative;
@@ -77,16 +81,18 @@ nav ul li {
   justify-content: space-around;
   margin-right: 6.5vw;
   height: 2vw;
-  min-width: 8vw;
+  min-width: 6.4vw;
   align-items: center;
   flex-direction: row;
+
 
 
 }
 
 
-.header_icons a {
+.header_icons li {
   font-size: 1.5vw;
+  cursor: pointer;
   color: black;
 
 }

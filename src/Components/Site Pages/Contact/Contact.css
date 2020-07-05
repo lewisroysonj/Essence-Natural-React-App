@@ -21,7 +21,7 @@
 
 .contactBody {
     position: relative;
-    height: 73vw;
+    height: 66vw;
     z-index: 9;
     display: flex;
     justify-content: center;
@@ -51,6 +51,10 @@
     justify-content: center;;
 }
 
+.contact form ::placeholder {
+    color: white; 
+}
+
 .contact form h3 {
     position: absolute;
     left: -1.06vw;
@@ -59,7 +63,7 @@
     color: #3F3D56;
 }
 
-.contact form input , .contact form textarea {
+.contact form input , .contact form textarea  {
     z-index: 2;
     position: relative;
     width: 19vw;

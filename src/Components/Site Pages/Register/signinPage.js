@@ -21,9 +21,9 @@ export default class SignUp extends React.Component {
                   <h1 className="signUpHeading">Sign In</h1>
                   <form action="/">
                    <label for="email" >Email*</label>
-                   <input id="email" type="email" placeholder="Full Name*" />
+                   <input id="email" type="email"  />
                    <label for="password" >Password*</label>
-                   <input id="password" type="password" placeholder="Password*" />  
+                   <input id="password" type="password"  />  
                    <input id="signupSubmit"  type="submit" value="Submit" ></input>  
                   </form>
                   <div className="OAuth" >

@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.css';
 import Footer from '../../Footer/Footer'
 
+
 import HeroArt1 from './hero page art.svg';
 import HomeWhite2 from './HomeWhite bg2.svg';
 import HomeWhite3 from './HomeWhite bg3.svg';
@@ -16,11 +17,16 @@ import custReviewsBody from './custReviews body.svg';
 import BodyLotionImage from './Essence body lotion.png';
 import FacewashImage from './essence facewash image.svg';
 import ProteinBarImage from './Protein bar Image.png';
+import { NavLink } from 'react-router-dom';
+import NewsletterSignUpForm from './NewsletterForm';
 
 
 
 export default class Home extends React.Component {
+
     render() {
+
+
         return (
             <div className="homePage">
                <div className="bgDiv1"></div> 
@@ -34,15 +40,16 @@ export default class Home extends React.Component {
                 </div>
                 <div className="BodyLotionText">
                   <img src={BodyLotionText} alt="text" />
-                  <button>See More&nbsp;&nbsp;<i class="fas fa-chevron-right"></i></button>
+                  <NavLink exact to="/body_lotions" ><button>See More&nbsp;&nbsp;<i class="fas fa-chevron-right"></i></button></NavLink>
                 </div>
                 <div className="ProteinBarImage">
                     <div className="ProductBG2"></div>
                     <img src={ProteinBarImage} alt="essence protein" />
+
                 </div>
                 <div className="ProteinBarText">
                   <img src={ProteinBarText} alt="text" />
-                  <button>See More&nbsp;&nbsp;<i class="fas fa-chevron-right"></i></button>
+                  <NavLink exact to="/nutrition_diet_foods" ><button>See More&nbsp;&nbsp;<i class="fas fa-chevron-right"></i></button></NavLink>
                 </div>
                 <img className="EssenceDarkbg" src={EssenceDarkbg} alt="essence logo" />
                 <div className="FacewashImage">
@@ -51,17 +58,14 @@ export default class Home extends React.Component {
                 </div>
                 <div className="FacewashText">
                   <img src={FacewashText} alt="text" />
-                  <button>See More&nbsp;&nbsp;<i class="fas fa-chevron-right"></i></button>
+                  <NavLink exact to="/facewash" ><button>See More&nbsp;&nbsp;<i class="fas fa-chevron-right"></i></button></NavLink>
                 </div>
                 <img src={HomeWhite4} className="HomeWhite4" alt="bg" />
                 <img src={DottedCurveDivider} className="DottedCurveDivider" alt="divider" />
                 <div className="bgDiv3"></div>
                 <div className="newsletterBG" >
                     <img src={newsletterBG} alt="bg"/>
-                    <form className="newsletterForm" action="#" >
-                        <input type="email" placeholder="Enter Your Email"></input>
-                        <input type="submit" ></input>
-                    </form>
+                    <NewsletterSignUpForm />
                 </div> 
                 <div className="customerReviews" >
                     <img src={custReviewsBody} alt="text" />

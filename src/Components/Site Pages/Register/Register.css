@@ -1,15 +1,15 @@
 
 .regBody {
     width: 100vw;
-    height: 90vw;
+    height: 70vw;
     position: relative;
-    top: -27vw;
+    top: -26vw;
     z-index: 7;
     background-color: #6ED782 ;
 }
 
 .register {
-    height: 94vw;
+    height: 87vw;
 }
 
 
@@ -31,7 +31,7 @@
 
 .signupSection {
     position: absolute;
-    top: 30vw;
+    top: 29vw;
     left: 50vw;
     z-index: 7;
     height: 37.9vw;
@@ -169,3 +169,38 @@
     color: #6ED782;
     font-weight: 700;
 }
+
+.passwordUnmatchAlert {
+    font-size: 0.8vw;
+    background-color: rgb(255, 255, 255);
+    width: 14.2vw;
+    height: 2vw;
+    position: relative;
+    top: 0.6vw;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.322);
+    border-radius: 0.2vw;
+    display: flex;
+    align-items: center;
+}
+
+.passwordUnmatchAlert p {
+    display: inline;
+    margin-right: 0vw;
+    margin-left: 1vw;
+}
+
+.passwordUnmatchAlert :nth-child(2) {
+    color: rgb(255, 153, 0);
+    font-size: 1.2vw;
+}
+
+.alertpointer {
+    position: absolute;
+    top: -1.7vw;
+    left: 0.5vw;
+    color: white;
+    list-style: none;
+    font-size: 2vw;
+}
+
+

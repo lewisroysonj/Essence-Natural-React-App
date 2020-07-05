@@ -18,7 +18,7 @@
 
 .bgDiv3 {
     background-color: #6ED782;
-    height: 120vw;
+    height: 107vw;
 }
 
 
@@ -36,6 +36,7 @@
     top: 40.5vw;
     left: -15vw;
     height: 95vw;
+    pointer-events: none;
 }
 
 .HomeWhite3 {
@@ -44,13 +45,15 @@
     top: 42.5vw;
     left: -18vw;
     height: 95vw;
+    pointer-events: none;
 }
 
 .BodyLotionImage {
     position: absolute;
-    z-index: 5;
+    z-index: 3;
     top: 55vw;
     left: 9.5vw;
+    height: 47vw;
 }
 
 .BodyLotionImage img, .FacewashImage img, .ProteinBarImage img {
@@ -58,6 +61,7 @@
     top: -37vw;
     left: -18vw;
     height: 47vw;
+    z-index: 10;
 
 }
 
@@ -101,7 +105,7 @@
 }
 
 .BodyLotionText {
-    z-index: 4;
+    z-index: 10;
     position: absolute;
     top: 53vw;
     left: 59.7vw;
@@ -129,6 +133,8 @@
     font-size: 1.4vw;
     font-weight: 500;
     box-shadow: 0px 5px 10px #00000029;
+    cursor: pointer;
+    z-index: 10;
 
 }
 
@@ -191,7 +197,7 @@
 .newsletterBG {
     z-index: 3;
     position: absolute;
-    top: 188vw;
+    top: 185vw;
     right: -19vw;
 
 }
@@ -225,7 +231,7 @@
 
 }
 
-::placeholder {
+.newsletterForm ::placeholder {
     color:white;
 }
 
@@ -246,14 +252,14 @@
 .customerReviews {
     z-index: 5;
     position: absolute;
-    top: 238vw;
+    top: 236vw;
 }
 
 .customerReviews :nth-child(1) {
     position: absolute;
-    left: -27vw;
-    top: 0vw;
-    height: 105vw;
+    left: -1vw;
+    top: 7vw;
+    width: 103vw;
 }
 
 

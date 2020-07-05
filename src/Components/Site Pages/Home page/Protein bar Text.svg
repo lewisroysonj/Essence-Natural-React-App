@@ -1,53 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="466" height="362" viewBox="0 0 466 362">
-  <defs>
-    <style>
-      .cls-1, .cls-3, .cls-4, .cls-6 {
-        fill: #fff;
-      }
-
-      .cls-1 {
-        font-size: 64px;
-        font-family: Poppins-Bold, Poppins;
-        font-weight: 700;
-      }
-
-      .cls-2, .cls-5 {
-        fill: #57d16e;
-      }
-
-      .cls-2, .cls-4 {
-        font-size: 49px;
-      }
-
-      .cls-2 {
-        font-family: JosefinSans-Regular, Josefin Sans;
-      }
-
-      .cls-3 {
-        font-size: 30px;
-      }
-
-      .cls-3, .cls-4, .cls-5, .cls-6 {
-        font-family: Poppins-Regular, Poppins;
-      }
-
-      .cls-5 {
-        font-size: 47px;
-      }
-
-      .cls-6 {
-        font-size: 35px;
-      }
-    </style>
-  </defs>
   <g id="Protein_bar_Text_" data-name="Protein bar Text " transform="translate(-1189 -1164)">
-    <text id="Rich_Nuts_" data-name="Rich Nuts " class="cls-1" transform="translate(1189 1296)"><tspan x="0" y="0">Rich Nuts </tspan></text>
-    <text id="_" data-name="&amp;" class="cls-2" transform="translate(1420 1341)"><tspan x="0" y="0">&amp;</tspan></text>
-    <text id="Dry_fruits" data-name="Dry fruits" class="cls-1" transform="translate(1264 1388)"><tspan x="0" y="0">Dry fruits</tspan></text>
-    <text id="_for_the" data-name=" for the" class="cls-3" transform="translate(1189 1450)"><tspan x="0" y="0" xml:space="preserve"> for the</tspan></text>
-    <text id="Energy" class="cls-4" transform="translate(1310 1450)"><tspan x="0" y="0">Energy</tspan></text>
-    <text id="anywhere" class="cls-5" transform="translate(1420 1510)"><tspan x="0" y="0">anywhere</tspan></text>
-    <text id="you_need" data-name="you need" class="cls-6" transform="translate(1492 1452)"><tspan x="0" y="0">you need</tspan></text>
-    <text id="with" class="cls-5" transform="translate(1189 1213)"><tspan x="0" y="0">with</tspan></text>
+    <text id="Rich_Nuts_" data-name="Rich Nuts " transform="translate(1189 1296)" fill="#fff" font-size="64" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">Rich Nuts </tspan></text>
+    <text id="_" data-name="&amp;" transform="translate(1420 1341)" fill="#57d16e" font-size="49" font-family="JosefinSans-Regular, Josefin Sans"><tspan x="0" y="0">&amp;</tspan></text>
+    <text id="Dry_fruits" data-name="Dry fruits" transform="translate(1264 1388)" fill="#fff" font-size="64" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">Dry fruits</tspan></text>
+    <text id="_for_the" data-name=" for the" transform="translate(1189 1450)" fill="#fff" font-size="30" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0" xml:space="preserve"> for the</tspan></text>
+    <text id="Energy" transform="translate(1310 1450)" fill="#fff" font-size="49" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Energy</tspan></text>
+    <text id="anywhere" transform="translate(1420 1510)" fill="#57d16e" font-size="47" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">anywhere</tspan></text>
+    <text id="you_need" data-name="you need" transform="translate(1492 1452)" fill="#fff" font-size="35" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">you need</tspan></text>
+    <text id="with" transform="translate(1189 1213)" fill="#57d16e" font-size="47" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">with</tspan></text>
   </g>
 </svg>

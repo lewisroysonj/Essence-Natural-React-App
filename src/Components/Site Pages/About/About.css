@@ -1,7 +1,7 @@
 .aboutBG {
     width: 130vw;
     position: absolute;
-    top: -11vw ;
+    top: -10vw ;
     left: -6vw;
 }
 
@@ -19,7 +19,7 @@
 
 .aboutBody {
     position: relative;
-    height: 73vw;
+    height: 67vw;
     z-index: 9;
     display: flex;
     justify-content: center;

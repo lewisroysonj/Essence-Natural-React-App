@@ -1,9 +1,9 @@
 .footerBG {
     z-index: 4;
     position: absolute;
-    left: -34vw;
-    top: 1vw;
-    height: 50vw;
+    left: -1.7vw;
+    top: 7vw;
+    width: 110vw;
 }
 
 .footer {
@@ -32,7 +32,7 @@
     position: absolute;
     left: 13vw;
     z-index: 10;
-    top: 15vw;
+    top: 20vw;
     height: 10vw;
 }
 
@@ -50,14 +50,14 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 29vw;
+    top: 32.5vw;
     left: 13vw;
 }
 
 .footerSocialLinks {
     position: absolute;
     z-index: 10;
-    top: 20vw;
+    top: 24vw;
     left: 65vw;
     height: 10vw;
     display: flex;
