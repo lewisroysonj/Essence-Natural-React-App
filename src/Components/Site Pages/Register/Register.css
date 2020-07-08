@@ -4,7 +4,6 @@
     height: 70vw;
     position: relative;
     top: -26vw;
-    z-index: 7;
     background-color: #6ED782 ;
 }
 
@@ -201,6 +200,127 @@
     color: white;
     list-style: none;
     font-size: 2vw;
+}
+
+@media only screen and (max-width:768px) {
+    .registerBG {
+
+        display: none;
+    }
+
+    .registerArt{
+        display: none;
+    }
+
+    .regBody {
+        height: 200vw;
+        background-color: white;
+        
+
+    }
+
+    .register {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        height: 200vw;
+
+    }
+
+    .signupSection {
+        top: 35vw;
+        position: relative;
+        left: auto;
+        height: 120vw;
+        width: 80vw;
+        background-color: #3F3D56;
+        border-radius: 2vw;
+
+    }
+
+    .signupBG {
+        display: none;
+    }
+
+    .register form  {
+        height: 100vw;
+        width: 70vw;
+
+
+    }
+
+    .register form input {
+        width: 60vw;
+        height: 10vw;
+        font-size: 4vw;
+    }
+
+    .register form label {
+        width: 60vw;
+        font-size: 3.5vw;
+        height: 5.5vw;
+
+    }
+
+    #signupSubmit {
+        height: 8vw;
+        width: 30vw;
+        font-size: 3.5vw;
+        margin-top: 4vw;
+    }
+
+    .signUpHeading {
+        font-size: 7vw;
+        top: 5.5vw;
+    }
+
+    .signInSubHeading {
+        font-size: 4vw;
+        padding-right: 1vw;
+        padding-top: 1vw;
+    }
+
+    .OAuth {
+        top: 100vw;
+    }
+
+    .OAuth p {
+        font-size: 3.5vw;
+    }
+
+    .OAuth h3 {
+        font-size: 6vw;
+        margin-right: 2vw ;
+        margin-left: 2vw ;
+    }
+
+    .signupAgreement {
+        top: 116vw;
+        font-size: 1.96vw;
+        left: 1.5vw;
+
+    }
+
+    .passwordUnmatchAlert {
+        width: 55vw;
+        top: 2vw;
+        height: 7vw;
+        font-size: 3.5vw;
+    }
+
+    .passwordUnmatchAlert :nth-child(2) {
+        font-size: 4vw;
+        margin-left: 3vw;
+
+    }
+
+    .alertpointer {
+        top: -3.7vw;
+        font-size: 4.5vw;
+    }
+
+
+
 }
 
 

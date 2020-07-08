@@ -4,7 +4,6 @@ import Footer from '../../Footer/Footer';
 
 import ProteinBarProductImg from './productdetails imgs/Protein bar Image.png';
 import BodyLotionImage from './productdetails imgs/Essence body lotion.png';
-import FacewashImage from './productdetails imgs/essence facewash image.svg';
 import FooterOverBG from './productdetails imgs/footerOverBG.svg';
 import DottedLines from './productdetails imgs/Dotted lines.svg';
 import { NavLink } from 'react-router-dom';

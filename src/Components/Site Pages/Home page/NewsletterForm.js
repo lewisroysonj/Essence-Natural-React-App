@@ -26,6 +26,10 @@ class NewsletterSignUpForm extends React.Component {
     render () {
     return (
         <form className="newsletterForm" onSubmit={this.handleSubmit} >
+            <h1>SUBSCRIBE TO OUR NEWSLETTER</h1>
+            <p>Stay updated with all the
+latest News & Products from
+Essence</p>
             <input
             id="email"
             name="email"

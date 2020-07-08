@@ -246,6 +246,11 @@
     top: 40vw;
 }
 
+.productDetailsDivider img {
+    height: 24.5vw;
+
+}
+
 .similarProducts {
     display: flex;
     flex-direction: column;
