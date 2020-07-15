@@ -1,11 +1,13 @@
 import React from 'react'; 
+import { NavLink } from 'react-router-dom';
+
 
 import Footer from '../../Footer/Footer';
 import './register.css';
 
 import WhiteBG from './RegisterPage bg.svg';
 import RegisterArt from './registerArt.svg';
-import { NavLink } from 'react-router-dom';
+import MobileBG from './mobile page bg.svg';
 
 export default class SignUp extends React.Component {
   constructor(props) {
@@ -69,7 +71,7 @@ export default class SignUp extends React.Component {
                   <h3><NavLink  className="signInSubHeading" exact to="/signin" >Sign In</NavLink></h3>
                   <h1 className="signUpHeading">Sign Up</h1>
                   <form onSubmit= {this.checkPasswordMatch} action="/" >
-                   <label for="fullName" >Full Name*</label>
+                   <label htmlFor ="fullName" >Full Name*</label>
                    <input name="fullName"
                           id="fullName"
                           type="text"
@@ -77,7 +79,7 @@ export default class SignUp extends React.Component {
                           required
                           value={this.state.fullName} 
                           onChange={this.handleChange} />  
-                   <label for="email" >Email*</label>
+                   <label htmlFor="email" >Email*</label>
                    <input 
                           name="email"
                           required
@@ -86,7 +88,7 @@ export default class SignUp extends React.Component {
                           type="email" 
                           value={this.state.email} 
                           onChange={this.handleChange} />
-                   <label for="password" >New Password*</label>
+                   <label htmlFor="password" >New Password*</label>
                    <input 
                           name="newPassword"
                           id="password" 
@@ -95,7 +97,7 @@ export default class SignUp extends React.Component {
                           type="password" 
                           value={this.state.password} 
                           onChange={this.handleChange}  />  
-                   <label for="repeatPassword" >Repeat Password*</label>
+                   <label htmlFor="repeatPassword" >Repeat Password*</label>
                    <input 
                           name="repeatPassword"
                           id="repeatPassword" 
@@ -109,21 +111,26 @@ export default class SignUp extends React.Component {
                   <div className="OAuth" >
                     <p>Sign Up or Login with</p>
                     <div className="loginIcons">
-                     <h3><i class="fab fa-google"></i></h3>
-                     <h3><i class="fab fa-facebook"></i></h3>
+                     <h3><i className="fab fa-google"></i></h3>
+                     <h3><i className="fab fa-facebook"></i></h3>
                     </div> 
                   </div>
                   <p className="signupAgreement">By <span className="SnUpAgmtHL" >Signing up</span> I agree the <strong>Privacy Policy</strong> and <strong>Terms and Conditions</strong> of <span className="agreementHL" >Essence</span></p>
                   <div className="signupBG"></div>
 
                 </div>
+                <img className="registerBGMobile" src={MobileBG} alt="bg" />
                 <img src={RegisterArt} className="registerArt" alt="art" />
                 <img src={WhiteBG} className="registerBG" alt="bg" />
                 
               </div>
+              <div className="registerFooter" >
               <Footer />
 
+              </div>
+
             </div>
+
         )
     }
 }

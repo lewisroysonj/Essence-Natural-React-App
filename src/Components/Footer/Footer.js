@@ -21,10 +21,10 @@ export default class Footer extends React.Component {
                 <div className="footerSocialLinks">
                    <h1>Connect with us</h1>
                      <ul>
-                       <li><i class="fab fa-instagram"></i></li>
-                       <li><i class="fab fa-facebook"></i></li>
-                       <li><i class="fab fa-linkedin-in"></i></li>
-                       <li><i class="fab fa-twitter"></i></li>
+                       <li><i className="fab fa-instagram"></i></li>
+                       <li><i className="fab fa-facebook"></i></li>
+                       <li><i className="fab fa-linkedin-in"></i></li>
+                       <li><i className="fab fa-twitter"></i></li>
                      </ul>
                 </div>
                 <h4 className="copyrightInfo" >&copy; Essence 2020 | Designed by Royson Lewis</h4>
@@ -40,10 +40,10 @@ export default class Footer extends React.Component {
                        <div className="footerSocialLinksMobile">
                           <h1>Connect with us</h1>
                           <ul>
-                            <li><i class="fab fa-instagram"></i></li>
-                            <li><i class="fab fa-facebook"></i></li>
-                            <li><i class="fab fa-linkedin-in"></i></li>
-                            <li><i class="fab fa-twitter"></i></li>
+                            <li><i className="fab fa-instagram"></i></li>
+                            <li><i className="fab fa-facebook"></i></li>
+                            <li><i className="fab fa-linkedin-in"></i></li>
+                            <li><i className="fab fa-twitter"></i></li>
                           </ul>
                        </div>
                        <p>(415)007-7780</p>

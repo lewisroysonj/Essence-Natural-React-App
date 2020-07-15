@@ -46,23 +46,7 @@
 
 }
 
-.itemListing {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    width: 75vw;
-    justify-content: center;
-    top: 4vw;
-    margin-bottom: 5vw;
 
-
-}
-
-.itemListing img {
-    height: 18vw;
-    position: relative;
-    left: -19vw;
-}
 
 .cartQuantity {
     position: relative;
@@ -72,53 +56,9 @@
 
 }
 
-.productListDetails {
-    position: absolute;
-    left: 34vw;
-}
-
-.productListDetails h1,.productListDetails a {
-    font-size: 2.7vw;
-    font-weight: 500;
-    color:#3F3D56;
-    text-decoration: none;
-}
-
-.starRatings {
-    margin-top: 1vw ;
-}
-
-.starRatings span {
-    color: #F8C629;
-    font-size: 1.2vw;
-}
-
-#ratingCounter {
-    color: black;
-    display: inline;
-    font-size: 1vw;
-}
-
-.listPrice {
-    display: flex;
-    position: relative;
-    top: 1vw;
-    width: 20vw;
 
 
-}
 
-.listItemPrice {
-    font-size: 2vw;
-    font-weight: 500;
-}
-
-.listItemMRP {
-    font-size: 1.2vw;
-    padding-left: 0.8vw;
-    padding-top: 0.4vw;
-    text-decoration: line-through;
-}
 
 .qtySection {
     position: relative;
@@ -157,7 +97,8 @@
     width: 2vw;
     height: 2.2vw;
     border: 0.12vw solid black;
-    padding: 0.5vw;
+    padding-left: 1.5vw;
+    pointer-events: none;
     font-size: 1vw;
     font-weight: 500;
 }
@@ -196,6 +137,91 @@
     left: 10vw;
     top: -3vw;
     z-index: -10;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .myCart {
+        width: 100vw;
+        height: 332vw;
+        overflow: hidden;
+    }
+
+
+    .myCartBody {
+       background-color: #6ED782;
+       margin-top: 0vw;
+       padding-top: 1vw;
+       height: 180vw;
+
+    }
+    
+    .cartQuantity {
+        font-size: 4.5vw;
+    }
+
+    .cartTotalSection {
+        top: 15vw;
+    }
+
+    .cartTotalSection span {
+        font-size: 4vw;
+    }
+
+    .cartTotalSection button {
+        width: 27vw;
+        height: 8vw;
+        font-size: 3vw;
+        color: #3F3D56;
+        font-family: Poppins, "sans-serif";
+    }
+
+    #cartWhiteBG {
+        height: 170vw;
+    }
+
+    .cartHeading {
+        font-size: 6vw;
+    }
+
+    .myCartContent {
+        top: 14vw;
+        height: 150vw;
+    }
+
+
+    .itemListing img {
+        left: auto;
+    }
+
+
+    .footerOverBGCart {
+        top: 170vw;
+        left: -15vw;
+        position: absolute;
+    }
+
+    .qtySection {
+        font-size: 3.5vw;
+    }
+
+    .qtyMinus, .qtyPlus {
+        font-size: 3vw;
+        padding: 1.5vw 2vw;
+        margin-left: 1vw;
+        margin-right: 1vw;
+    
+    }
+
+    .qtySection input {
+        width: 6.5vw;
+        height: 7vw;
+        font-size: 3vw;
+    }
+
+   
+
+
 }
 
 

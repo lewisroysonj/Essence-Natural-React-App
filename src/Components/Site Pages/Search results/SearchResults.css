@@ -48,7 +48,7 @@
 
 }
 
-.itemListing {
+.searchResult .itemListing {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -60,7 +60,7 @@
 
 }
 
-.itemListing img {
+.searchResult .itemListing img {
     height: 18vw;
     position: relative;
     left: -19vw;

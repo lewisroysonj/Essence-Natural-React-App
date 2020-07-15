@@ -40,8 +40,8 @@
     flex-direction: column;
     align-items: center;
     top: 10vw;
-    width: 75vw;
-    height: 100vw;
+    width: 85vw;
+    height: 80vw;
 
 }
 
@@ -69,10 +69,13 @@
     left: 34vw;
 }
 
-.productListDetails h1 {
+.productListDetails h1,.productListDetails a {
     font-size: 2.7vw;
     font-weight: 500;
+    color:#3F3D56;
+    text-decoration: none;
 }
+
 
 .starRatings {
     margin-top: 1vw ;
@@ -143,6 +146,111 @@
     left: 8vw;
     top: -2vw;
     z-index: 10;
+}
+
+@media only screen and (max-width: 768px) {
+    .category {
+        width: 100vw;
+        height: 332vw;
+        overflow: hidden;
+    }
+
+    .categoryBody {
+        height: 180vw;
+        background-color: #6ED782 ;
+        margin-top: 0vw;
+        padding-top: 2vw ;
+        padding-bottom: 2vw ;
+    }
+
+
+    .categoryHeading {
+        font-size: 6vw;
+    }
+
+    .whiteBG20 {
+        height: 170vw;
+        z-index: 10;
+        top: 13vw;
+        position: absolute;
+    }
+
+    .footerOverBGCategory {
+        top: 170vw;
+        left: -10vw;
+        position: absolute;
+    }
+
+    
+    .itemListing {
+        width: 95vw;
+        justify-content: space-around;
+        height: 50vw;
+        top: 7vw;
+        align-items: center;
+        margin-bottom: 0vw;
+    
+    }
+
+    .productImgDiv {
+        display: flex;
+        justify-content: center;
+    }
+
+    .itemListing img {
+        top: 1vw;
+        left: -27vw;
+        height: 40vw;
+
+    }
+
+    .productListDetails {
+        top: auto;
+        left: 40vw;
+        height: 35vw;
+        position: absolute;
+    }
+
+    .categoryContent {
+        height: 200vw;
+    }
+
+    .productListDetails h1, .productListDetails a {
+        font-size: 4.5vw;
+    }
+
+    .starRatings span {
+        font-size: 2.8vw;
+    }
+
+    #ratingCounter {
+        font-size: 2.5vw;
+    }
+
+    .listPrice {
+        width: 40vw;
+    }
+
+    .listItemPrice {
+        font-size: 4.5vw;
+    }
+
+    .listItemMRP {
+        font-size: 2.8vw;
+        margin-top: 0.5vw;
+    }
+
+    .purchaseOptions {
+        width: 45vw;
+        top: 4vw;
+    }
+
+    .buyNow, .addToCart {
+        height: 7vw;
+        width: 21vw;
+        font-size: 3vw;
+        font-weight: 500;
+    }
 }
 
 

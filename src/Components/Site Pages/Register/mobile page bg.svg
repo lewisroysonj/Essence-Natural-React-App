@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="435.924" height="793.332" viewBox="0 0 435.924 793.332">
+  <defs>
+    <filter id="Path_729" x="0" y="0" width="429.438" height="197.286" filterUnits="userSpaceOnUse">
+      <feOffset dx="-4" dy="20" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_730" x="0.924" y="564.105" width="434.997" height="142.018" filterUnits="userSpaceOnUse">
+      <feOffset dy="-20" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_750" x="0.909" y="670.722" width="435.015" height="122.61" filterUnits="userSpaceOnUse">
+      <feOffset dy="20" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="mobile_page_bg" data-name="mobile page bg" transform="translate(31.063 -114.453)">
+    <g transform="matrix(1, 0, 0, 1, -31.06, 114.45)" filter="url(#Path_729)">
+      <path id="Path_729-2" data-name="Path 729" d="M263.177-39.033C205.928-65.927,166.449-94.5,72.643-91.058S-61.9-58.74-112.047-25.26c-.1-33.778-.463-88.016.065-143.222,67.728-.383,283.735,1.114,375.158.045Z" transform="translate(143.26 175.55)" fill="#fff"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -31.06, 114.45)" filter="url(#Path_730)">
+      <path id="Path_730-2" data-name="Path 730" d="M-831.548,210.576c-104.226,0-278.448-.093-375-.093V150.655c107.829,59.8,243.368,76.078,375-22.1Z" transform="translate(1237.47 485.55)" fill="#fff"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -31.06, 114.45)" filter="url(#Path_750)">
+      <path id="Path_750-2" data-name="Path 750" d="M-435.14,1264.377c-96.118,5.322-231.657,44.6-375.015,13.622v-50.016c115.664,21.942,315.388,4.9,375.015-.809Z" transform="translate(841.06 -546.45)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

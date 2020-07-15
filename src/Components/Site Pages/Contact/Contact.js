@@ -5,7 +5,7 @@ import Footer from '../../Footer/Footer';
 
 import BG from './contact imgs/contact bg.svg';
 import ContactArt from './contact imgs/contact art.svg';
-
+import MobileBG from './contact imgs/mobile contact bg.svg';
 
 
 export default class Contact extends React.Component {
@@ -114,6 +114,8 @@ handleSubmit(event) {
                     <p>5th street Olive cross</p>
                     <p>Santiago Chile</p>
                   </div>
+                  <img src={MobileBG} alt="bg" className="contactBGMobile" ></img>
+
                   </div>
 
                   <Footer />

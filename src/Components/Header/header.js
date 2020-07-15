@@ -1,5 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom'; 
+import { NavLink } from 'react-router-dom';
+ 
 import './header.css';
 import logo from './essence logo.svg';
 import MobLogo from './Essence Mob Logo@2x.png';
@@ -45,8 +46,8 @@ class Header extends React.Component {
             <li><NavLink exact activeClassName="current" to="/contact" >Contact</NavLink></li>
           </ul>
           <ul className="header_icons">
-            <li onClick={this.togglePopup}><i class="fas fa-search"></i></li>
-            <NavLink exact activeClassName="navIconCurrent" to="/cart" ><li><i  class="fas fa-shopping-cart"></i></li></NavLink>
+            <li onClick={this.togglePopup}><i className="fas fa-search"></i></li>
+            <NavLink exact activeClassName="navIconCurrent" to="/cart" ><li><i  className="fas fa-shopping-cart"></i></li></NavLink>
           </ul>
           {this.state.seen ? <SearchPopup toggle={this.togglePopup} /> : null }
         </div>
@@ -55,9 +56,9 @@ class Header extends React.Component {
          
           
           <ul className="burgerButton"  onClick={this.toggleBurgerPopup} style={this.state.burgerOpen? {position: "fixed", color: "#3F3D56"} : null }>
-            <div style={this.state.burgerOpen? { "background-color": "black"} : null } ></div>
-            <div style={this.state.burgerOpen? { "background-color": "black"} : null } ></div>
-            <div style={this.state.burgerOpen? { "background-color": "black"} : null } ></div>
+            <div style={this.state.burgerOpen? { backgroundColor : "black"} : null } ></div>
+            <div style={this.state.burgerOpen? { backgroundColor: "black"} : null } ></div>
+            <div style={this.state.burgerOpen? { backgroundColor : "black"} : null } ></div>
           </ul>
 
           {this.state.burgerOpen ? <div className="burgerBG" onClick={this.toggleBurgerPopup} ></div> : null }
@@ -67,11 +68,11 @@ class Header extends React.Component {
           </ul>
 
           <ul className="header_icons">
-            <NavLink exact activeClassName="navIconCurrent" to="/cart" ><li><i  class="fas fa-shopping-cart"></i></li></NavLink>
+            <NavLink exact activeClassName="navIconCurrent" to="/cart" ><li><i  className="fas fa-shopping-cart"></i></li></NavLink>
           </ul>
           <form className="searchBar" onSubmit={this.handleSubmit} action="/search_results" >
               <input id="fullName" type="text" placeholder="Search"  value={this.state.value} onChange={this.handleChange} />
-              <button className="searchSubmit" type="submit" ><i class="fas fa-search"></i></button>
+              <button className="searchSubmit" type="submit" ><i className="fas fa-search"></i></button>
           </form> 
 
            

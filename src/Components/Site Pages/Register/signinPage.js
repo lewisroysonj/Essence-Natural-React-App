@@ -1,12 +1,12 @@
 import React from 'react';  
-import Footer from '../../Footer/Footer';
-
+import { NavLink } from 'react-router-dom';
 
 import './register.css';
+import Footer from '../../Footer/Footer';
 
 import WhiteBG from './RegisterPage bg.svg';
 import RegisterArt from './registerArt.svg';
-import { NavLink } from 'react-router-dom';
+import MobileBG from './mobile page bg.svg';
 
 export default class SignUp extends React.Component {
 
@@ -37,11 +37,15 @@ export default class SignUp extends React.Component {
                   <div className="signupBG"></div>
 
                 </div>
+                <img className="registerBGMobile" src={MobileBG} alt="bg" />
+
                 <img src={RegisterArt} className="registerArt" alt="art" />
                 <img src={WhiteBG} className="registerBG" alt="bg" />
                 
               </div>
-              <Footer /> 
+              <div className="registerFooter" >
+              <Footer />
+              </div> 
             </div>
         )
     }

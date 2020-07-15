@@ -11,6 +11,10 @@
     height: 87vw;
 }
 
+.registerBGMobile {
+    display: none;
+}
+
 
 .registerBG {
     top: -4vw;
@@ -213,24 +217,45 @@
     }
 
     .regBody {
-        height: 200vw;
-        background-color: white;
+        height: 362vw;
+        position: absolute;
+        background-color: #6ED782 ;
+        width: 100vw;
+        overflow: hidden;
         
 
     }
 
+    .registerFooter {
+        position: relative;
+        top: 210vw;
+    }
+
+
+
+    .registerBGMobile {
+        display: block;
+        position: absolute;
+        height: 212vw;
+        top: 31vw;
+        left: -8vw;
+        z-index: 8;
+        pointer-events: none;
+    }
+
     .register {
         display: flex;
-        position: relative;
+        position: absolute;
         justify-content: center;
-        height: 200vw;
+        height: 207vw;
 
     }
 
     .signupSection {
-        top: 35vw;
+        top: 75vw;
         position: relative;
-        left: auto;
+        left: 50vw;
+        transform: translateX(-50%);
         height: 120vw;
         width: 80vw;
         background-color: #3F3D56;
