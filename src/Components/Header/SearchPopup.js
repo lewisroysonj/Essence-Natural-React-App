@@ -1,41 +1,36 @@
-import React from 'react';
+/** @format */
 
-import './SearchPopup.css';
+import React, { useState } from "react";
 
-export default class SearchPopup extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            value: 'essence'
-        }
+import "./SearchPopup.css";
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    };
+export default function SearchPopup(props) {
+  const [state, setState] = useState({
+    value: "essence",
+    open: false,
+  });
 
-    handleChange(event) {
-        this.setState({value: event.target.value});
-    }
+  console.log(props);
 
-    handleSubmit(event) {
-    }
-    
+  function handleChange(event) {
+    setState({ value: event.target.value });
+  }
 
+  function handleSubmit(event) {}
 
-
-    render() {
-    
-        return (
-            
-            <div className="searchPopUpBG"  >
-               <div className="searchPopUp" >
-                 <form className="searchBar" onSubmit={this.handleSubmit} action="/search_results" >
-                    <input id="fullName" type="text" placeholder="Search"  value={this.state.value} onChange={this.handleChange} />
-                    <button className="searchSubmit" type="submit" ><i class="fas fa-search"></i></button>
-                 </form>    
-                 <span className="searchClose" onClick={this.props.toggle}>&times;</span>
-              </div>
-            </div>  
-        )
-    }
+  return (
+    <div className='searchPopUpBG'>
+      <div className='searchPopUp'>
+        <form className='searchBar' onSubmit={handleSubmit} action='/search_results'>
+          <input id='fullName' type='text' placeholder='Search' value={state.value} onChange={handleChange} />
+          <button className='searchSubmit' type='submit'>
+            <i class='fas fa-search'></i>
+          </button>
+        </form>
+        <span onClick={props.toggle} className='searchClose'>
+          &times;
+        </span>
+      </div>
+    </div>
+  );
 }

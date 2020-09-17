@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1981.145" height="1193.472" viewBox="0 0 1981.145 1193.472">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        filter: url(#Path_730);
+      }
+
+      .cls-3 {
+        filter: url(#contactCurveTop);
+      }
+    </style>
+    <filter id="contactCurveTop" x="0" y="0" width="1974.29" height="499.439" filterUnits="userSpaceOnUse">
+      <feOffset dx="-4" dy="20" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_730" x="0.692" y="583.709" width="1980.452" height="609.763" filterUnits="userSpaceOnUse">
+      <feOffset dy="-20" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="contactCurve" transform="translate(31.025 -28.566)">
+    <g class="cls-3" transform="matrix(1, 0, 0, 1, -31.02, 28.57)">
+      <path id="contactCurveTop-2" data-name="contactCurveTop" class="cls-1" d="M1116.044,183.034C991.861,119.2,846.886,49.3,680.358,42.983,421.306,37.34,327.394,245.371,122.369,245c.037.009-.015,0,0,0C-32.6,239-211.284,19.155-325.391-33.672c-110.64-59.271-274.426-124.19-478.615-56.983,0-3.166-.038-41.472-.005-52.539,13.825-55.073,1517.446-95.047,1920.276.115C1116.222-102.426,1116.044,136.892,1116.044,183.034Z" transform="translate(835.02 207.43)"/>
+    </g>
+    <g class="cls-2" transform="matrix(1, 0, 0, 1, -31.02, 28.57)">
+      <path id="Path_730-2" data-name="Path 730" class="cls-1" d="M147.12-15.365c0,17.808-.035,93.423-.035,120.819-12.779,0-1412.9,328.29-1920.417,413.583.011-33.95.537-21.042,0-87.7,276.172,0,421.963-90.218,582.483-206.346,211.516-153.021,312.435-97.524,366.931-77.2C-593.854,233.578-345.105,225.5-96,41.407,51.759-67.787,125.39-22.533,147.12-15.365Z" transform="translate(1804.02 664.43)"/>
+    </g>
+  </g>
+</svg>

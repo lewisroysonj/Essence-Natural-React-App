@@ -1,351 +1,320 @@
+/** @format */
 
 .regBody {
-    width: 100vw;
-    height: 70vw;
-    position: relative;
-    top: -26vw;
-    background-color: #6ED782 ;
+  width: 100vw;
+  height: 100vw;
+  position: relative;
+  top: -26vw;
+  background-color: #6ed782;
 }
 
 .register {
-    height: 87vw;
+  height: 100vw;
 }
 
 .registerBGMobile {
-    display: none;
+  display: none;
 }
 
-
 .registerBG {
-    top: -4vw;
-    position: absolute;
-    left: -10vw;
-    z-index: 5;
-    height: 110vw;
+  top: -4vw;
+  position: absolute;
+  left: -10vw;
+  z-index: 5;
+  height: 110vw;
 }
 
 .registerArt {
-    position: absolute;
-    z-index: 5;
-    top: 36vw;
-    left: 4vw;
-    height: 27vw;
+  position: absolute;
+  z-index: 5;
+  top: 36vw;
+  left: 4vw;
+  height: 27vw;
 }
 
 .signupSection {
-    position: absolute;
-    top: 29vw;
-    left: 50vw;
-    z-index: 7;
-    height: 37.9vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+  position: absolute;
+  top: 29vw;
+  left: 50vw;
+  z-index: 7;
+  height: 37.9vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .signupBG {
-    background-color: #3F3D56;
-    height: 37.75vw;
-    width: 30.12vw;
-    position: absolute;
-    top: 0vw;
-    left: 0vw;
-    border-radius: 1.2vw;
-
+  background-color: #3f3d56;
+  height: 37.75vw;
+  width: 30.12vw;
+  position: absolute;
+  top: 0vw;
+  left: 0vw;
+  border-radius: 1.2vw;
 }
 
 .register form {
-    position: relative;
-    z-index: 6;
-    top: -3vw;
-    left: 0vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 30.12vw;
-    height: 37.75vw;
-    justify-content: center;;
+  position: relative;
+  z-index: 6;
+  top: -2vw;
+  left: 0vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30.12vw;
+  height: 37.75vw;
+  justify-content: center;
 }
 
-
-
 .register form input {
-    z-index: 2;
-    position: relative;
-    width: 17vw;
-    border: none;
-    margin-top: 0.7vw;
-    height: 2.4vw;
-    border-radius: 0.3vw;
-    font-size: 1vw;
-    padding-left: 0.8vw;
-    font-family: Poppins, 'Sans-serif';
-
+  z-index: 2;
+  position: relative;
+  width: 19vw;
+  border: none;
+  margin-top: 1vw;
+  height: 2.6vw;
+  border-radius: 0.3vw;
+  font-size: 1vw;
+  padding-left: 0.8vw;
+  font-family: Poppins, "Sans-serif";
 }
 
 .register form label {
-    z-index: 2;
-    position: relative;
-    width: 17vw;
-    margin-top: 0.3vw;
-    height: 1vw;
-    color: #6ED782;
-    font-size: 0.9vw;
-    font-family: Poppins, 'Sans-serif';
-
+  z-index: 2;
+  position: relative;
+  width: 19vw;
+  margin-top: 0.6vw;
+  height: 1vw;
+  color: #6ed782;
+  font-size: 1.3vw;
+  font-family: Poppins, "Sans-serif";
 }
 
 #signupSubmit {
-    background-color: #6ED782;
-    font-size: 1.2vw;
-    color: #3F3D56;
-    font-weight: 700;
-    font-family: Poppins, 'Sans-serif';
-    width: 9vw;
-    height: 2vw;
-    margin-top: 1.7vw;
-    padding-left: 0;
-
-
-
-
+  background-color: #6ed782;
+  font-size: 1.2vw;
+  color: #3f3d56;
+  font-weight: 700;
+  font-family: Poppins, "Sans-serif";
+  width: 9vw;
+  height: 2vw;
+  margin-top: 1.7vw;
+  padding-left: 0;
 }
 
 .OAuth {
-    position: absolute;
-    top: 29vw;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  position: absolute;
+  top: 30.5vw;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .loginIcons {
-    display: flex;
-
+  display: flex;
 }
 
-.OAuth p, .OAuth h3 {
-    color: white;
-    margin-right: 0.3vw ;
-    margin-left:  0.3vw;
-    margin-top: 0.5vw;
-    font-size: 1vw;
+.OAuth p,
+.OAuth h3 {
+  color: white;
+  margin-right: 0.3vw;
+  margin-left: 0.3vw;
+  margin-top: 0.5vw;
+  font-size: 1vw;
 }
 
 .OAuth h3 {
-    font-size: 1.5vw;
+  font-size: 1.5vw;
 }
-
 
 .signupAgreement {
-    position: absolute;
-    top: 36vw;
-    z-index: 10;
-    font-size: 0.7vw;
-    color: white;
-
+  position: absolute;
+  top: 36vw;
+  z-index: 10;
+  font-size: 0.7vw;
+  color: white;
 }
 
-.signUpHeading   {
-    z-index: 10;
-    font-size: 1.8vw;
-    position: relative;
-    top: 4vw;
-    color: white;
-
+.signUpHeading {
+  z-index: 10;
+  font-size: 1.8vw;
+  position: relative;
+  top: 3vw;
+  color: white;
 }
 
 .signInSubHeading {
-    z-index: 10;
-    color: #6ED782;
-    font-size: 1.1vw;
-    position: absolute;
-    right: 1vw;
-    top: 0.5vw;
-    text-decoration: none;
-
+  z-index: 10;
+  color: #6ed782;
+  font-size: 1.1vw;
+  position: absolute;
+  right: 1vw;
+  top: 0.5vw;
+  text-decoration: none;
 }
 
 .agreementHL {
-    color: #6ED782;
-    font-weight: 700;
+  color: #6ed782;
+  font-weight: 700;
 }
 
 .passwordUnmatchAlert {
-    font-size: 0.8vw;
-    background-color: rgb(255, 255, 255);
-    width: 14.2vw;
-    height: 2vw;
-    position: relative;
-    top: 0.6vw;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.322);
-    border-radius: 0.2vw;
-    display: flex;
-    align-items: center;
+  font-size: 0.8vw;
+  background-color: rgb(255, 255, 255);
+  width: 14.2vw;
+  height: 2vw;
+  position: relative;
+  top: 0.6vw;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.322);
+  border-radius: 0.2vw;
+  display: flex;
+  align-items: center;
 }
 
 .passwordUnmatchAlert p {
-    display: inline;
-    margin-right: 0vw;
-    margin-left: 1vw;
+  display: inline;
+  margin-right: 0vw;
+  margin-left: 1vw;
 }
 
 .passwordUnmatchAlert :nth-child(2) {
-    color: rgb(255, 153, 0);
-    font-size: 1.2vw;
+  color: rgb(255, 153, 0);
+  font-size: 1.2vw;
 }
 
 .alertpointer {
+  position: absolute;
+  top: -1.7vw;
+  left: 0.5vw;
+  color: white;
+  list-style: none;
+  font-size: 2vw;
+}
+
+@media only screen and (max-width: 768px) {
+  .registerBG {
+    display: none;
+  }
+
+  .registerArt {
+    display: none;
+  }
+
+  .regBody {
+    height: 362vw;
     position: absolute;
-    top: -1.7vw;
-    left: 0.5vw;
-    color: white;
-    list-style: none;
-    font-size: 2vw;
+    background-color: #6ed782;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .registerFooter {
+    position: relative;
+    top: 210vw;
+  }
+
+  .registerBGMobile {
+    display: block;
+    position: absolute;
+    height: 212vw;
+    top: 31vw;
+    left: -8vw;
+    z-index: 8;
+    pointer-events: none;
+  }
+
+  .register {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    height: 207vw;
+  }
+
+  .signupSection {
+    top: 75vw;
+    position: relative;
+    left: 50vw;
+    transform: translateX(-50%);
+    height: 120vw;
+    width: 80vw;
+    background-color: #3f3d56;
+    border-radius: 2vw;
+  }
+
+  .signupBG {
+    display: none;
+  }
+
+  .register form {
+    height: 100vw;
+    width: 70vw;
+  }
+
+  .register form input {
+    width: 60vw;
+    height: 10vw;
+    font-size: 4vw;
+  }
+
+  .register form label {
+    width: 60vw;
+    font-size: 3.5vw;
+    height: 5.5vw;
+  }
+
+  #signupSubmit {
+    height: 8vw;
+    width: 30vw;
+    font-size: 3.5vw;
+    margin-top: 4vw;
+  }
+
+  .signUpHeading {
+    font-size: 7vw;
+    top: 5.5vw;
+  }
+
+  .signInSubHeading {
+    font-size: 4vw;
+    padding-right: 1vw;
+    padding-top: 1vw;
+  }
+
+  .OAuth {
+    top: 100vw;
+  }
+
+  .OAuth p {
+    font-size: 3.5vw;
+  }
+
+  .OAuth h3 {
+    font-size: 6vw;
+    margin-right: 2vw;
+    margin-left: 2vw;
+  }
+
+  .signupAgreement {
+    top: 116vw;
+    font-size: 1.96vw;
+    left: 1.5vw;
+  }
+
+  .passwordUnmatchAlert {
+    width: 55vw;
+    top: 2vw;
+    height: 7vw;
+    font-size: 3.5vw;
+  }
+
+  .passwordUnmatchAlert :nth-child(2) {
+    font-size: 4vw;
+    margin-left: 3vw;
+  }
+
+  .alertpointer {
+    top: -3.7vw;
+    font-size: 4.5vw;
+  }
 }
-
-@media only screen and (max-width:768px) {
-    .registerBG {
-
-        display: none;
-    }
-
-    .registerArt{
-        display: none;
-    }
-
-    .regBody {
-        height: 362vw;
-        position: absolute;
-        background-color: #6ED782 ;
-        width: 100vw;
-        overflow: hidden;
-        
-
-    }
-
-    .registerFooter {
-        position: relative;
-        top: 210vw;
-    }
-
-
-
-    .registerBGMobile {
-        display: block;
-        position: absolute;
-        height: 212vw;
-        top: 31vw;
-        left: -8vw;
-        z-index: 8;
-        pointer-events: none;
-    }
-
-    .register {
-        display: flex;
-        position: absolute;
-        justify-content: center;
-        height: 207vw;
-
-    }
-
-    .signupSection {
-        top: 75vw;
-        position: relative;
-        left: 50vw;
-        transform: translateX(-50%);
-        height: 120vw;
-        width: 80vw;
-        background-color: #3F3D56;
-        border-radius: 2vw;
-
-    }
-
-    .signupBG {
-        display: none;
-    }
-
-    .register form  {
-        height: 100vw;
-        width: 70vw;
-
-
-    }
-
-    .register form input {
-        width: 60vw;
-        height: 10vw;
-        font-size: 4vw;
-    }
-
-    .register form label {
-        width: 60vw;
-        font-size: 3.5vw;
-        height: 5.5vw;
-
-    }
-
-    #signupSubmit {
-        height: 8vw;
-        width: 30vw;
-        font-size: 3.5vw;
-        margin-top: 4vw;
-    }
-
-    .signUpHeading {
-        font-size: 7vw;
-        top: 5.5vw;
-    }
-
-    .signInSubHeading {
-        font-size: 4vw;
-        padding-right: 1vw;
-        padding-top: 1vw;
-    }
-
-    .OAuth {
-        top: 100vw;
-    }
-
-    .OAuth p {
-        font-size: 3.5vw;
-    }
-
-    .OAuth h3 {
-        font-size: 6vw;
-        margin-right: 2vw ;
-        margin-left: 2vw ;
-    }
-
-    .signupAgreement {
-        top: 116vw;
-        font-size: 1.96vw;
-        left: 1.5vw;
-
-    }
-
-    .passwordUnmatchAlert {
-        width: 55vw;
-        top: 2vw;
-        height: 7vw;
-        font-size: 3.5vw;
-    }
-
-    .passwordUnmatchAlert :nth-child(2) {
-        font-size: 4vw;
-        margin-left: 3vw;
-
-    }
-
-    .alertpointer {
-        top: -3.7vw;
-        font-size: 4.5vw;
-    }
-
-
-
-}
-
-

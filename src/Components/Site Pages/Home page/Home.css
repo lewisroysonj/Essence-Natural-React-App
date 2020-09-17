@@ -1,641 +1,601 @@
-.homePage {
-    position: relative;
+/** @format */
 
+.homePage {
+  position: relative;
 }
 
-
-
 .bgDiv1 {
-    background-color: #6ED782 ;
-    height: 90vw;
+  background-color: #6ed782;
+  height: 90vw;
 }
 
 .bgDiv2 {
-    background-color: #3F3D56;
-    height: 97.5vw;
+  background-color: #3f3d56;
+  height: 97.5vw;
 }
 
 .bgDiv3 {
-    height: 110vw;
-    background-color: #3F3D56;
-
-
+  height: 110vw;
+  background-color: #3f3d56;
 }
-
 
 .HomeHeroArt1 {
-    z-index: 2;
-    position: absolute;
-    width: 121vw;
-    right: -12vw;
-    top: -18vw;
+  z-index: 2;
+  position: absolute;
+  width: 121vw;
+  right: -12vw;
+  top: -18vw;
 }
 
-.HomeHeroArtMobile, .HomeHeroEclipseGreenMobile, .HomeHeroEclipseGreyMobile {
-    display: none;
-} 
+.HomeHeroArtMobile,
+.HomeHeroEclipseGreenMobile,
+.HomeHeroEclipseGreyMobile {
+  display: none;
+}
 
 .HomeWhite2 {
-    z-index: 3;
-    position: absolute;
-    top: 40.5vw;
-    left: -15vw;
-    height: 95vw;
-    pointer-events: none;
+  z-index: 3;
+  position: absolute;
+  top: 40.5vw;
+  left: -15vw;
+  height: 95vw;
+  pointer-events: none;
 }
 
 .HomeWhite3 {
-    z-index: 3;
-    position: absolute;
-    top: 42.5vw;
-    left: -18vw;
-    height: 95vw;
-    pointer-events: none;
+  z-index: 3;
+  position: absolute;
+  top: 42.5vw;
+  left: -18vw;
+  height: 95vw;
+  pointer-events: none;
 }
 
 .BodyLotionImage {
-    position: absolute;
-    z-index: 3;
-    top: 55vw;
-    left: 9.5vw;
-    height: 47vw;
+  position: absolute;
+  z-index: 3;
+  top: 55vw;
+  left: 9.5vw;
+  height: 47vw;
 }
 
 .BodyLotionTextMobile {
-    display: none;
+  display: none;
 }
 
-.BodyLotionText :nth-child(2) {
-    display: none;
-}
+/* .BodyLotionText :nth-child(2) {
+  display: none;
+} */
 
 .BodyLotionText :nth-child(1) {
-    display: block;
-} 
+  display: inline;
+}
 
 .BodyLotionImage img {
-    position: relative;
-    top: -7.5vw;
-    left: -14vw;
-    height: 40vw;
-   
-
+  position: relative;
+  top: -7.5vw;
+  left: -14vw;
+  height: 40vw;
 }
 
 .FacewashImage img {
-    position: relative;
-    left: -4vw;
-    height: 40vw;
-    top: -7vw;
-
+  position: relative;
+  left: -4vw;
+  height: 40vw;
+  top: -7vw;
 }
 
 .ProteinBarImage img {
-    position: relative;
-    height: 30vw;
-    left: 4vw;
-    top: -3.5vw;
+  position: relative;
+  height: 30vw;
+  left: 4vw;
+  top: -3.5vw;
 }
 
-.ProductBG1, .ProductBG2, .ProductBG3 {
-    height: 25vw;  
-    background-color: #3F3D56;
-    width: 25vw;
-    border-radius: 50%;
-    position: relative;
-
+.ProductBG1,
+.ProductBG2,
+.ProductBG3 {
+  height: 25vw;
+  background-color: #3f3d56;
+  width: 25vw;
+  border-radius: 50%;
+  position: relative;
 }
 
 .ProductBG2 {
-    background-color: #6ED782;
+  background-color: #6ed782;
 }
 
 .ProteinBarImage {
-    position: absolute;
-    z-index: 5;
-    top: 97vw;
-    left: 65.5vw;
+  position: absolute;
+  z-index: 5;
+  top: 97vw;
+  left: 65.5vw;
 }
 
 .FacewashImage {
-    position: absolute;
-    z-index: 5;
-    top: 148vw;
-    left: 9.5vw; 
+  position: absolute;
+  z-index: 5;
+  top: 148vw;
+  left: 9.5vw;
 }
 
 .BodyLotionText {
-    z-index: 10;
-    position: absolute;
-    top: 53vw;
-    left: 59.7vw;
-
-    
-
+  z-index: 10;
+  position: absolute;
+  top: 53vw;
+  left: 59.7vw;
 }
 
 .BodyLotionText img {
-    height: 18vw;
+  height: 18vw;
 }
 
+.BodyLotionText button,
+.ProteinBarText button,
+.FacewashText button {
+  font-family: Poppins, "Sans-Serif";
+  position: absolute;
+  top: 18.8vw;
+  right: 0vw;
+  width: 13vw;
+  height: 2.7vw;
+  border-radius: 0.4vw;
+  border: none;
+  background-color: #3f3d56;
+  color: white;
+  font-size: 1.4vw;
+  font-weight: 500;
+  box-shadow: 0px 5px 10px #00000029;
+  cursor: pointer;
+  z-index: 10;
+}
 
-.BodyLotionText button, .ProteinBarText button, .FacewashText button {
-    font-family: Poppins, 'Sans-Serif';
+.ProteinBarText button {
+  background-color: #6ed782;
+}
+
+.FacewashText button {
+  background-color: #6ed782;
+}
+
+.BodyLotionText button {
+  background-color: #3f3d56;
+}
+
+.ProteinBarText {
+  z-index: 4;
+  position: absolute;
+  top: 103vw;
+  left: 15.7vw;
+}
+
+.ProteinBarText img {
+  height: 18vw;
+}
+
+.EssenceDarkbg {
+  position: absolute;
+  z-index: 4;
+  top: 85vw;
+  left: 45.5vw;
+  height: 9vw;
+}
+
+.FacewashText {
+  z-index: 4;
+  position: absolute;
+  top: 145vw;
+  right: 7.7vw;
+}
+
+.FacewashText img {
+  height: 18vw;
+}
+
+.HomeWhite4 {
+  z-index: 3;
+  position: absolute;
+  top: 131.5vw;
+  left: -7vw;
+  height: 95vw;
+}
+
+.DottedCurveDivider {
+  z-index: 4;
+  position: absolute;
+  top: 182vw;
+  right: -19vw;
+  height: 20vw;
+}
+
+.newsletterBG {
+  z-index: 3;
+  position: absolute;
+  top: 185vw;
+  right: -19vw;
+}
+
+.newsletterBG img {
+  height: 83vw;
+}
+
+.newsletterForm {
+  position: absolute;
+  top: 43vw;
+  right: 33.6vw;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletterForm :nth-child(3) {
+  height: 3.6vw;
+  width: 26vw;
+  border: none;
+  border-radius: 0.5vw;
+  background-color: #3f3d56;
+  font-size: 1.6vw;
+  font-family: Poppins, "Sans-serif";
+  font-weight: 500;
+  color: white;
+  padding-left: 1.5vw;
+}
+
+.newsletterForm ::placeholder {
+  color: white;
+}
+
+.newsletterForm :nth-child(2) {
+  display: none;
+}
+
+.newsletterForm :nth-child(1) {
+  display: none;
+}
+
+.newsletterForm :nth-child(4) {
+  height: 2.7vw;
+  width: 10vw;
+  margin-top: 0.7vw;
+  border: none;
+  border-radius: 0.5vw;
+  background-color: white;
+  font-size: 1.4vw;
+  font-family: Poppins, "Sans-serif";
+  font-weight: 500;
+  color: #6ed782;
+}
+
+.newsletterBGMobile {
+  display: none;
+}
+
+.customerReviews {
+  z-index: 5;
+  position: absolute;
+  top: 235vw;
+}
+
+.customerReviews :nth-child(1) {
+  position: absolute;
+  left: -1vw;
+  top: 7vw;
+  width: 103vw;
+}
+
+.homeFooter {
+  position: absolute;
+  top: 318vw;
+}
+
+.homeFooter .bottomFooterBG {
+  top: 20vw;
+  left: -1vw;
+}
+
+@media only screen and (max-width: 768px) {
+  .homePage {
+    position: relative;
+    height: 590vw;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .bgDiv1,
+  .bgDiv2,
+  .bgDiv3,
+  .HomeWhite2,
+  .HomeWhite3,
+  .HomeWhite4,
+  .HomeHeroArt1,
+  .EssenceDarkbg {
+    display: none;
+  }
+
+  .HomeHeroArtMobile {
+    display: block;
     position: absolute;
-    top: 18.8vw;
-    right: 0vw;
-    width: 13vw;
-    height: 2.7vw;
-    border-radius: 0.4vw;
-    border: none;
-    background-color: #3F3D56;
+    right: 4vw;
+    top: 17vw;
+    height: 37vw;
+  }
+
+  .HomeHeroEclipseGreenMobile {
+    height: 100vw;
+    width: 100vw;
+    background-color: #6ed782;
+    border-radius: 50%;
+    left: -47vw;
+    top: -34vw;
+    z-index: 2;
+    position: relative;
+    box-shadow: 14px 2px 15px 0 rgba(0, 0, 0, 0.144);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .HomeHeroEclipseGreenMobile div {
+    width: 50vw;
+    position: relative;
+    left: 26.5vw;
+    top: 8vw;
+  }
+
+  .HomeHeroEclipseGreyMobile {
+    height: 70vw;
+    display: block;
+    width: 70vw;
+    background-color: #3f3d56;
+    border-radius: 50%;
+    left: 0vw;
+    top: -46vw;
+    position: absolute;
+    box-shadow: 14px 2px 15px 0 rgba(0, 0, 0, 0.144);
+  }
+
+  .HomeHeroEclipseGreenMobile h2 {
+    position: relative;
+    color: #3f3d56;
+    font-weight: 300;
+    font-size: 4.5vw;
+  }
+
+  .HomeHeroEclipseGreenMobile h2 span {
     color: white;
-    font-size: 1.4vw;
+    font-weight: 700;
+  }
+
+  .HomeHeroEclipseGreenMobile h1 {
+    color: #3f3d56;
+    letter-spacing: 0.7vw;
+    font-size: 6vw;
+    position: relative;
+    top: -1vw;
+  }
+
+  .HomeHeroEclipseGreenMobile hr {
+    width: 32vw;
+    border: 1px #ffffff dashed;
+    color: white;
+    position: relative;
+    top: -1vw;
+  }
+
+  .HomeHeroEclipseGreenMobile p {
+    font-size: 2.7vw;
+    width: 42vw;
+  }
+
+  .HomeHeroEclipseGreenMobile button {
+    font-family: Poppins, "Sans-Serif";
+    position: relative;
+    width: 30vw;
+    height: 8vw;
+    border-radius: 1vw;
+    border: none;
+    top: 1vw;
+    background-color: #3f3d56;
+    color: white;
+    font-size: 3vw;
+    font-weight: 500;
+    box-shadow: 0px 5px 10px #00000029;
+  }
+
+  .BodyLotionImage {
+    position: absolute;
+    top: 76vw;
+    width: 50vw;
+  }
+
+  .ProductBG1 {
+    height: 40vw;
+    width: 40vw;
+  }
+
+  .BodyLotionImage img {
+    height: 60vw;
+    top: -11vw;
+    left: -18.5vw;
+    position: relative;
+  }
+
+  .BodyLotionTextMobile {
+    display: block;
+  }
+
+  .BodyLotionTextMobile img {
+    height: 30vw;
+    right: 5vw;
+    top: 76vw;
+    position: absolute;
+  }
+
+  .BodyLotionTextMobile button,
+  .ProteinBarTextMobile button,
+  .FacewashTextMobile button {
+    font-family: Poppins, "Sans-Serif";
+    position: relative;
+    top: 7.8vw;
+    width: 30vw;
+    height: 8vw;
+    left: 65.2vw;
+    border-radius: 0.8vw;
+    border: none;
+    background-color: #3f3d56;
+    color: white;
+    font-size: 3.5vw;
     font-weight: 500;
     box-shadow: 0px 5px 10px #00000029;
     cursor: pointer;
     z-index: 2;
+  }
 
-}
+  .BodyLotionText {
+    display: none;
+  }
 
-.ProteinBarText button {
-    background-color: #6ED782;
-}
-
-.FacewashText button {
-    background-color: #6ED782;
-}
-
-.ProteinBarText {
-    z-index: 4;
+  .ProteinBarImage {
     position: absolute;
-    top: 103vw;
-    left: 15.7vw;
+    top: 136vw;
+    left: 50vw;
+    width: 50vw;
+  }
 
-}
+  .ProteinBarImage img {
+    top: -5vw;
+    height: 47vw;
+    left: 6.5vw;
+  }
 
-.ProteinBarText img {
-    height: 18vw;
-}
+  .ProductBG2 {
+    height: 40vw;
+    width: 40vw;
+  }
 
-.EssenceDarkbg {
-    position: absolute;
-    z-index: 4;
-    top: 85vw;
-    left: 45.5vw;
-    height: 9vw;
+  .ProteinBarText {
+    display: none;
+  }
 
-}
+  .ProteinBarTextMobile {
+    position: relative;
+    top: 35vw;
+  }
 
-.FacewashText {
-    z-index: 4;
-    position: absolute;
-    top: 145vw;
-    right: 7.7vw;
-}
+  .ProteinBarTextMobile img {
+    height: 30vw;
+    position: relative;
+    left: 5vw;
+    top: -3vw;
+  }
 
-.FacewashText img {
-    height: 18vw;
-}
+  .ProteinBarTextMobile button {
+    left: -35.5vw;
+    top: 5vw;
+  }
 
-.HomeWhite4 {
-    z-index: 3;
-    position: absolute;
-    top: 131.5vw;
-    left: -7vw;
-    height: 95vw;
-}
+  .FacewashImage {
+    top: 193vw;
+    left: 9vw;
+  }
 
-.DottedCurveDivider {
-    z-index: 4;
-    position: absolute;
-    top: 182vw;
-    right: -19vw;
-    height: 20vw;
-}
+  .FacewashImage img {
+    height: 65vw;
+    top: -13vw;
+    left: -8vw;
+  }
 
-.newsletterBG {
-    z-index: 3;
-    position: absolute;
-    top: 185vw;
-    right: -19vw;
+  .ProductBG3 {
+    height: 40vw;
+    width: 40vw;
+  }
 
-}
+  .FacewashText {
+    display: none;
+  }
 
-.newsletterBG img {
-    height: 83vw;
-}
+  .FacewashTextMobile {
+    position: relative;
+    top: 55vw;
+    left: 55vw;
+  }
 
-.newsletterForm {
-    position: absolute;
-    top: 43vw;
-    right: 33.6vw;
-    z-index: 0;
-    display: flex;
-    flex-direction: column;
-}
+  .FacewashTextMobile img {
+    height: 30vw;
+  }
 
-.newsletterForm :nth-child(3) {
-    height: 3.6vw;
-    width: 26vw;
-    border: none;
-    border-radius: 0.5vw;
-    background-color: #3F3D56;
-    font-size: 1.6vw;
-    font-family: Poppins, 'Sans-serif';
+  .FacewashTextMobile button {
+    left: -30vw;
+    top: 7.5vw;
+  }
+
+  .DottedCurveDivider,
+  .newsletterBG {
+    display: none;
+  }
+
+  .newsletterBGMobile {
+    display: block;
+    position: relative;
+    top: 100vw;
+    left: 0vw;
+  }
+
+  .newsletterBGMobile img {
+    height: 107vw;
+  }
+
+  .newsletterBGMobile div {
+    position: relative;
+    top: -121vw;
+    left: 9vw;
+  }
+
+  .newsletterForm :nth-child(1) {
+    display: block;
+    color: #3f3d56;
+    font-size: 7vw;
+    line-height: 8vw;
+  }
+
+  .newsletterForm :nth-child(2) {
+    display: block;
+    color: #3f3d56;
+    width: 60vw;
+    font-size: 4vw;
+    font-weight: 700;
+  }
+
+  .newsletterForm :nth-child(3) {
+    width: 70vw;
+    height: 10vw;
+    font-size: 4.2vw;
+    padding-left: 2.5vw;
+  }
+
+  .newsletterForm :nth-child(4) {
+    width: 25vw;
+    height: 8vw;
+    margin-top: 2vw;
+    color: #3f3d56;
     font-weight: 500;
-    color: white;
-    padding-left: 1.5vw;
+    font-size: 4.2vw;
+  }
 
-    
+  .customerReviews {
+    top: 370vw;
+    left: 0vw;
+  }
 
-} 
+  .customerReviews img {
+    width: 100vw;
+  }
 
-.newsletterForm ::placeholder {
-    color:white;
+  .homeFooter {
+    display: block;
+    position: relative;
+    top: 156vw;
+  }
 }
-
-.newsletterForm :nth-child(2) {
-    display: none;
-}
-
-.newsletterForm :nth-child(1) {
-    display: none;
-}
-
-.newsletterForm :nth-child(4) {
-    height: 2.7vw;
-    width: 10vw;
-    margin-top: 0.7vw;
-    border: none;
-    border-radius: 0.5vw;
-    background-color: white;
-    font-size: 1.4vw;
-    font-family: Poppins, 'Sans-serif';
-    font-weight: 500;
-    color: #6ED782;
-
-}
-
-.newsletterBGMobile {
-    display: none;
-} 
-
-.customerReviews {
-    z-index: 5;
-    position: absolute;
-    top: 235vw;
-}
-
-.customerReviews :nth-child(1) {
-    position: absolute;
-    left: -1vw;
-    top: 7vw;
-    width: 103vw;
-} 
-
-.homeFooter {
-    position: absolute;
-    top: 315vw;
-}
-
-.homeFooter .bottomFooterBG {
-    top: 20vw;
-    left: -1vw;
-}
-
-
-@media only screen and (max-width: 768px) {
-
-    .homePage {
-        position: relative;
-        height: 603vw;
-        width: 100vw;
-        overflow: hidden;        
-    
-    
-    }
-
-    .bgDiv1, .bgDiv2, .bgDiv3, .HomeWhite2, .HomeWhite3, .HomeWhite4, .HomeHeroArt1, .EssenceDarkbg {
-        display: none;
-    }
-
- 
-
-    
-
-    .HomeHeroArtMobile {
-        display: block;
-        position: absolute;
-        right: 4vw;
-        top: 17vw;
-        height: 37vw;
-    }
-
-
-    .HomeHeroEclipseGreenMobile {
-        height: 100vw;
-        width: 100vw;
-        background-color: #6ED782;
-        border-radius: 50%;
-        left: -47vw;
-        top: -34vw;
-        z-index: 2;
-        position: relative;
-        box-shadow: 14px 2px 15px 0 rgba(0, 0, 0, 0.144);
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        justify-content: center;
-    }
-
-    .HomeHeroEclipseGreenMobile div {
-        width: 50vw;
-        position: relative;
-        left: 26.5vw;
-        top: 8vw;
-    }
-
-    .HomeHeroEclipseGreyMobile {
-        height: 70vw;
-        display: block;
-        width: 70vw;
-        background-color: #3F3D56 ;
-        border-radius: 50%;
-        left: 0vw;
-        top: -46vw;
-        position: absolute;
-        box-shadow: 14px 2px 15px 0 rgba(0, 0, 0, 0.144);
-        
-    }
-
-    .HomeHeroEclipseGreenMobile h2 {
-        position: relative;
-        color: #3F3D56;
-        font-weight: 300;
-        font-size: 4.5vw;
-    }
-
-    .HomeHeroEclipseGreenMobile h2 span {
-        color: white;
-        font-weight: 700;
-    }
-
-    .HomeHeroEclipseGreenMobile h1 {
-        color: #3F3D56 ;
-        letter-spacing: 0.7vw;
-        font-size: 6vw;
-        position: relative;
-        top: -1vw;
-    }
-
-    .HomeHeroEclipseGreenMobile hr {
-        width: 32vw;
-        border: 1px #ffffff dashed;
-        color: white;
-        position: relative;
-        top: -1vw;
-    }
-
-    .HomeHeroEclipseGreenMobile p {
-        font-size: 2.7vw;
-        width: 42vw;
-    }
-
-    .HomeHeroEclipseGreenMobile button {
-        font-family: Poppins, 'Sans-Serif';
-        position: relative;
-        width: 25vw;
-        height: 6vw;
-        border-radius: 1vw;
-        border: none;
-        top: 1vw;
-        background-color: #3F3D56;
-        color: white;
-        font-size: 3vw;
-        font-weight: 500;
-        box-shadow: 0px 5px 10px #00000029;
-    }
-
-    .BodyLotionImage {
-        position: absolute;
-        top: 76vw;
-        width: 50vw;
-    
-    }
-
-    .ProductBG1 {
-        height: 40vw;
-        width: 40vw;
-    }
-
-    .BodyLotionImage img {
-        height: 60vw;
-        top: -11vw;
-        left: -18.5vw;
-        position: relative ;
-    }
-
-    .BodyLotionTextMobile {
-        display: block;
-    }
-
-    .BodyLotionTextMobile img {
-        height: 30vw;
-        right: 5vw;
-        top: 76vw;
-        position: absolute;
-    }
-
-
-    .BodyLotionTextMobile button, .ProteinBarTextMobile button, .FacewashTextMobile button {
-        font-family: Poppins, 'Sans-Serif';
-        position: relative;
-        top: 7.8vw;
-        left: 74.2vw;
-        width: 19vw;
-        height: 5.7vw;
-        border-radius: 0.8vw;
-        border: none;
-        background-color: #3F3D56;
-        color: white;
-        font-size: 2.5vw;
-        font-weight: 500;
-        box-shadow: 0px 5px 10px #00000029;
-        cursor: pointer;
-        z-index: 2;
-    
-
-    }
-
-    .BodyLotionText {
-        display: none;
-    }
-
-    .ProteinBarImage {
-        position: absolute;
-        top: 136vw;
-        left: 50vw;
-        width: 50vw;
-    
-
-    }
-
-    .ProteinBarImage img {
-        top: -5vw;
-        height: 47vw;
-        left: 6.5vw;
-    }
-
-    .ProductBG2 {
-        height: 40vw;
-        width: 40vw;
-
-    }
-
-    .ProteinBarText {
-        display: none;
-    }
-
-    .ProteinBarTextMobile {
-        position: relative;
-        top: 35vw;
-    }
-
-    .ProteinBarTextMobile img {
-        height: 30vw;
-        position: relative;
-        left: 5.0vw;
-        top: -3vw;
-
-    }
-
-    .ProteinBarTextMobile button {
-        left: -36.5vw;
-        top: 2vw;
-    }
-
-    
-    
-
-    .FacewashImage {
-        top: 193vw;
-        left: 9vw;
-    }
-
-    .FacewashImage img {
-        height: 65vw;
-        top: -13vw;
-        left: -8vw;
-    }
-
-    .ProductBG3 {
-        height: 40vw;
-        width: 40vw;
-    }
-
-    .FacewashText {
-        display: none;
-    }
-
-    .FacewashTextMobile  {
-        position: relative;
-        top: 55vw;
-        left: 55vw
-    }
-
-    .FacewashTextMobile img {
-        height: 30vw;
-
-    }
-
-    .FacewashTextMobile button {
-        left: -20vw;
-        top: 5vw;
-    }
-
-    .DottedCurveDivider, .newsletterBG {
-        display: none;
-    }
-
-
-    .newsletterBGMobile {
-        display: block;
-        position: relative;
-        top: 100vw;
-        left: 0vw;
-
-    }
-
-    .newsletterBGMobile img {
-        height: 107vw;
-    }
-
-    .newsletterBGMobile div {
-        position: relative;
-        top: -121vw;
-        left: 9vw;
-    }
-
-
-
-    .newsletterForm :nth-child(1) {
-        display: block;
-        color: #3F3D56;
-        font-size: 7vw;
-        line-height: 8vw;
-    }
-
-    .newsletterForm :nth-child(2) {
-        display: block;
-        color: #3F3D56;
-        width: 60vw;
-        font-size: 4vw;
-        font-weight: 700 ;
-    }
-
-    .newsletterForm :nth-child(3) {
-        width: 70vw;
-        height: 10vw;
-        font-size: 4.2vw;
-        padding-left: 2.5vw;
-    }
-
-    .newsletterForm :nth-child(4) {
-        width: 25vw;
-        height: 8vw;
-        margin-top: 2vw;
-        color: #3F3D56;
-        font-weight: 500;
-        font-size: 4.2vw;
-    }
-    
-    .customerReviews {
-        top: 370vw;
-        left: 0vw;
-    }
-
-    .customerReviews img {
-        width: 100vw;
-    }
-
-    .homeFooter {
-        display: block;
-        position: relative;
-        top: 172.5vw;
-    }
-
-
-
-
-
-
-
-
-} 
-
-
-
-
-
-

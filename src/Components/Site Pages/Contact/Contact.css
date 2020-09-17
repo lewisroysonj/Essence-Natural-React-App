@@ -1,283 +1,274 @@
+/** @format */
+
 .contactBG {
-    width: 130vw;
-    position: absolute;
-    top: -11vw ;
-    left: -6vw;
-    z-index: 5;
-    pointer-events: none;
+  width: 130vw;
+  position: absolute;
+  top: -11vw;
+  left: -6vw;
+  z-index: 5;
+  pointer-events: none;
 }
 
 .contactBGMobile {
-    display: none;
+  display: none;
 }
 
 .contact {
-    position: relative;
-    z-index: 9;
+  background-color: #6ed782;
+  position: relative;
+  z-index: 9;
+  height: fit-content;
 }
 
 .contactArt {
-    position: absolute;
-    top: 15vw;
-    height: 20vw;
-    left: 5vw;
+  position: absolute;
+  top: 15vw;
+  height: 20vw;
+  left: 5vw;
 }
 
 .contactBody {
-    position: relative;
-    height: 66vw;
-    z-index: 9;
-    display: flex;
-    justify-content: center;
+  position: relative;
+  height: 80vw;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
 }
 
-
-
 .contactBody h1 {
-    position: absolute;
-    top: 3.5vw;
-    z-index: 8;
-    color: #3F3D56;
-    font-weight: 700;
-    font-size: 3.15vw;
+  position: absolute;
+  top: 3.5vw;
+  z-index: 8;
+  color: #3f3d56;
+  font-weight: 700;
+  font-size: 3.15vw;
 }
 
 .contact form {
-    position: absolute;
-    z-index: 4;
-    top: 9.6vw;
-    right: 15vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 16.8vw;
-    height: 30vw;
-    justify-content: center;;
+  position: absolute;
+  z-index: 10;
+  top: 9.6vw;
+  right: 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 16.8vw;
+  height: 30vw;
+  justify-content: center;
 }
 
 .contact form ::placeholder {
-    color: white; 
+  color: white;
 }
 
 .contact form h3 {
-    position: absolute;
-    left: -1.06vw;
-    top: 1.7vw;
-    font-size: 1vw;
-    color: #3F3D56;
+  position: absolute;
+  left: -1.06vw;
+  top: 1.7vw;
+  font-size: 1vw;
+  color: #3f3d56;
 }
 
-.contact form input , .contact form textarea  {
-    z-index: 2;
-    position: relative;
-    width: 19vw;
-    background-color: #3F3D56;
-    border: none;
-    color: white;
-    margin-top: 0.7vw;
-    height: 3.4vw;
-    border-radius: 0.3vw;
-    font-size: 1vw;
-    padding-left: 0.8vw;
-    font-family: Poppins, 'Sans-serif';
-    overflow-wrap: break-word;
-
+.contact form input,
+.contact form textarea {
+  z-index: 2;
+  position: relative;
+  width: 19vw;
+  background-color: #3f3d56;
+  border: none;
+  color: white;
+  margin-top: 0.7vw;
+  height: 3.4vw;
+  border-radius: 0.3vw;
+  font-size: 1vw;
+  padding-left: 0.8vw;
+  font-family: Poppins, "Sans-serif";
+  overflow-wrap: break-word;
 }
 
 .contact form textarea {
-    height: 7vw;
-    padding-right: 0.8vw;
-    padding-top: 0.4vw;
+  height: 7vw;
+  padding-right: 0.8vw;
+  padding-top: 0.4vw;
 }
 
 .contact form input:nth-child(6) {
-    height: 8vw;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-
+  height: 8vw;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .contact form label {
-    z-index: 2;
-    position: relative;
-    width: 17vw;
-    margin-top: 0.3vw;
-    height: 1vw;
-    font-size: 0.9vw;
-    font-family: Poppins, 'Sans-serif';
-
+  z-index: 2;
+  position: relative;
+  width: 17vw;
+  margin-top: 0.3vw;
+  height: 1vw;
+  font-size: 0.9vw;
+  font-family: Poppins, "Sans-serif";
 }
 
 #contactSubmit {
-    background-color: white;
-    font-size: 1.2vw;
-    color: #6ED782;
-    font-weight: 500;
-    font-family: Poppins, 'Sans-serif';
-    width: 9vw;
-    position: absolute;
-    height: 2vw;
-    top: 26.8vw;
-    left: -1.06vw;
-    margin-top: 1vw;
-    padding-left: 0;
-
-
+  background-color: white;
+  font-size: 1.2vw;
+  color: #6ed782;
+  font-weight: 500;
+  font-family: Poppins, "Sans-serif";
+  width: 9vw;
+  position: absolute;
+  height: 2vw;
+  top: 26.8vw;
+  left: -1.06vw;
+  margin-top: 1vw;
+  padding-left: 0;
 }
 
 .contactSocialLinks {
-
-    position: absolute;
-    z-index: 10;
-    top: 47vw;
-    width: 25vw;
-    height: 20vw;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-
+  position: absolute;
+  z-index: 10;
+  top: 47vw;
+  width: 25vw;
+  height: 20vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-
 .contactSocialLinks h1 {
-    font-size: 2.5vw;
-    color: #3F3D56;
-
+  font-size: 2.5vw;
+  color: #3f3d56;
 }
 
 .contactSocialLinks ul {
-    display: flex;
-
-
+  display: flex;
 }
 
 .contactSocialLinks li {
-    font-size: 3vw;
-    color: #6ED782;
-    margin-right: 1.3vw ;
-    margin-left: 1.3vw;
-    position: relative;
-    list-style: none;
-    
+  font-size: 3vw;
+  color: #6ed782;
+  margin-right: 1.3vw;
+  margin-left: 1.3vw;
+  position: relative;
+  list-style: none;
 }
 
 .contactCompanyAddress {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 64vw;
-    font-size: 1.4vw;
-    left: 0vw;
-    z-index: 10;
-    color: black;
-    text-align: center;
-    height: 10vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 64vw;
+  font-size: 1.4vw;
+  left: 0vw;
+  z-index: 10;
+  color: black;
+  text-align: center;
+  height: 10vw;
 }
 
-@media only screen and (max-width: 768vw) {
-    .contactBG {
-        display: none;
-    }
+.contactFooter {
+  position: relative;
+  top: 4vw;
+}
 
-    .contact {
-        width: 100vw;
-        height: 357vw;
-        overflow: hidden;
-    }
+@media only screen and (max-width: 768px) {
+  .contactBG {
+    display: none;
+  }
 
-    .contactBody {
-        background-color: #6ED782;
-        height: 205vw;
-        z-index: 1;
-    }
+  .contact {
+    width: 100vw;
+    height: 358vw;
+    overflow: hidden;
+  }
 
-    .contactArt {
-        left: auto;  
-        height: 35vw;
-        top: 23vw;
-        left: auto;
-    
-    }
+  .contactBody {
+    background-color: #6ed782;
+    height: 205vw;
+    z-index: 1;
+  }
 
-    .contactBody form {
-        right: auto;
-        top: 70vw;
-        height: auto;
-    }
+  .contactArt {
+    left: auto;
+    height: 35vw;
+    top: 23vw;
+    left: auto;
+  }
 
-    .contact form input, .contact form textarea {
-        width: 80vw;
-        height: 10vw;
-        margin-top: 3vw;
-        font-size: 3.5vw;
-        padding-left: 2vw;
+  .contactBody form {
+    right: auto;
+    top: 70vw;
+    height: auto;
+  }
 
-    }
+  .contact form input,
+  .contact form textarea {
+    width: 80vw;
+    height: 10vw;
+    margin-top: 3vw;
+    font-size: 3.5vw;
+    padding-left: 2vw;
+  }
 
-    .contact form textarea {
-        height: 25vw;
-        padding-top: 1.5vw;
-    }
+  .contact form textarea {
+    height: 25vw;
+    padding-top: 1.5vw;
+  }
 
-    #contactSubmit {
-        top: 80vw;
-        left: -31.5vw;
-        height: 8vw;
-        width: 40vw;
-        font-size: 4.5vw;
-        font-weight: 700;
-        color: #3F3D56;
-        border-radius: 1vw;
-        margin-top: 3vw;
-    }
+  #contactSubmit {
+    top: 80vw;
+    left: -31.5vw;
+    height: 8vw;
+    width: 40vw;
+    font-size: 4.5vw;
+    font-weight: 700;
+    color: #3f3d56;
+    border-radius: 1vw;
+    margin-top: 3vw;
+  }
 
-    .contactSocialLinks {
-        top: 185vw;
-        width: 50vw;
-    }
+  .contactSocialLinks {
+    top: 185vw;
+    width: 50vw;
+  }
 
-    .contactSocialLinks h1 {
-        font-size: 5vw;
-    }
+  .contactSocialLinks h1 {
+    font-size: 5vw;
+  }
 
-    .contactSocialLinks li {
-        font-size: 6vw;
-        top: 5vw;
+  .contactSocialLinks li {
+    font-size: 6vw;
+    top: 5vw;
+  }
 
-    }
+  .contactBody > h1 {
+    z-index: 10;
+    font-size: 6vw;
+    top: 2.5vw;
+  }
 
+  .contact form h3 {
+    font-size: 4vw;
+    top: -5vw;
+    width: 50vw;
+    left: -31vw;
+  }
 
-    .contactBody > h1 {
-        z-index: 10;
-        font-size: 6vw;
-        top: 2.5vw;
-    }
+  .contactBGMobile {
+    display: block;
+    position: absolute;
+    z-index: 8;
+    top: -9vw;
+    left: -8vw;
+    width: 115.85vw;
+    pointer-events: none;
+  }
 
-    .contact form h3 {
-        font-size: 4vw;
-        top: -5vw;
-        width: 50vw;
-        left: -31vw;
-    }
+  .contactCompanyAddress {
+    display: none;
+  }
 
-    .contactBGMobile {
-        display: block;
-        position: absolute;
-        z-index: 8;
-        top: -9vw;
-        left: -8vw;
-        width: 115.85vw;
-        pointer-events: none;
-    }
-
-    .contactCompanyAddress {
-        display: none;
-    }
-
-  
-
-
-    
+  .contactFooter {
+    top: 0vw;
+  }
 }

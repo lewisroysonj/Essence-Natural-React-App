@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Home from "../Site Pages/Home page/Home";
 import About from "../Site Pages/About/About";
 import Contact from "../Site Pages/Contact/Contact";
-import MyCart from "../Site Pages/My Cart/My cart";
+import MyCart from "../Site Pages/My Cart/My cartF.jsx";
 import SignUp from "../Site Pages/Register/signupPage";
 import SignIn from "../Site Pages/Register/signinPage";
 import SearchResults from "../Site Pages/Search results/SearchResults";
