@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "../Site Pages/Home page/Home";
@@ -27,7 +29,7 @@ export default class Main extends React.Component {
           <Route exact path='/body_lotions' component={BodyLotionsPage}></Route>
           <Route exact path='/facewash' component={FacewashPage}></Route>
           <Route exact path='/nutrition_diet_foods' component={NutritionFoodPage}></Route>
-          <Route exact path='/product_details' component={ProductDetail}></Route>
+          <Route exact path='/products/:id' component={ProductDetail}></Route>
         </Switch>
       </div>
     );

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="419" height="398.469" viewBox="0 0 419 398.469">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f9e429;
+      }
+    </style>
+  </defs>
+  <path id="fullStar" class="cls-1" d="M212.5,3l64.736,131.147L422,155.307,317.25,257.333l24.721,144.136L212.5,333.382,83.029,401.469,107.75,257.333,3,155.307l144.764-21.16Z" transform="translate(-3 -3)"/>
+</svg>
