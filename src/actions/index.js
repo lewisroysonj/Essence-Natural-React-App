@@ -30,3 +30,10 @@ export const getProductData = (id) => {
     payload: id,
   };
 };
+
+export const getCurrentUser = (userID) => {
+  return {
+    type: "getUSer",
+    payload: userID,
+  };
+};

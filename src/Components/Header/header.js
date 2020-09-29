@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { burgerToggle } from "../../actions";
@@ -8,11 +8,26 @@ import SearchPopup from "./SearchPopup";
 import "./header.css";
 import logo from "./essence logo.svg";
 import MobLogo from "./Essence Mob Logo@2x.png";
+import { loadUserFromCookies, logOut } from "../../lib/user";
 
 export default function Header() {
   const [searchPopup, toggleSearhPopup] = useState({
     open: false,
   });
+
+  const [user, setUser] = useState({});
+
+  const getUser = async () => {
+    const loadedUser = await loadUserFromCookies();
+    setUser({
+      ...loadedUser,
+    });
+  };
+
+  useEffect(() => {
+    getUser();
+    return () => {};
+  }, []);
 
   function disableScroll() {
     const scrollY = window.pageYOffset;
@@ -20,6 +35,7 @@ export default function Header() {
 
     window.onscroll = function () {
       window.scrollTo(scrollX, scrollY);
+      console.log(scrollX, scrollY);
     };
   }
 
@@ -31,8 +47,8 @@ export default function Header() {
     toggleSearhPopup({
       open: !searchPopup.open,
     });
-    console.log(searchPopup);
   }
+  console.log(searchPopup);
 
   // toggleBurgerPopup() {
   //   this.setState ({
@@ -65,11 +81,7 @@ export default function Header() {
               Home
             </NavLink>
           </li>
-          <li>
-            <NavLink exact activeClassName='current' to='/signup'>
-              SignUp
-            </NavLink>
-          </li>
+
           <li>
             <NavLink exact activeClassName='current' to='/About'>
               About
@@ -80,6 +92,19 @@ export default function Header() {
               Contact
             </NavLink>
           </li>
+          {user._id ? (
+            <li onClick={logOut}>
+              <NavLink exact activeClassName='current' to='/signin'>
+                Sign Out
+              </NavLink>
+            </li>
+          ) : (
+            <li>
+              <NavLink exact activeClassName='current' to='/signup'>
+                Sign Up
+              </NavLink>
+            </li>
+          )}
         </ul>
         <ul className='header_icons'>
           <li onClick={togglePopup}>
@@ -93,7 +118,7 @@ export default function Header() {
           </NavLink>
         </ul>
         {searchPopup.open ? <SearchPopup open={searchPopup.open} toggle={togglePopup} /> : null}
-        {searchPopup.open ? disableScroll() : enableScroll()}
+        {searchPopup.open === true ? disableScroll : enableScroll}
       </div>
 
       <div className='mobileNav'>
@@ -118,12 +143,7 @@ export default function Header() {
             </li>
           </NavLink>
         </ul>
-        {/* <form className='searchBar' action='/search_results'>
-          <input id='fullName' type='text' placeholder='Search' value='' />
-          <button className='searchSubmit' type='submit'>
-            <i className='fas fa-search'></i>
-          </button>
-        </form> */}
+
         <SearchPopup toggle={togglePopup} device='mobile' />
 
         {burgerNavOpen ? disableScroll() : enableScroll()}
@@ -134,11 +154,7 @@ export default function Header() {
                 Home
               </NavLink>
             </li>
-            <li>
-              <NavLink exact activeClassName='current' to='/signup'>
-                SignUp
-              </NavLink>
-            </li>
+
             <li>
               <NavLink exact activeClassName='current' to='/About'>
                 About
@@ -149,6 +165,19 @@ export default function Header() {
                 Contact
               </NavLink>
             </li>
+            {user._id ? (
+              <li onClick={logOut}>
+                <NavLink exact activeClassName='current' to='/signin'>
+                  Sign Out
+                </NavLink>
+              </li>
+            ) : (
+              <li>
+                <NavLink exact activeClassName='current' to='/signup'>
+                  Sign Up
+                </NavLink>
+              </li>
+            )}
           </ul>
         </div>
       </div>

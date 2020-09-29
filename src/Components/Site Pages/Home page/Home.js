@@ -54,7 +54,7 @@ export default function Home() {
       </div>
       <div className='BodyLotionText'>
         <img src={BodyLotionText} alt='text' />
-        <a href='/body_lotions'>
+        <a href='/body-lotions'>
           <button>
             See More&nbsp;&nbsp;<i class='fas fa-chevron-right'></i>
           </button>
@@ -62,7 +62,7 @@ export default function Home() {
       </div>
       <div className='BodyLotionTextMobile'>
         <img src={BodyLotionTextMobile} alt='text' />
-        <a href='/body_lotions'>
+        <a href='/body-lotions'>
           <button>
             See More&nbsp;&nbsp;<i class='fas fa-chevron-right'></i>
           </button>
@@ -75,19 +75,19 @@ export default function Home() {
       </div>
       <div className='ProteinBarText'>
         <img src={ProteinBarText} alt='text' />
-        <NavLink exact to='/nutrition_diet_foods'>
+        <a href='/diet-foods'>
           <button>
             See More&nbsp;&nbsp;<i class='fas fa-chevron-right'></i>
           </button>
-        </NavLink>
+        </a>
       </div>
       <div className='ProteinBarTextMobile'>
         <img src={ProteinBarTextMobile} alt='text' />
-        <NavLink exact to='/nutrition_diet_foods'>
+        <a href='/diet-foods'>
           <button>
             See More&nbsp;&nbsp;<i class='fas fa-chevron-right'></i>
           </button>
-        </NavLink>
+        </a>
       </div>
       <img className='EssenceDarkbg' src={EssenceDarkbg} alt='essence logo' />
       <div className='FacewashImage'>
@@ -97,19 +97,19 @@ export default function Home() {
       </div>
       <div className='FacewashText'>
         <img src={FacewashText} alt='text' />
-        <NavLink exact to='/facewash'>
+        <a href='/face-wash'>
           <button>
             See More&nbsp;&nbsp;<i class='fas fa-chevron-right'></i>
           </button>
-        </NavLink>
+        </a>
       </div>
       <div className='FacewashTextMobile'>
         <img src={FacewashTextMobile} alt='text' />
-        <NavLink exact to='/facewash'>
+        <a href='/face-wash'>
           <button>
             See More&nbsp;&nbsp;<i class='fas fa-chevron-right'></i>
           </button>
-        </NavLink>
+        </a>
       </div>
       <img src={HomeWhite4} className='HomeWhite4' alt='bg' />
       <img src={DottedCurveDivider} className='DottedCurveDivider' alt='divider' />

@@ -1,7 +1,9 @@
 /** @format */
 
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink, Redirect } from "react-router-dom";
+
+import api from "../../../lib/api";
 
 import Footer from "../../Footer/Footer";
 import "./register.css";
@@ -10,102 +12,130 @@ import WhiteBG from "./RegisterPage bg.svg";
 import RegisterArt from "./registerArt.svg";
 import MobileBG from "./mobile page bg.svg";
 
-export default class SignUp extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      fullName: "",
-      email: "",
-      newPassword: "",
-      repeatPassword: "",
-      same: true,
-    };
+export default function SignUp() {
+  const [newUser, setNewUser] = useState({
+    fullName: "",
+    email: "",
+    newPassword: "",
+    repeatPassword: "",
+    error: false,
+    message: null,
+    loading: false,
+  });
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.checkPasswordMatch = this.checkPasswordMatch.bind(this);
-  }
+  console.log(newUser);
 
-  handleChange(event) {
-    const target = event.target;
+  function handleChange(e) {
+    const target = e.target;
     const value = target.name === "fullName" ? target.value : target.value;
     const name = target.name;
-    this.setState({
+    setNewUser({
+      ...newUser,
       [name]: value,
     });
   }
 
-  handleSubmit() {
-    alert("Signed up Successfully");
-    console.log(this.state);
+  async function handleSubmit() {
+    setNewUser({
+      ...newUser,
+      loading: true,
+      error: false,
+      message: null,
+    });
+
+    const postUser = await api.post("/auth/register", { ...newUser });
+
+    setNewUser({
+      ...newUser,
+      resError: postUser.data.error,
+      resMessage: postUser.data.message,
+      resUserEmail: postUser.data.userEmail,
+      loading: false,
+      error: false,
+      message: null,
+    });
   }
 
-  checkPasswordMatch(event) {
-    if (this.state.repeatPassword !== this.state.newPassword) {
-      this.setState({ same: false });
-      event.preventDefault();
+  function validateForm(e) {
+    e.preventDefault();
+    if (newUser.repeatPassword === newUser.newPassword) {
+      handleSubmit();
     } else {
-      this.handleSubmit();
+      setNewUser({ ...newUser, error: true, message: "Passwords Don't Match!" });
     }
   }
 
-  render() {
-    return (
-      <div className='regBody'>
-        <div className='register'>
-          <div className='signupSection'>
-            <h3>
-              <NavLink className='signInSubHeading' exact to='/signin'>
-                Sign In
-              </NavLink>
-            </h3>
-            <h1 className='signUpHeading'>Sign Up</h1>
-            <form onSubmit={this.checkPasswordMatch} action='/'>
-              <label htmlFor='fullName'>Full Name*</label>
-              <input name='fullName' id='fullName' type='text' maxLength='100' required value={this.state.fullName} onChange={this.handleChange} />
-              <label htmlFor='email'>Email*</label>
-              <input name='email' required id='email' maxLength='320' type='email' value={this.state.email} onChange={this.handleChange} />
-              <label htmlFor='password'>New Password*</label>
-              <input name='newPassword' id='password' minLength='8' maxLength='1000' type='password' value={this.state.password} onChange={this.handleChange} />
-              <label htmlFor='repeatPassword'>Repeat Password*</label>
-              <input name='repeatPassword' id='repeatPassword' type='password' required value={this.state.repeatPassword} onChange={this.handleChange} />
-              {this.state.same === false ? (
-                <div className='passwordUnmatchAlert'>
-                  <li className='alertpointer'>
-                    <i class='fas fa-caret-up'></i>
-                  </li>
-                  <p>
-                    <i class='fas fa-exclamation-circle'></i>
-                  </p>
-                  <p>Password doesn't match</p>
-                </div>
-              ) : null}
-              <input id='signupSubmit' type='submit' value='Submit'></input>
-            </form>
-            <div className='OAuth'>
-              <p>Sign Up or Login with</p>
-              <div className='loginIcons'>
-                <h3>
-                  <i className='fab fa-google'></i>
-                </h3>
-                <h3>
-                  <i className='fab fa-facebook'></i>
-                </h3>
+  const { fullName, email, newPassword, repeatPassword } = newUser;
+
+  return (
+    <div className='regBody'>
+      <div className='register'>
+        <div className='signupSection'>
+          <h3>
+            <NavLink className='signInSubHeading' exact to='/signin'>
+              Sign In
+            </NavLink>
+          </h3>
+          <h1 className='signUpHeading'>Sign Up</h1>
+          <form onSubmit={validateForm} action='/'>
+            {newUser.resError ? <div className='formErrorAlert'>{newUser.resMessage}</div> : <div className='formSuccessAlert'>{newUser.resMessage}</div>}
+            {newUser.loading ? <div>Loading...</div> : null}
+            <label htmlFor='fullName'>Full Name*</label>
+            <input name='fullName' autoComplete='name' id='fullName' type='text' maxLength='100' required value={fullName} onChange={handleChange} />
+            <label htmlFor='email'>Email*</label>
+            <input name='email' autoComplete='email' required id='email' maxLength='320' type='email' value={email} onChange={handleChange} />
+            <label htmlFor='newPassword'>New Password*</label>
+            <input name='newPassword' id='newPassword' autoComplete='new-password' minLength='8' maxLength='1000' type='password' value={newPassword} onChange={handleChange} />
+            <label htmlFor='repeatPassword'>Repeat Password*</label>
+            <input name='repeatPassword' id='repeatPassword' autoComplete='new-password' type='password' required value={repeatPassword} onChange={handleChange} />
+            {newUser.error ? (
+              <div className='passwordUnmatchAlert'>
+                <li className='alertpointer'>
+                  <i class='fas fa-caret-up'></i>
+                </li>
+                <p>
+                  <i class='fas fa-exclamation-circle'></i>
+                </p>
+                <p>{newUser.message}</p>
               </div>
+            ) : null}
+
+            {newUser.resUserEmail ? (
+              <Redirect
+                to={{
+                  pathname: "/signin",
+                  state: { user: newUser.resUserEmail, message: newUser.resMessage },
+                }}
+              />
+            ) : null}
+
+            <button id='signupSubmit' type='submit'>
+              Sign Up
+            </button>
+          </form>
+          <div className='OAuth'>
+            <p>Sign Up or Login with</p>
+            <div className='loginIcons'>
+              <h3>
+                <i className='fab fa-google'></i>
+              </h3>
+              <h3>
+                <i className='fab fa-facebook'></i>
+              </h3>
             </div>
-            <p className='signupAgreement'>
-              By <span className='SnUpAgmtHL'>Signing up</span> I agree the <strong>Privacy Policy</strong> and <strong>Terms and Conditions</strong> of <span className='agreementHL'>Essence</span>
-            </p>
-            <div className='signupBG'></div>
           </div>
-          <img className='registerBGMobile' src={MobileBG} alt='bg' />
-          <img src={RegisterArt} className='registerArt' alt='art' />
-          <img src={WhiteBG} className='registerBG' alt='bg' />
+          <p className='signupAgreement'>
+            By <span className='SnUpAgmtHL'>Signing up</span> I agree the <strong>Privacy Policy</strong> and <strong>Terms and Conditions</strong> of <span className='agreementHL'>Essence</span>
+          </p>
+          <div className='signupBG'></div>
         </div>
-        <div className='registerFooter'>
-          <Footer />
-        </div>
+        <img className='registerBGMobile' src={MobileBG} alt='bg' />
+        <img src={RegisterArt} className='registerArt' alt='art' />
+        <img src={WhiteBG} className='registerBG' alt='bg' />
       </div>
-    );
-  }
+      <div className='registerFooter'>
+        <Footer />
+      </div>
+    </div>
+  );
 }
