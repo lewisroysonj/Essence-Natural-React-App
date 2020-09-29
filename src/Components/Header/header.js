@@ -8,19 +8,8 @@ import SearchPopup from "./SearchPopup";
 import "./header.css";
 import logo from "./essence logo.svg";
 import MobLogo from "./Essence Mob Logo@2x.png";
-// import SearchPopup from './SearchPopup';
 
 export default function Header() {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     seen: false,
-  // //     burgerOpen: false
-  //    };
-  //   this.togglePopup = this.togglePopup.bind(this);
-  // //   this.toggleBurgerPopup = this.toggleBurgerPopup.bind(this);
-  //  }
-
   const [searchPopup, toggleSearhPopup] = useState({
     open: false,
   });
@@ -129,12 +118,13 @@ export default function Header() {
             </li>
           </NavLink>
         </ul>
-        <form className='searchBar' action='/search_results'>
+        {/* <form className='searchBar' action='/search_results'>
           <input id='fullName' type='text' placeholder='Search' value='' />
           <button className='searchSubmit' type='submit'>
             <i className='fas fa-search'></i>
           </button>
-        </form>
+        </form> */}
+        <SearchPopup toggle={togglePopup} device='mobile' />
 
         {burgerNavOpen ? disableScroll() : enableScroll()}
         <div className={burgerNavOpen ? "burgerNavOpen" : "burgerNav"}>

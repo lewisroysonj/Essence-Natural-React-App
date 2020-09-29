@@ -9,10 +9,9 @@ import MyCart from "../Site Pages/My Cart/My cartF.jsx";
 import SignUp from "../Site Pages/Register/signupPage";
 import SignIn from "../Site Pages/Register/signinPage";
 import SearchResults from "../Site Pages/Search results/SearchResults";
-import BodyLotionsPage from "../Site Pages/CategoryListingPages/BodyLotionCategory";
-import FacewashPage from "../Site Pages/CategoryListingPages/FacewashCategory";
-import NutritionFoodPage from "../Site Pages/CategoryListingPages/Nutrition Diet Foods";
+import CategoryPage from "../Site Pages/CategoryListingPages/categoryListing";
 import ProductDetail from "../Site Pages/product details/ProductDetail";
+import NotFound from "../Site Pages/Errors/notFound";
 
 export default class Main extends React.Component {
   render() {
@@ -26,10 +25,10 @@ export default class Main extends React.Component {
           <Route exact path='/signup' component={SignUp}></Route>
           <Route exact path='/signin' component={SignIn}></Route>
           <Route exact path='/search_results' component={SearchResults}></Route>
-          <Route exact path='/body_lotions' component={BodyLotionsPage}></Route>
-          <Route exact path='/facewash' component={FacewashPage}></Route>
-          <Route exact path='/nutrition_diet_foods' component={NutritionFoodPage}></Route>
+          <Route exact path='/notFound' component={NotFound} status={404}></Route>
           <Route exact path='/products/:id' component={ProductDetail}></Route>
+          <Route exact path='/:category' component={CategoryPage}></Route>
+          <Route path='*' component={NotFound}></Route>
         </Switch>
       </div>
     );

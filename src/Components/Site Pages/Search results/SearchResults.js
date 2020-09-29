@@ -1,96 +1,44 @@
-import React from 'react';
+/** @format */
 
-import './SearchResults.css';
-import Footer from '../../Footer/Footer';
-import ProteinBarProductImg from './Protein bar Image.png';
-import BodyLotionImage from './Essence body lotion.png';
-import FacewashImage from './essence facewash image.svg';
-import FooterOverBG from './footerOverBG.svg';
+import React, { useEffect, useState } from "react";
 
+import Footer from "../../Footer/Footer";
+import FooterOverBG from "./footerOverBG.svg";
 
-export default class SearchResults extends React.Component {
-    render() {
-        return (
-            <div className="searchResult">
-            <div className="searchResultsBody" >
-            <h1 className="searchResultsHeading" >Search <span className="searchResultsHeadingSpan" >Results</span></h1>
-            <div className="whiteBG30"></div>  
-            <div className="searchResultsContent">
-                <p className="searchKeyword" >for "essence"</p>
-                <div className="itemListing">
-                    <img src={ProteinBarProductImg} alt="essence Protein bar" className="productImage"></img>
-                    <div className="productListDetails" >
-                        <h1>Essence Protein Bar</h1>
-                        <div className="starRatings">
-                          <span><i class="fas fa-star"></i></span>
-                          <span><i class="fas fa-star"></i></span>
-                          <span><i class="fas fa-star"></i></span>
-                          <span><i class="fas fa-star"></i></span>
-                          <span><i class="fas fa-star-half"></i></span>
-                          <p id="ratingCounter">123 ratings</p>
-                        </div>
-                        <div className="listPrice">
-                          <span className="listItemPrice">$12.00</span>
-                          <span className="listItemMRP">$18.00</span>
-                        </div>
-                        <div className="purchaseOptions">
-                          <button className="buyNow">Buy Now</button>
-                          <button className="addToCart">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="itemListing">
-                    <img src={BodyLotionImage} alt="essence Protein bar" className="productImage"></img>
-                    <div className="productListDetails" >
-                        <h1>Essence Coconut Oil Body Lotion</h1>
-                        <div className="starRatings">
-                          <span><i class="fas fa-star"></i></span>
-                          <span><i class="fas fa-star"></i></span>
-                          <span><i class="fas fa-star"></i></span>
-                          <span><i class="fas fa-star"></i></span>
-                          <span><i class="fas fa-star-half"></i></span>
-                          <p id="ratingCounter">123 ratings</p>
-                        </div>
-                        <div className="listPrice">
-                          <span className="listItemPrice">$12.00</span>
-                          <span className="listItemMRP">$18.00</span>
-                        </div>
-                        <div className="purchaseOptions">
-                          <button className="buyNow">Buy Now</button>
-                          <button className="addToCart">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="itemListing">
-                    <img src={FacewashImage} alt="essence Protein bar" className="productImage"></img>
-                    <div className="productListDetails" >
-                        <h1>Essence Facewash with Tea Tree Oil</h1>
-                        <div className="starRatings">
-                          <span><i class="fas fa-star"></i></span>
-                          <span><i class="fas fa-star"></i></span>
-                          <span><i class="fas fa-star"></i></span>
-                          <span><i class="fas fa-star"></i></span>
-                          <span><i class="fas fa-star-half"></i></span>
-                          <p id="ratingCounter">123 ratings</p>
-                        </div>
-                        <div className="listPrice">
-                          <span className="listItemPrice">$12.00</span>
-                          <span className="listItemMRP">$18.00</span>
-                        </div>
-                        <div className="purchaseOptions">
-                          <button className="buyNow">Buy Now</button>
-                          <button className="addToCart">Add to Cart</button>
-                        </div>
-                    </div>
-                  </div>
-            <img className="footerOverBGSearch" src={FooterOverBG} alt="bg" ></img>
+import ProductList from "../../UI Components/productListing";
 
-               </div>
-           
-            </div>
+import "./SearchResults.css";
+import styles from "./searchResults.module.scss";
 
-            <Footer />
-        </div>
-        );
+export default function SearchResults(props) {
+  const [search, setResults] = useState({
+    results: null,
+    keyword: null,
+  });
+
+  useEffect(() => {
+    if (props.location.state.search) {
+      setResults({
+        results: props.location.state.search.results,
+        keyword: props.location.state.search.keyword,
+      });
     }
+  }, [props.location.state]);
+  console.log(search);
+
+  return (
+    <div className={styles.searchResults}>
+      <h1 className={styles.searchResultsHeading}>
+        Search <span className={styles.searchResultsHeadingSpan}>Results</span>
+      </h1>
+      <div className={styles.searchResultsContainer}>
+        <div className={styles.searchResultsContent}>
+          <p className={styles.searchKeyword}>for "{search.keyword}"</p>
+          <div className={styles.listingContainer}>{search.results && search.results.length > 0 ? <ProductList products={search.results} /> : <h3 className={styles.noResultText}>Sorry! Couldn't find any products matching {search.keyword}.</h3>}</div>
+        </div>
+      </div>
+
+      <Footer />
+    </div>
+  );
 }

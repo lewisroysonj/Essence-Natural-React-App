@@ -21,7 +21,7 @@ import newsletterBG from "./newsletter bg.svg";
 import newsletterBGMobile from "./Subscribe form illustration mobile.svg";
 import custReviewsBody from "./custReviews body.svg";
 import BodyLotionImage from "./Essence body lotion.png";
-import FacewashImage from "./essence facewash image.svg";
+import FacewashImage from "./essence facewash image.png";
 import ProteinBarImage from "./Protein bar Image.png";
 import { NavLink } from "react-router-dom";
 import NewsletterSignUpForm from "./NewsletterForm";
@@ -54,19 +54,19 @@ export default function Home() {
       </div>
       <div className='BodyLotionText'>
         <img src={BodyLotionText} alt='text' />
-        <NavLink exact to='/body_lotions'>
+        <a href='/body_lotions'>
           <button>
             See More&nbsp;&nbsp;<i class='fas fa-chevron-right'></i>
           </button>
-        </NavLink>
+        </a>
       </div>
       <div className='BodyLotionTextMobile'>
         <img src={BodyLotionTextMobile} alt='text' />
-        <NavLink exact to='/body_lotions'>
+        <a href='/body_lotions'>
           <button>
             See More&nbsp;&nbsp;<i class='fas fa-chevron-right'></i>
           </button>
-        </NavLink>
+        </a>
       </div>
       <div className='ProteinBarImage'>
         <div className='ProductBG2'>
