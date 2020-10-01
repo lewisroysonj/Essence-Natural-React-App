@@ -7,6 +7,7 @@ import api from "../../../lib/api";
 
 import Footer from "../../Footer/Footer";
 import "./register.css";
+import alertStyles from "../../UI Components/NewsletterForm.module.scss";
 
 import WhiteBG from "./RegisterPage bg.svg";
 import RegisterArt from "./registerArt.svg";
@@ -78,8 +79,8 @@ export default function SignUp() {
           </h3>
           <h1 className='signUpHeading'>Sign Up</h1>
           <form onSubmit={validateForm} action='/'>
-            {newUser.resError ? <div className='formErrorAlert'>{newUser.resMessage}</div> : <div className='formSuccessAlert'>{newUser.resMessage}</div>}
-            {newUser.loading ? <div>Loading...</div> : null}
+            {newUser.resError ? <h3 className={alertStyles.errorMessage}>{newUser.resMessage}</h3> : <h3 className={alertStyles.successMessage}>{newUser.resMessage}</h3>}
+            {newUser.loading ? <div className='loadingSpinner'>Loading...</div> : null}
             <label htmlFor='fullName'>Full Name*</label>
             <input name='fullName' autoComplete='name' id='fullName' type='text' maxLength='100' required value={fullName} onChange={handleChange} />
             <label htmlFor='email'>Email*</label>

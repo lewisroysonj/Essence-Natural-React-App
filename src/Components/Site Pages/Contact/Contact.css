@@ -61,7 +61,7 @@
   color: white;
 }
 
-.contact form h3 {
+.contact form .contactFormHeader {
   position: absolute;
   left: -1.06vw;
   top: 1.7vw;
@@ -169,6 +169,20 @@
 .contactFooter {
   position: relative;
   top: 4vw;
+}
+
+.contactSuccess {
+  color: white;
+  font-size: 1.8vw;
+  width: 40vw;
+  margin-left: 1vw;
+  margin-top: 5vw;
+}
+
+.contactSuccess h3 {
+  color: #3f3d56;
+  font-size: 1.3vw;
+  width: 30vw;
 }
 
 @media only screen and (max-width: 768px) {

@@ -24,7 +24,7 @@ import BodyLotionImage from "./Essence body lotion.png";
 import FacewashImage from "./essence facewash image.png";
 import ProteinBarImage from "./Protein bar Image.png";
 import { NavLink } from "react-router-dom";
-import NewsletterSignUpForm from "./NewsletterForm";
+import NewsletterSignUpForm from "../../UI Components/NewsletterForm";
 
 export default function Home() {
   return (
@@ -90,7 +90,7 @@ export default function Home() {
         </a>
       </div>
       <img className='EssenceDarkbg' src={EssenceDarkbg} alt='essence logo' />
-      <div className='FacewashImage'>
+      <div className='FacewashImageContainer'>
         <div className='ProductBG3'>
           <img src={FacewashImage} alt='essence facewash' />
         </div>

@@ -25,8 +25,13 @@ export default function Header() {
   };
 
   useEffect(() => {
-    getUser();
-    return () => {};
+    let mounted = true;
+    if (mounted) {
+      getUser();
+    }
+    return () => {
+      mounted = false;
+    };
   }, []);
 
   function disableScroll() {

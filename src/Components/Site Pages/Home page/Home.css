@@ -78,13 +78,6 @@
   height: 40vw;
 }
 
-.FacewashImage img {
-  position: relative;
-  left: -4vw;
-  height: 40vw;
-  top: -7vw;
-}
-
 .ProteinBarImage img {
   position: relative;
   height: 30vw;
@@ -113,11 +106,27 @@
   left: 65.5vw;
 }
 
-.FacewashImage {
+.FacewashImageContainer {
   position: absolute;
   z-index: 5;
-  top: 148vw;
-  left: 9.5vw;
+  top: 142vw;
+  left: 6vw;
+  width: 35vw;
+  height: 35vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ProductBG3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FacewashImageContainer img {
+  width: 140%;
 }
 
 .BodyLotionText {
@@ -496,20 +505,20 @@
     top: 5vw;
   }
 
-  .FacewashImage {
-    top: 193vw;
+  .FacewashImageContainer {
     left: 9vw;
-  }
-
-  .FacewashImage img {
-    height: 65vw;
-    top: -13vw;
-    left: -8vw;
+    top: 197vw;
+    width: 40vw;
+    height: 40vw;
   }
 
   .ProductBG3 {
-    height: 40vw;
     width: 40vw;
+    height: 40vw;
+  }
+
+  .FacewashImageContainer img {
+    width: 140%;
   }
 
   .FacewashText {

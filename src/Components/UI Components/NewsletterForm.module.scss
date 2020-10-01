@@ -1,0 +1,131 @@
+/** @format */
+$primaryColor: #6ed782;
+$secondaryColor: #3f3d56;
+$warningColorBG: #ffde7c;
+$warningColor: #382a00;
+$successColorBG: #3baf56;
+$successColor: #009b24;
+
+.newsletterForm {
+  display: flex;
+  position: absolute;
+  top: 26vw;
+  margin-top: 1vw;
+  right: 26vw;
+  flex-direction: column;
+  height: fit-content;
+  justify-content: center;
+  gap: 1vw;
+  width: 30vw;
+
+  h1 {
+    font-size: 3vw;
+    color: $secondaryColor;
+    line-height: 3vw;
+
+    span {
+      display: block;
+      color: white;
+    }
+  }
+
+  p {
+    font-size: 1.5vw;
+    font-weight: 700;
+    color: $secondaryColor;
+    width: 80%;
+  }
+
+  .errorMessage,
+  .successMessage {
+    background-color: $warningColorBG;
+    color: $warningColor;
+    font-weight: 300;
+    padding: 0.4vw;
+    border-radius: 0.2vw;
+    font-size: 1.2vw;
+  }
+
+  .successMessage {
+    background-color: white;
+    color: $successColor;
+    font-weight: 700;
+  }
+
+  input,
+  button {
+    width: 100%;
+    height: 4vw;
+    border: none;
+    border-radius: 0.4vw;
+    padding: 1vw;
+    font-size: 1.4vw;
+    background-color: $secondaryColor;
+    color: white;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.849);
+    }
+  }
+
+  button {
+    height: 3vw;
+    width: 50%;
+    background-color: white;
+    color: $secondaryColor;
+    font-weight: 700;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .newsletterForm {
+    top: 40vw;
+    margin-top: 6vw;
+    left: -2vw;
+    gap: 1.5vw;
+    width: 60vw;
+
+    h1 {
+      font-size: 5.5vw;
+      line-height: 5.5vw;
+
+      span {
+        color: white;
+      }
+    }
+
+    p {
+      font-size: 2.8vw;
+      width: 70%;
+    }
+
+    .errorMessage,
+    .successMessage {
+      font-weight: 500;
+      padding: 0.7vw;
+      border-radius: 0.2vw;
+      font-size: 2.2vw;
+    }
+
+    .successMessage {
+      font-weight: 700;
+    }
+
+    input,
+    button {
+      width: 100%;
+      height: 9vw;
+      border-radius: 0.4vw;
+      padding: 2vw;
+      font-size: 3vw;
+    }
+
+    button {
+      height: 7vw;
+      width: 50%;
+      font-weight: 500;
+      padding: 0;
+    }
+  }
+}
