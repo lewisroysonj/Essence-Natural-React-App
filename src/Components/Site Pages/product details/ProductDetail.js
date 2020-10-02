@@ -18,11 +18,20 @@ export default function ProductDetail(props) {
     similarProducts: null,
   });
 
+  const [products, setProducts] = useState({
+    addedToCart: "",
+    productLoading: true,
+  });
+
   async function getProductData(id) {
     const productData = await api.get(`/products/product/${id}`);
     setProductDetails({
       data: productData.data.product,
       similarProducts: productData.data.similarProducts,
+    });
+    setProducts({
+      ...products,
+      productLoading: false,
     });
   }
 
@@ -30,8 +39,22 @@ export default function ProductDetail(props) {
     getProductData(props.match.params.id);
   }, []);
 
+  function setLoadingSpinner(boolean, boolean2) {
+    setProducts({
+      ...products,
+      productLoading: boolean,
+      addedToCart: boolean2,
+    });
+  }
+
   return (
     <div className='productDetails' key={props.match.params.id}>
+      {products.addedToCart ? <div className={products.addedToCart === "in" ? "cartSuccessMessage" : "cartSuccessMessageOut"}>Product Added to Cart Successfully!</div> : null}
+      {products.productLoading ? (
+        <div className='fullScreenLoader'>
+          <div></div>
+        </div>
+      ) : null}
       <div className='productDetailsBody'>
         <h1 className='productDetailsHeading'>
           Product <span className='cartHeadingSpan'>Details</span>
@@ -114,7 +137,7 @@ export default function ProductDetail(props) {
           <div className={styles.similarProducts}>
             <h1 className={styles.similarHeading}>Similar Products</h1>
             <div className={styles.listingContainer}>
-              <ProductListing products={productDetails.similarProducts} />
+              <ProductListing products={productDetails.similarProducts} startSpinner={setLoadingSpinner} />
             </div>
           </div>
         </div>

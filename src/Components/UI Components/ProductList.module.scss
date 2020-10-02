@@ -65,12 +65,18 @@ $secondaryColor: #3f3d56;
       font-size: 1.4vw;
       font-weight: 500;
 
-      .listItemMRP {
-        font-size: 1.1vw;
+      span {
+        font-size: 1.3vw;
         font-weight: 200;
         color: rgb(63, 63, 63);
         text-decoration: line-through;
         margin-left: 0.5vw;
+      }
+
+      .listItemPrice {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.7vw;
       }
     }
 
@@ -94,6 +100,47 @@ $secondaryColor: #3f3d56;
       .addToCart {
         background-color: $secondaryColor;
         color: white;
+      }
+    }
+
+    .quantitySection {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 15vw;
+      margin-top: 0.8vw;
+
+      span {
+        color: black;
+        font-size: 1.5vw;
+        margin-right: 1vw;
+      }
+
+      .buttons {
+        width: 10vw;
+        display: flex;
+        justify-content: center;
+        background-color: $secondaryColor;
+        color: white;
+        border-radius: 0.4vw;
+
+        button {
+          border: none;
+          background-color: transparent;
+          flex: 0.5;
+          border: 0.1vw solid rgb(21, 22, 21);
+          border-radius: 0.4vw;
+          color: white;
+          font-size: 1.5vw;
+          font-weight: 500;
+        }
+
+        p {
+          font-size: 1.5vw;
+          width: 1vw;
+          text-align: center;
+          flex: 0.5;
+        }
       }
     }
   }

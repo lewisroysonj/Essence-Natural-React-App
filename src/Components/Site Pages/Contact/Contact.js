@@ -40,6 +40,7 @@ export default function Contact() {
       ...contact,
       loading: true,
     });
+    console.log("clicked");
     // alert("Thank you for contacting us, we will get back to you soon!");
     const response = await api.post("/contact", contact);
     setContact({
@@ -48,7 +49,6 @@ export default function Contact() {
       error: response.data.error,
       resMessage: response.data.message,
     });
-    console.log(response);
   }
 
   return (

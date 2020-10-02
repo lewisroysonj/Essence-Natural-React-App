@@ -1,6 +1,63 @@
+/** @format */
+
 .appBlock {
-    height: 100vh;
-    overflow-y: hidden;
+  height: 100vh;
+  overflow-y: hidden;
 }
 
+.fullScreenLoader {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.199);
+  position: fixed;
+  z-index: 100;
+  left: 0vw;
+  top: 0vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fullScreenLoader div {
+  color: transparent;
+  padding: 4%;
+  transform: rotate(0deg);
+  border: 1.5vw solid#6ed782;
+  border-bottom: 1.5vw solid;
+  border-radius: 50%;
+  animation-name: span2;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.3, 0.65, 0.47, 0.77);
+}
 
+@keyframes span2 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.cartSuccessMessage,
+.cartSuccessMessageOut {
+  position: fixed;
+  z-index: 100;
+  padding: 1.5vw 2vw;
+  background-color: #3f3d56;
+  border-radius: 0.4vw;
+  box-shadow: -1px 1px 5px 0px #00000061;
+  width: auto;
+  justify-self: center;
+  color: white;
+  transform: translate(-50%, -50%);
+  top: 93%;
+  left: 50%;
+  font-size: 1.2vw;
+  transition: transform 0.4s ease-in;
+}
+
+.cartSuccessMessageOut {
+  transform: translate(-50%, 150%);
+}

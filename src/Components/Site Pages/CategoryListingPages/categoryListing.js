@@ -16,6 +16,8 @@ export default function CategoryListing(props) {
     data: null,
     category: null,
     loading: true,
+    productLoading: true,
+    addedToCart: true,
   });
   const source = Axios.CancelToken.source();
 
@@ -25,9 +27,11 @@ export default function CategoryListing(props) {
       const categoryProducts = await api.get(`/products/${category}`);
       console.log("ddf", categoryProducts);
       setProducts({
+        ...products,
         data: categoryProducts.data.product[0].name ? categoryProducts.data.product : null,
         category: categoryProducts.data.categoryName,
         loading: false,
+        productLoading: false,
       });
       console.log(category);
       console.log(categoryProducts);
@@ -44,6 +48,16 @@ export default function CategoryListing(props) {
     }
   };
 
+  function setLoadingSpinner(boolean, boolean2) {
+    setProducts({
+      ...products,
+      productLoading: boolean,
+      addedToCart: boolean2,
+    });
+  }
+
+  console.log(products);
+
   useEffect(() => {
     let mounted = true;
     if (mounted) {
@@ -58,12 +72,18 @@ export default function CategoryListing(props) {
 
   return (
     <div className={styles.category}>
+      {products.addedToCart ? <div className={products.addedToCart === "in" ? "cartSuccessMessage" : "cartSuccessMessageOut"}>Product Added to Cart Successfully!</div> : null}
+      {products.productLoading ? (
+        <div className='fullScreenLoader'>
+          <div></div>
+        </div>
+      ) : null}
       <h1 className={styles.categoryHeading}>
         Essence <span className={styles.categoryHeadingSpan}>{products.category}</span>
       </h1>
 
       <div className={styles.categoryContainer}>
-        <div className={styles.categoryContent}>{products.loading ? <h1>Loading...</h1> : products.data ? <ProductListing products={products.data} /> : <h1>No items Available!</h1>}</div>
+        <div className={styles.categoryContent}>{products.loading ? <h1>Loading...</h1> : products.data ? <ProductListing products={products.data} startSpinner={setLoadingSpinner} /> : <h1>No items Available!</h1>}</div>
       </div>
 
       <div className={styles.productListFooter}>

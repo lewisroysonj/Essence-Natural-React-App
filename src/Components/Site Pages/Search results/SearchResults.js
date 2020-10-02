@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import Footer from "../../Footer/Footer";
 import FooterOverBG from "./footerOverBG.svg";
 
-import ProductList from "../../UI Components/productListing";
+import ProductListing from "../../UI Components/productListing";
 
 import "./SearchResults.css";
 import styles from "./searchResults.module.scss";
@@ -16,25 +16,48 @@ export default function SearchResults(props) {
     keyword: null,
   });
 
+  const [products, setProducts] = useState({
+    addedToCart: "",
+    productLoading: true,
+  });
+
   useEffect(() => {
     if (props.location.state.search) {
       setResults({
         results: props.location.state.search.results,
         keyword: props.location.state.search.keyword,
       });
+      setProducts({
+        ...products,
+        productLoading: false,
+      });
     }
   }, [props.location.state]);
   console.log(search);
 
+  function setLoadingSpinner(boolean, boolean2) {
+    setProducts({
+      ...products,
+      productLoading: boolean,
+      addedToCart: boolean2,
+    });
+  }
+
   return (
     <div className={styles.searchResults}>
+      {products.addedToCart ? <div className={products.addedToCart === "in" ? "cartSuccessMessage" : "cartSuccessMessageOut"}>Product Added to Cart Successfully!</div> : null}
+      {products.productLoading ? (
+        <div className='fullScreenLoader'>
+          <div></div>
+        </div>
+      ) : null}
       <h1 className={styles.searchResultsHeading}>
         Search <span className={styles.searchResultsHeadingSpan}>Results</span>
       </h1>
       <div className={styles.searchResultsContainer}>
         <div className={styles.searchResultsContent}>
           <p className={styles.searchKeyword}>for "{search.keyword}"</p>
-          <div className={styles.listingContainer}>{search.results && search.results.length > 0 ? <ProductList products={search.results} /> : <h3 className={styles.noResultText}>Sorry! Couldn't find any products matching {search.keyword}.</h3>}</div>
+          <div className={styles.listingContainer}>{search.results && search.results.length > 0 ? <ProductListing products={search.results} startSpinner={setLoadingSpinner} /> : <h3 className={styles.noResultText}>Sorry! Couldn't find any products matching {search.keyword}.</h3>}</div>
         </div>
       </div>
 

@@ -20,5 +20,5 @@ export async function loadUserFromCookies() {
 
 export function logOut() {
   Cookies.remove("token");
-  window.location.pathname = "/";
+  window.location.pathname = "/signin";
 }
