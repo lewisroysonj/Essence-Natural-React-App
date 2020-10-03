@@ -8,6 +8,7 @@ import CartProduct from "../../UI Components/cart product template.js";
 import api from "../../../lib/api";
 import { useEffect } from "react";
 import Cookies from "js-cookie";
+import { NavLink, Redirect } from "react-router-dom";
 
 export default function MyCart() {
   const [cart, setCart] = useState({
@@ -130,6 +131,13 @@ export default function MyCart() {
     });
   }
 
+  function setCheckoutProducts(products) {
+    setCart({
+      ...cart,
+      checkout: products,
+    });
+  }
+
   return (
     <React.Fragment>
       <div className='myCart'>
@@ -146,13 +154,21 @@ export default function MyCart() {
           <h3>
             {cart.products.length} {cart.products.length > 1 ? "items" : "item"}
           </h3>
-          <CartProduct products={cart.products} startSpinner={setLoadingSpinner} isUser={checkUser} changeProducts={setChangedProducts} loadingState={products} />
+          <CartProduct products={cart.products} startSpinner={setLoadingSpinner} isUser={checkUser} changeProducts={setChangedProducts} loadingState={products} setCheckoutProducts={setCheckoutProducts} />
 
           <div className='cartTotalSection'>
             <span className='totalCounter'>
               Cart Total: <strong>${cart.cartTotal}</strong>
             </span>
-            <button className='checkoutButton'>CheckOut</button>
+            <button className='checkoutButton'>
+              <NavLink
+                to={{
+                  pathname: "/checkout",
+                  state: { checkout: cart.checkout },
+                }}>
+                CheckOut
+              </NavLink>
+            </button>
           </div>
         </div>
 

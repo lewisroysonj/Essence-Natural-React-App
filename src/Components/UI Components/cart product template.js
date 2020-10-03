@@ -123,6 +123,33 @@ export default function CartProduct(props) {
   console.log(cartProduct, "dsdsd");
 
   console.log(cartProduct.loggedUser);
+
+  function handleCheckoutItems() {
+    console.log(cartProduct.items);
+
+    const cartItems = [];
+    for (let i = 0; i < cartProduct.items.length; i++) {
+      let product = {
+        price_data: {
+          currency: "usd",
+          product_data: {
+            name: cartProduct.items[i].name,
+            images: [cartProduct.items[i].featuredImage],
+          },
+          unit_amount: Number(cartProduct.items[i].finalPrice),
+        },
+        quantity: Number(cartProduct.items[i].qty),
+      };
+      cartItems.push(product);
+    }
+    console.log(cartItems);
+    props.setCheckoutProducts(cartItems);
+  }
+
+  useEffect(() => {
+    handleCheckoutItems();
+  }, [cartProduct.items]);
+
   return (
     <>
       {cartProduct.items && cartProduct.loggedUser && cartProduct.items.length > 0 ? (

@@ -1,0 +1,252 @@
+/** @format */
+
+.product {
+  display: flex;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#checkout-button {
+  height: 36px;
+  background: #556cd6;
+  color: white;
+  width: 100%;
+  font-size: 14px;
+  border: 0;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 0.6;
+  border-radius: 0 0 6px 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0px 4px 5.5px 0px rgba(0, 0, 0, 0.07);
+}
+#checkout-button:hover {
+  opacity: 0.8;
+}
+
+/** @format */
+
+$primaryColor: #6ed782;
+$secondaryColor: #3f3d56;
+
+.category {
+  width: 100vw;
+
+  h3 {
+    width: 100%;
+    margin-left: 2vw;
+    margin-bottom: 2vw;
+    font-size: 1.7vw;
+    font-weight: 500;
+  }
+
+  .categoryHeading {
+    font-size: 4vw;
+    position: relative;
+    color: white;
+    padding-top: 0.5vw;
+    background-color: #6ed782;
+    width: 100vw;
+    text-align: center;
+    height: 12vw;
+
+    .categoryHeadingSpan {
+      color: #3f3d56;
+    }
+  }
+
+  .categoryContainer {
+    background-color: #f6f6f6;
+    display: grid;
+    min-height: 20vw;
+    top: -5vw;
+    position: relative;
+    border-radius: 6vw 6vw 0rem 0rem;
+    box-shadow: 0px -10px 13px rgba(0, 0, 0, 0.192);
+    grid-template-rows: auto auto 15vw;
+    grid-template-columns: 45vw 30vw;
+    width: 100%;
+    justify-content: center;
+    height: auto;
+    padding-top: 3vw;
+    gap: 2vw;
+    grid-template-areas:
+      "shipping summary"
+      "shipping items"
+      "payments items";
+
+    .shippingDetailsSection {
+      grid-area: shipping;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2vw;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+
+        label {
+          margin-bottom: 0.5vw;
+          font-size: 1vw;
+        }
+
+        input {
+          margin-bottom: 1vw;
+          border-radius: 0.4vw;
+          border: none;
+          background-color: #f8f8f8;
+          padding: 0 0.7vw;
+          font-size: 0.95vw;
+        }
+
+        span {
+          width: 100%;
+          padding-left: 1vw;
+          padding-right: 1vw;
+
+          input {
+            height: 2.5vw;
+            width: 100%;
+          }
+        }
+
+        .dividedInputs {
+          display: flex;
+          width: 100%;
+
+          span {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+
+    .paymentOptionsSection {
+      grid-area: payments;
+      background-color: violet;
+    }
+
+    .OrderSummarySection {
+      grid-area: summary;
+      background-color: #fff;
+      padding: 2vw;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+
+      span {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1.5vw;
+        border-bottom: 1px solid #000;
+        width: 100%;
+
+        div {
+          p {
+            font-size: 1vw;
+            margin-bottom: 1vw;
+          }
+          h4 {
+            font-size: 1.2vw;
+            margin-bottom: 1vw;
+          }
+        }
+
+        .rightSide {
+          text-align: end;
+        }
+      }
+
+      button {
+        width: 100%;
+        margin-top: 1vw;
+        height: 3vw;
+        border: none;
+        border-radius: 0.4vw;
+        background-color: $primaryColor;
+        color: white;
+        font-weight: 700;
+        font-size: 1.2vw;
+      }
+    }
+
+    .OrderDetailsSection {
+      grid-area: items;
+      background-color: $primaryColor;
+    }
+  }
+
+  .productListFooter {
+    width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+  }
+}
+
+// .footerOverBGProductDetails {
+//   height: 20vw;
+//   position: absolute;
+//   left: 10vw;
+//   top: 60vw;
+//   z-index: 10;
+// }
+
+// .productDetailsFooter .footerOverBG {
+//   top: -3vw;
+// }
+
+// .productDetailsFooter .footerUpperBG {
+//   top: -3vw;
+// }
+
+@media only screen and (max-width: 768px) {
+  .category {
+    width: 95vw;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+
+    .categoryHeading {
+      font-size: 5.2vw;
+      width: 95%;
+      border-bottom: 0.7px solid rgb(97, 97, 97);
+    }
+
+    .showMoreButton {
+      padding: 1.4vw 2vw;
+      font-size: 3vw;
+
+      &:hover {
+        border-bottom: 2px solid $primaryColor;
+        background-color: $secondaryColor;
+        color: white;
+      }
+    }
+  }
+
+  // .footerOverBGProductDetails {
+  //   height: 20vw;
+  //   position: absolute;
+  //   left: 00vw;
+  //   display: none;
+  //   top: 60vw;
+  //   z-index: 10;
+  // }
+  // .productDetailsFooter {
+  //   top: -14vw;
+  //   position: relative;
+  // }
+
+  // .productDetailsFooter .footerOverBG {
+  //   display: none;
+  // }
+}
