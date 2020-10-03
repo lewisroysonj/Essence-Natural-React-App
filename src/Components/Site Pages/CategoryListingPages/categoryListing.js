@@ -72,7 +72,7 @@ export default function CategoryListing(props) {
 
   return (
     <div className={styles.category}>
-      {products.addedToCart ? <div className={products.addedToCart === "in" ? "cartSuccessMessage" : "cartSuccessMessageOut"}>Product Added to Cart Successfully!</div> : null}
+      {products.addedToCart ? <div className={products.addedToCart === "in" || products.addedToCart === "noAccess" ? "cartSuccessMessage" : "cartSuccessMessageOut"}>{products.addedToCart === "noAccess" || products.addedToCart === "noAccessOut" ? "Please Sign in to Add Products to Cart" : "Product Added to Cart Successfully!"}</div> : null}
       {products.productLoading ? (
         <div className='fullScreenLoader'>
           <div></div>

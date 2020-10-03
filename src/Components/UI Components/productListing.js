@@ -46,20 +46,24 @@ export default function ProductList(props) {
       });
       setTimeout(() => props.startSpinner(false, "out"), 3000);
     } else {
-      const tempCart = [];
-      const cookieCart = Cookies.get("tempCart");
-      if (cookieCart) {
-        let tempProduct = cookieCart;
-        tempProduct = JSON.parse(tempProduct);
-        tempProduct.push(productData);
-        Cookies.set("tempCart", tempProduct);
-      } else {
-        Cookies.set("tempCart", tempCart);
-        let tempProduct = cookieCart;
-        tempProduct = JSON.parse(tempProduct);
-        tempProduct.push(productData);
-        Cookies.set("tempCart", tempProduct);
-      }
+      props.startSpinner(false, "noAccess");
+
+      setTimeout(() => props.startSpinner(false, "noAccessOut"), 3000);
+
+      // const tempCart = [];
+      // const cookieCart = Cookies.get("tempCart");
+      // if (cookieCart) {
+      //   let tempProduct = cookieCart;
+      //   tempProduct = JSON.parse(tempProduct);
+      //   tempProduct.push(productData);
+      //   Cookies.set("tempCart", tempProduct);
+      // } else {
+      //   Cookies.set("tempCart", tempCart);
+      //   let tempProduct = cookieCart;
+      //   tempProduct = JSON.parse(tempProduct);
+      //   tempProduct.push(productData);
+      //   Cookies.set("tempCart", tempProduct);
+      // }
     }
   }
   return (

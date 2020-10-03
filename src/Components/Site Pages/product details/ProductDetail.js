@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 import api from "../../../lib/api";
-
+import Cookies from "js-cookie";
 import Footer from "../../Footer/Footer";
 
 import "./ProductDetail.css";
@@ -46,10 +46,51 @@ export default function ProductDetail(props) {
       addedToCart: boolean2,
     });
   }
+  console.log(products);
+
+  async function addToCart(e) {
+    setLoadingSpinner(true, "out");
+
+    const token = Cookies.get("token");
+
+    const productID = e.target.name;
+    const productData = {
+      addItem: true,
+      id: productID.toString(),
+    };
+
+    if (token) {
+      const res = await api.post("/cart", productData);
+      console.log(res);
+
+      setLoadingSpinner(false, "in");
+
+      setTimeout(() => setLoadingSpinner(false, "out"), 2500);
+    } else {
+      setLoadingSpinner(false, "noAccess");
+      setTimeout(() => setLoadingSpinner(false, "noAccessOut"), 2500);
+
+      // const tempCart = [];
+      // const cookieCart = Cookies.get("tempCart");
+      // if (cookieCart) {
+      //   let tempProduct = cookieCart;
+      //   tempProduct = JSON.parse(tempProduct);
+      //   tempProduct.push(productData);
+      //   Cookies.set("tempCart", tempProduct);
+      // } else {
+      //   Cookies.set("tempCart", tempCart);
+      //   let tempProduct = cookieCart;
+      //   tempProduct = JSON.parse(tempProduct);
+      //   tempProduct.push(productData);
+      //   Cookies.set("tempCart", tempProduct);
+      // }
+    }
+  }
 
   return (
     <div className='productDetails' key={props.match.params.id}>
-      {products.addedToCart ? <div className={products.addedToCart === "in" ? "cartSuccessMessage" : "cartSuccessMessageOut"}>Product Added to Cart Successfully!</div> : null}
+      {products.addedToCart ? <div className={products.addedToCart === "in" || products.addedToCart === "noAccess" ? "cartSuccessMessage" : "cartSuccessMessageOut"}>{products.addedToCart === "noAccess" || products.addedToCart === "noAccessOut" ? "Please Sign in to Add Products to Cart" : "Product Added to Cart Successfully!"}</div> : null}
+
       {products.productLoading ? (
         <div className='fullScreenLoader'>
           <div></div>
@@ -98,7 +139,9 @@ export default function ProductDetail(props) {
                 </div>
                 <div className='buyAndCartButtons'>
                   <button>Buy Now</button>
-                  <button>Add to Cart</button>
+                  <button name={productDetails.data._id} onClick={addToCart}>
+                    Add to Cart
+                  </button>
                 </div>
                 <div className='availableOptions'>
                   <h2>Available Options:</h2>
@@ -134,12 +177,16 @@ export default function ProductDetail(props) {
               </div>
             </div>
           ) : null}
-          <div className={styles.similarProducts}>
-            <h1 className={styles.similarHeading}>Similar Products</h1>
-            <div className={styles.listingContainer}>
-              <ProductListing products={productDetails.similarProducts} startSpinner={setLoadingSpinner} />
+          {!products.productLoading ? (
+            <div className={styles.similarProducts}>
+              <h1 className={styles.similarHeading}>Similar Products</h1>
+              <div className={styles.listingContainer}>
+                <ProductListing products={productDetails.similarProducts} startSpinner={setLoadingSpinner} />
+              </div>
             </div>
-          </div>
+          ) : (
+            <div className={styles.similarProducts}></div>
+          )}
         </div>
       </div>
       <div className={styles.productDetailsFooter}>

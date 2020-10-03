@@ -17,6 +17,8 @@ export default function CartProduct(props) {
     id: "",
     user: "",
     loading: true,
+    loggedUser: true,
+    products: false,
   });
 
   // useEffect(() => {
@@ -34,14 +36,22 @@ export default function CartProduct(props) {
     }, {});
   }
 
-  function setProducts() {
-    setCartProduct({
-      products: props.products,
-    });
-  }
   useEffect(() => {
-    setProducts();
+    const loggedUser = props.isUser();
+    if (loggedUser) {
+      setCartProduct({
+        ...cartProduct,
+        loggedUser: true,
+        products: props.products,
+      });
+    } else {
+      setCartProduct({
+        ...cartProduct,
+        loggedUser: false,
+      });
+    }
   }, [props.products]);
+  console.log(props.products);
 
   useEffect(() => {
     if (cartProduct.products) {
@@ -63,15 +73,13 @@ export default function CartProduct(props) {
       }
       console.log(cartproductArray);
       setCartProduct({
+        ...cartProduct,
         items: cartproductArray,
       });
     }
   }, [cartProduct.products]);
 
-  const cartItemQty = useSelector((state) => state.cartItemQty);
-  const dispatch = useDispatch();
-  const popAlert = () => <div className='limitAlertStyle'>Max limit reached</div>;
-
+  console.log(props);
   async function handleIncrement(e) {
     props.startSpinner(true, "out");
     const productID = e.target.name;
@@ -112,18 +120,15 @@ export default function CartProduct(props) {
     }, 2000);
   }
 
+  console.log(cartProduct, "dsdsd");
+
+  console.log(cartProduct.loggedUser);
   return (
     <>
-      {cartProduct.items && cartProduct.items.length > 0 && props.userID ? (
+      {cartProduct.items && cartProduct.loggedUser && cartProduct.items.length > 0 ? (
         cartProduct.items.map((product) => {
           return (
             <div key={product._id} className={styles.productSection}>
-              {cartProduct.loading ? (
-                <div className='fullScreenLoader'>
-                  <div></div>
-                </div>
-              ) : null}
-              {console.log(product.finalPrice)}
               <a href={"/products/" + product._id}>
                 <div className={styles.imageContainer}>
                   <img className={styles.productImage} src={product.featuredImage} alt={product.name}></img>
@@ -154,24 +159,27 @@ export default function CartProduct(props) {
                     </button>
                   </div>
                 </div>
-                {cartItemQty === 10 ? popAlert() : null}
               </div>
             </div>
           );
         })
-      ) : props.userID && cartProduct.items && cartProduct.items.length === 0 && !props.loadingState.productLoading ? (
+      ) : cartProduct.loggedUser && cartProduct.items && cartProduct.items.length === 0 && !props.loadingState.productLoading ? (
         <div className={styles.noCartItems}>
           <h3>Your cart is empty!</h3>
+          {console.log("broooo", console.log(props.isUser))}
+
           <NavLink to='/all-products'>Explore All Products!</NavLink>
         </div>
-      ) : !props.userID && !cartProduct.loading && !props.loadingState.productLoading ? (
+      ) : !cartProduct.loggedUser && !props.loadingState.productLoading ? (
         <Redirect
           to={{
             pathname: "/signin",
             state: { message: "Please Sign in to add items to your cart" },
           }}
         />
-      ) : null}
+      ) : (
+        console.log("yooo", console.log(props.isUser))
+      )}
     </>
   );
 }
