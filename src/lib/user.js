@@ -22,3 +22,12 @@ export function logOut() {
   Cookies.remove("token");
   window.location.pathname = "/signin";
 }
+
+export function checkUser() {
+  let token = Cookies.get("token");
+  if (token) {
+    return true;
+  } else {
+    return false;
+  }
+}

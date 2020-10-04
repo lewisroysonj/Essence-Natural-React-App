@@ -21,21 +21,6 @@ export default function CartProduct(props) {
     products: false,
   });
 
-  // useEffect(() => {
-  //   setCartProduct({
-  //     ...cartProduct,
-  //     items: props.products,
-  //   });
-  // }, [props.products]);
-
-  function groupBy(array, key) {
-    return array.reduce((result, currentValue) => {
-      (result[currentValue[key]] = result[currentValue[key]] || []).push(currentValue);
-
-      return result;
-    }, {});
-  }
-
   useEffect(() => {
     const loggedUser = props.isUser();
     if (loggedUser) {
@@ -51,35 +36,7 @@ export default function CartProduct(props) {
       });
     }
   }, [props.products]);
-  console.log(props.products);
 
-  useEffect(() => {
-    if (cartProduct.products) {
-      const groupedProducts = groupBy(cartProduct.products, "name");
-      console.log(groupedProducts);
-      console.log(props.products);
-
-      const cartproductArray = [];
-
-      let igg = Object.keys(groupedProducts);
-
-      for (let i = 0; i < Object.keys(groupedProducts).length; i++) {
-        console.log("products", groupedProducts);
-        console.log(igg[i]);
-        console.log(groupedProducts[igg[i]].length);
-        groupedProducts[igg[i]][0].qty = groupedProducts[igg[i]].length;
-        cartproductArray.push(groupedProducts[igg[i]][0]);
-        console.log(groupedProducts[igg[i]].length);
-      }
-      console.log(cartproductArray);
-      setCartProduct({
-        ...cartProduct,
-        items: cartproductArray,
-      });
-    }
-  }, [cartProduct.products]);
-
-  console.log(props);
   async function handleIncrement(e) {
     props.startSpinner(true, "out");
     const productID = e.target.name;
@@ -89,10 +46,9 @@ export default function CartProduct(props) {
     };
 
     const res = await api.post(`/cart`, product);
-    console.log("uuu", res);
     props.startSpinner(false, "in");
 
-    props.changeProducts(res.data.cartItems);
+    props.changeProducts(res.data);
 
     setTimeout(() => {
       props.startSpinner(false, "out");
@@ -113,7 +69,7 @@ export default function CartProduct(props) {
 
     props.startSpinner(false, "inverse");
 
-    props.changeProducts(res.data.cartItems);
+    props.changeProducts(res.data);
 
     setTimeout(() => {
       props.startSpinner(false, "outverse");
@@ -152,8 +108,8 @@ export default function CartProduct(props) {
 
   return (
     <>
-      {cartProduct.items && cartProduct.loggedUser && cartProduct.items.length > 0 ? (
-        cartProduct.items.map((product) => {
+      {cartProduct.products && cartProduct.loggedUser && cartProduct.products.length > 0 ? (
+        cartProduct.products.map((product) => {
           return (
             <div key={product._id} className={styles.productSection}>
               <a href={"/products/" + product._id}>
@@ -190,7 +146,7 @@ export default function CartProduct(props) {
             </div>
           );
         })
-      ) : cartProduct.loggedUser && cartProduct.items && cartProduct.items.length === 0 && !props.loadingState.productLoading ? (
+      ) : cartProduct.loggedUser && cartProduct.products && cartProduct.products.length === 0 && !props.loadingState.productLoading ? (
         <div className={styles.noCartItems}>
           <h3>Your cart is empty!</h3>
           {console.log("broooo", console.log(props.isUser))}

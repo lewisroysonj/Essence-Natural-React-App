@@ -31,6 +31,8 @@
 
 $primaryColor: #6ed782;
 $secondaryColor: #3f3d56;
+$cardShadow: 0px 0px 4px #7f7f7f7a;
+$cardRadius: 0.8vw;
 
 .category {
   width: 100vw;
@@ -66,7 +68,7 @@ $secondaryColor: #3f3d56;
     position: relative;
     border-radius: 6vw 6vw 0rem 0rem;
     box-shadow: 0px -10px 13px rgba(0, 0, 0, 0.192);
-    grid-template-rows: auto auto 15vw;
+    grid-template-rows: auto auto auto auto;
     grid-template-columns: 45vw 30vw;
     width: 100%;
     justify-content: center;
@@ -76,7 +78,8 @@ $secondaryColor: #3f3d56;
     grid-template-areas:
       "shipping summary"
       "shipping items"
-      "payments items";
+      "payments items"
+      "null items";
 
     .shippingDetailsSection {
       grid-area: shipping;
@@ -86,6 +89,8 @@ $secondaryColor: #3f3d56;
       justify-content: center;
       align-items: center;
       padding: 2vw;
+      box-shadow: $cardShadow;
+      border-radius: $cardRadius;
 
       form {
         display: flex;
@@ -101,8 +106,8 @@ $secondaryColor: #3f3d56;
         input {
           margin-bottom: 1vw;
           border-radius: 0.4vw;
-          border: none;
-          background-color: #f8f8f8;
+          border: 1px solid rgb(201, 201, 201);
+          background-color: #f1f1f13f;
           padding: 0 0.7vw;
           font-size: 0.95vw;
         }
@@ -113,7 +118,7 @@ $secondaryColor: #3f3d56;
           padding-right: 1vw;
 
           input {
-            height: 2.5vw;
+            height: 3vw;
             width: 100%;
           }
         }
@@ -132,7 +137,58 @@ $secondaryColor: #3f3d56;
 
     .paymentOptionsSection {
       grid-area: payments;
-      background-color: violet;
+      border-radius: 0.8vw;
+      box-shadow: $cardShadow;
+      border-radius: $cardRadius;
+      background-color: #fff;
+      padding: 2vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h3 {
+        margin-bottom: 1vw;
+      }
+
+      div {
+        width: 95%;
+        display: flex;
+        justify-content: flex-start;
+        background-color: transparent;
+        border: 0.1vw solid rgb(209, 209, 209);
+        padding: 1vw;
+        margin-bottom: 1vw;
+        border-radius: 0.4vw;
+        font-size: 1vw;
+        align-items: center;
+
+        .checkmark {
+          width: 1.2vw;
+          height: 1.2vw;
+          background-color: #e7e7e7;
+          border-radius: 50%;
+          border: solid 0.1vw rgb(201, 201, 201);
+          margin-right: 1vw;
+        }
+
+        input:checked ~ .checkmark {
+          border: solid 0.4vw $primaryColor;
+        }
+
+        input:checked ~ label {
+          color: $primaryColor;
+        }
+
+        input {
+          margin-right: 0.7vw;
+          border-radius: 50%;
+          opacity: 0;
+          cursor: pointer;
+          position: absolute;
+          width: 100%;
+          padding: 1vw;
+        }
+      }
     }
 
     .OrderSummarySection {
@@ -142,7 +198,9 @@ $secondaryColor: #3f3d56;
       display: flex;
       flex-direction: column;
       width: 100%;
+      border-radius: 0.8vw;
       align-items: center;
+      box-shadow: $cardShadow;
 
       span {
         display: flex;
@@ -177,12 +235,78 @@ $secondaryColor: #3f3d56;
         color: white;
         font-weight: 700;
         font-size: 1.2vw;
+        box-shadow: $cardShadow;
+        cursor: pointer;
       }
     }
 
     .OrderDetailsSection {
       grid-area: items;
-      background-color: $primaryColor;
+      background-color: #fff;
+      box-shadow: $cardShadow;
+      border-radius: $cardRadius;
+      padding: 2vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .productSection {
+        display: flex;
+        width: 100%;
+
+        a {
+          width: 50%;
+          height: 10vw;
+
+          .imageContainer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            padding: 1vw 0vw;
+
+            img {
+              height: 90%;
+            }
+          }
+        }
+
+        .productListDetails {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          height: 10vw;
+          justify-content: flex-start;
+          padding-top: 1vw;
+
+          a {
+            height: 40%;
+            width: 90%;
+            font-size: 0.8vw;
+            text-decoration: none;
+            color: $secondaryColor;
+          }
+
+          .listPrice {
+            font-size: 1vw;
+            font-weight: 500;
+            margin-top: 0.5vw;
+
+            .listItemMRP {
+              font-size: 0.7vw;
+              font-weight: 300;
+              text-decoration: line-through;
+              margin-left: 0.4vw;
+            }
+            .qty {
+              font-weight: 700;
+              color: $secondaryColor;
+            }
+          }
+        }
+      }
     }
   }
 
