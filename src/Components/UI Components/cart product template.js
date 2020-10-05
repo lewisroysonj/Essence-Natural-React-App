@@ -20,6 +20,7 @@ export default function CartProduct(props) {
     loggedUser: true,
     products: false,
   });
+  console.log(props.isUser());
 
   useEffect(() => {
     const loggedUser = props.isUser();

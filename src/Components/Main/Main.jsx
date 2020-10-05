@@ -13,6 +13,7 @@ import CategoryPage from "../Site Pages/CategoryListingPages/categoryListing";
 import ProductDetail from "../Site Pages/product details/ProductDetail";
 import NotFound from "../Site Pages/Errors/notFound";
 import Checkout from "../Site Pages/checkout/checkout";
+import Status from "../Site Pages/checkout/status";
 
 export default class Main extends React.Component {
   render() {
@@ -27,6 +28,7 @@ export default class Main extends React.Component {
           <Route exact path='/signin' component={SignIn}></Route>
           <Route exact path='/search_results' component={SearchResults}></Route>
           <Route exact path='/checkout' component={Checkout}></Route>
+          <Route exact path='/checkout/status' component={Status}></Route>
           <Route exact path='/notFound' component={NotFound} status={404}></Route>
           <Route exact path='/products/:id' component={ProductDetail}></Route>
           <Route exact path='/:category' component={CategoryPage}></Route>

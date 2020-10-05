@@ -1,0 +1,69 @@
+/** @format */
+
+.statusContainer {
+  background-color: #f6f6f6;
+  border-radius: 3.5vw;
+  height: auto;
+  position: relative;
+  top: -5vw;
+  box-shadow: -1px -5px 8px 4px #00000036;
+  padding: 5vw;
+  width: 100vw;
+  padding-bottom: 25vw;
+
+  .statusCard {
+    display: grid;
+    grid-template-columns: auto auto 49%;
+    width: 90%;
+    background-color: #fff;
+    margin: 0 auto;
+    height: 30vw;
+    border-radius: 2vw;
+    align-items: center;
+    grid-template-rows: 1fr;
+    grid-template-areas: "image divider info";
+
+    img {
+      grid-area: image;
+      width: 80%;
+      place-self: center;
+    }
+
+    .divider {
+      grid-area: divider;
+      width: 2px;
+      background-color: rgba(180, 180, 180, 0.699);
+      height: 70%;
+    }
+
+    .statusInfo {
+      grid-area: info;
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      margin: 2vw;
+      height: 50%;
+      align-items: center;
+
+      grid-template-areas:
+        "number delivery"
+        "address null";
+
+      .infoSection {
+        width: 50%;
+        height: fit-content;
+        padding: 1vw;
+        width: fit-content;
+
+        h2 {
+          font-size: 1.6vw;
+          font-weight: 500;
+        }
+        h4 {
+          font-size: 1.2vw;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

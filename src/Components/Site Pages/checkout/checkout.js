@@ -10,6 +10,8 @@ import ProductList from "../../UI Components/productListing";
 import listImage from "../CategoryListingPages/Protein bar Image.png";
 import RatingsToStars from "../../Util Components/RatingToStars";
 import { checkUser } from "../../../lib/user";
+import { Redirect } from "react-router-dom";
+import Cookies from "js-cookie";
 const stripePromise = loadStripe("pk_test_51HY93TDKKKjugUT6tDBzGfL9LLcL8MoAg9x0wOVLa6kphoHy9FQsnEviQPZFVgC2SbiBpfhgVkliOmx0h4RR3a2W00GciVOIO3");
 
 const Message = ({ message }) => (
@@ -75,57 +77,50 @@ export default function Checkout(props) {
     };
   }, []);
   console.log(checkout);
-  useEffect(() => {
-    // Check to see if this is a redirect back from Checkout
-    const query = new URLSearchParams(window.location.search);
-
-    if (query.get("success")) {
-      setCheckout({ ...checkout, message: "Order placed! You will receive an email confirmation." });
-    }
-
-    if (query.get("canceled")) {
-      setCheckout({ ...checkout, message: "Order canceled -- continue to shop around and checkout when you're ready." });
-    }
-  }, []);
 
   const handleClick = async (event) => {
     const { firstName, lastName, phone, address, postalCode, city, state, country } = checkout.shippingInfo;
-    console.log(firstName);
     if (firstName && lastName && phone && address && postalCode && city && state && country && checkout.paymentMode) {
-      setCheckout({
-        ...checkout,
-        productLoading: true,
-      });
-      const stripe = await stripePromise;
+      if (checkout.items.length > 0) {
+        setCheckout({
+          ...checkout,
+          productLoading: true,
+        });
+        const stripe = await stripePromise;
 
-      const paymentData = {
-        items: checkout.items,
-        shippingInfo: checkout.shippingInfo,
-        paymentMode: checkout.paymentMode,
-      };
+        const paymentData = {
+          items: checkout.items,
+          shippingInfo: checkout.shippingInfo,
+          paymentMode: checkout.paymentMode,
+        };
 
-      const response = await api.post("/cart/checkout/create-session", paymentData);
+        setCheckout({
+          ...checkout,
+          paymentData: paymentData,
+        });
 
-      console.log(response);
+        sessionStorage.setItem("paymentData", JSON.stringify(paymentData));
+        const response = await api.post("/cart/checkout/create-session", paymentData);
 
-      const session = await response.data;
-
-      // When the customer clicks on the button, redirect them to Checkout.
-      const result = await stripe.redirectToCheckout({
-        sessionId: session.id,
-      });
-
-      if (!result.error) {
-        const response = await api.post("/cart/checkout/placeorder", paymentData);
+        console.log(JSON.parse(sessionStorage.getItem("paymentData")));
         console.log(response);
-      }
 
-      console.log(result);
+        const session = await response.data;
 
-      if (result.error) {
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer
-        // using `result.error.message`.
+        // When the customer clicks on the button, redirect them to Checkout.
+        const result = await stripe.redirectToCheckout({
+          sessionId: session.id,
+        });
+
+        console.log(result);
+
+        if (result.error) {
+          //   // If `redirectToCheckout` fails due to a browser or network
+          //   // error, display the localized error message to your customer
+          //   // using `result.error.message`.
+        }
+      } else {
+        alert("Please Add Items to cart to continue with the checkout process!");
       }
     } else {
       alert("Please fill all required(*) fields");
@@ -144,9 +139,7 @@ export default function Checkout(props) {
   }
   console.log(checkout);
 
-  return checkout.message ? (
-    <Message message={checkout.message} />
-  ) : (
+  return (
     <>
       {checkout.productLoading ? (
         <div className='fullScreenLoader'>

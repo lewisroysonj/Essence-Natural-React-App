@@ -45,12 +45,17 @@ export default function MyCart() {
       });
     } catch (err) {
       console.error("Get User and Cart Items Error:", err);
+      setProducts({
+        ...products,
+        productLoading: false,
+      });
     }
   }
 
   useEffect(() => {
     let mounted = false;
     const user = checkUser();
+    console.log(user);
 
     if (!mounted) {
       if (user) {

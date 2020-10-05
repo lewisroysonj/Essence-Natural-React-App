@@ -25,6 +25,7 @@ export function logOut() {
 
 export function checkUser() {
   let token = Cookies.get("token");
+  console.log(token);
   if (token) {
     return true;
   } else {
