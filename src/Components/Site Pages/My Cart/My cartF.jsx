@@ -128,9 +128,11 @@ export default function MyCart() {
             <span className='totalCounter'>
               Cart Total: <strong>${cart.cartTotal}</strong>
             </span>
-            <button className='checkoutButton'>
-              <a href='/checkout'>CheckOut</a>
-            </button>
+            {cart.cartQuantity < 1 ? null : (
+              <button className='checkoutButton'>
+                <a href='/checkout'>CheckOut</a>
+              </button>
+            )}
           </div>
         </div>
 

@@ -66,6 +66,15 @@ export default function ProductList(props) {
       // }
     }
   }
+
+  async function buyNow(e) {
+    let productID = e.target.name;
+    const response = await api.post("/cart/buynow", { id: productID });
+    console.log(productID);
+    console.log(response);
+    sessionStorage.setItem("buynow", JSON.stringify(response.data.product));
+    window.location.pathname = "/checkout";
+  }
   return (
     <>
       {props.products
@@ -83,14 +92,16 @@ export default function ProductList(props) {
                   </a>
                   <div className={styles.starRatings}>
                     <RatingsToStars rating={product.ratings} />
-                    <p id='ratingCounter'>{!product.ratedCustomers.id ? 0 : product.ratedCustomers.length} ratings</p>
+                    <p id='ratingCounter'>{product.ratedCustomers.length} ratings</p>
                   </div>
                   <div className={styles.listPrice}>
                     <span className={styles.listItemPrice}>${product.finalPrice}</span>
                     <span className={styles.listItemMRP}>${product.MRP}</span>
                   </div>
                   <div className={styles.purchaseOptions}>
-                    <button className={styles.buyNow}>Buy Now</button>
+                    <button className={styles.buyNow} name={product._id} onClick={buyNow}>
+                      Buy Now
+                    </button>
                     <button className={styles.addToCart} name={product._id} onClick={addToCart}>
                       Add to Cart
                     </button>

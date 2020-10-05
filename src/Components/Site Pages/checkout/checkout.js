@@ -34,14 +34,34 @@ export default function Checkout(props) {
         productLoading: true,
       });
 
-      const getCheckout = await api.get("/cart/checkout");
+      const sessionProduct = sessionStorage.getItem("buynow");
 
-      setCheckout({
-        ...checkout,
-        items: getCheckout.data.items,
-        summary: getCheckout.data.summary,
-        productLoading: false,
-      });
+      if (sessionProduct) {
+        const parsedSesssionProducts = await JSON.parse(sessionStorage.getItem("buynow"));
+        const taxes = parsedSesssionProducts.finalPrice * (10 / 100);
+        const summary = {
+          items: parsedSesssionProducts.finalPrice,
+          shipping: 0,
+          taxes: taxes,
+          total: parsedSesssionProducts.finalPrice + taxes + 0,
+        };
+        console.log(summary);
+        setCheckout({
+          ...checkout,
+          items: [parsedSesssionProducts],
+          summary: summary,
+          productLoading: false,
+        });
+        sessionStorage.removeItem("buynow");
+      } else {
+        const getCheckout = await api.get("/cart/checkout");
+        setCheckout({
+          ...checkout,
+          items: getCheckout.data.items,
+          summary: getCheckout.data.summary,
+          productLoading: false,
+        });
+      }
     } catch (err) {
       console.error("Get Checkout Error:", err);
       setCheckout({
@@ -99,8 +119,10 @@ export default function Checkout(props) {
           paymentData: paymentData,
         });
 
-        sessionStorage.setItem("paymentData", JSON.stringify(paymentData));
         const response = await api.post("/cart/checkout/create-session", paymentData);
+
+        sessionStorage.setItem("paymentData", JSON.stringify(paymentData));
+        sessionStorage.setItem("session", "active");
 
         console.log(JSON.parse(sessionStorage.getItem("paymentData")));
         console.log(response);
@@ -214,11 +236,11 @@ export default function Checkout(props) {
                   <span className={styles.checkmark}></span>
                   <label htmlFor='card'>Credit / Debit Card</label>
                 </div>
-                <div>
+                {/* <div>
                   <input name='payment' value='netbanking' onChange={changeHandler} type='radio' required></input>
                   <span className={styles.checkmark}></span>
                   <label htmlFor='netbanking'>Netbanking</label>
-                </div>
+                </div> */}
               </section>
               <section className={styles.OrderSummarySection}>
                 <h3>Order Summary</h3>
@@ -257,7 +279,7 @@ export default function Checkout(props) {
                           <span className={styles.listItemMRP}>${item.MRP}</span>
                         </div>
                         <div className={styles.listPrice}>
-                          <span className={styles.qty}>Qty: {item.qty}</span>
+                          <span className={styles.qty}>Qty: {item.qty ? item.qty : 1}</span>
                         </div>
                       </div>
                     </div>

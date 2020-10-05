@@ -34,7 +34,7 @@ export default function ProductDetail(props) {
       productLoading: false,
     });
   }
-
+  console.log(productDetails);
   useEffect(() => {
     getProductData(props.match.params.id);
   }, []);
@@ -87,6 +87,15 @@ export default function ProductDetail(props) {
     }
   }
 
+  async function buyNow(e) {
+    let productID = e.target.name;
+    const response = await api.post("/cart/buynow", { id: productID });
+    console.log(productID);
+    console.log(response);
+    sessionStorage.setItem("buynow", JSON.stringify(response.data.product));
+    window.location.pathname = "/checkout";
+  }
+
   return (
     <div className='productDetails' key={props.match.params.id}>
       {products.addedToCart ? <div className={products.addedToCart === "in" || products.addedToCart === "noAccess" ? "cartSuccessMessage" : "cartSuccessMessageOut"}>{products.addedToCart === "noAccess" || products.addedToCart === "noAccessOut" ? "Please Sign in to Add Products to Cart" : "Product Added to Cart Successfully!"}</div> : null}
@@ -134,11 +143,13 @@ export default function ProductDetail(props) {
                     <span className='ratingStars'>
                       <RatingsToStars rating={productDetails.data.ratings} />
                     </span>
-                    <span className='ratingCounter'>&nbsp;{productDetails.data.ratedCustomers[0] && productDetails.data.ratedCustomers[0].id === null ? 0 : productDetails.data.ratedCustomers.length} ratings</span>
+                    <span className='ratingCounter'>&nbsp;{productDetails.data.ratedCustomers.length} ratings</span>
                   </div>
                 </div>
                 <div className='buyAndCartButtons'>
-                  <button>Buy Now</button>
+                  <button name={productDetails.data._id} onClick={buyNow}>
+                    Buy Now
+                  </button>
                   <button name={productDetails.data._id} onClick={addToCart}>
                     Add to Cart
                   </button>

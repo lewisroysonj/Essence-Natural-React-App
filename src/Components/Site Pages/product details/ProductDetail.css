@@ -147,6 +147,7 @@
   color: white;
   font-weight: 700;
   font-family: POppins, "Sans-serif";
+  cursor: pointer;
 }
 
 .buyAndCartButtons :nth-child(2) {

@@ -2,46 +2,57 @@
 
 import React, { useEffect, useState } from "react";
 import api from "../../../lib/api";
-import Cookies from "js-cookie";
 
 import styles from "./checkout.module.scss";
 import statusStyles from "./status.module.scss";
 import statusIllustrator from "./checkout Illustration.svg";
-import checkIcon from "./checkIcon.svg";
 import Footer from "../../Footer/Footer";
 
 const SuccessMessage = () => {
   const [success, setSuccess] = useState({
-    success: true,
+    success: false,
+    loading: true,
   });
   async function placeOrder() {
+    setSuccess({
+      ...success,
+      loading: true,
+    });
     const paymentData = sessionStorage.getItem("paymentData");
+    const session = sessionStorage.getItem("session");
     console.log(paymentData);
-    if (paymentData) {
+    if (paymentData && session) {
       console.log(JSON.parse(paymentData));
       const response = await api.post("/cart/checkout/placeorder", JSON.parse(paymentData));
       setSuccess({
         success: true,
         response: response.data,
         checkoutData: JSON.parse(paymentData),
+        loading: false,
       });
-      console.log(response);
       sessionStorage.removeItem("paymentData");
+      sessionStorage.removeItem("session");
     } else {
       setSuccess({
-        success: true,
+        ...success,
+        success: false,
+        loading: true,
       });
       alert("Session Expired");
       window.location.pathname = "/";
     }
   }
-  console.log(success);
   useEffect(() => {
     placeOrder();
   }, []);
   return (
     <>
-      {success.response && success.success ? (
+      {success.loading ? (
+        <div className='fullScreenLoader'>
+          <div></div>
+        </div>
+      ) : null}
+      {success.response && success.success && !success.loading ? (
         <div className={styles.category}>
           <h1 className={styles.categoryHeading}>
             Order<span className={styles.categoryHeadingSpan}> Placed!</span>
@@ -82,12 +93,71 @@ const SuccessMessage = () => {
 };
 
 const FailureMessage = () => {
-  return <div></div>;
+  const [failure, setFailure] = useState({
+    failure: false,
+    loading: true,
+  });
+
+  async function removeBuyNow() {
+    await api.get("/cart/checkout/removebuynow");
+  }
+
+  useEffect(() => {
+    const session = sessionStorage.getItem("session");
+    if (session) {
+      removeBuyNow();
+
+      setFailure({
+        ...failure,
+        loading: false,
+        failure: true,
+      });
+      sessionStorage.removeItem("session");
+      sessionStorage.removeItem("paymentData");
+    } else {
+      alert("Session Expired!");
+      window.location.pathname = "/cart";
+    }
+  }, []);
+  return (
+    <>
+      {failure.loading ? (
+        <div className='fullScreenLoader'>
+          <div></div>
+        </div>
+      ) : null}
+      {failure.failure && !failure.loading ? (
+        <div className={styles.category}>
+          <h1 className={styles.categoryHeading}>
+            Order<span className={styles.categoryHeadingSpan}> Failed!</span>
+          </h1>
+          <section className={statusStyles.statusContainer}>
+            <div className={statusStyles.failureMessage}>
+              <h2>Sorry! Something went wrong while placing your order</h2>
+              <h4>If money was deducted, it will be returned to your account within 4-5 working days</h4>
+
+              <div className={statusStyles.failureLinks}>
+                <a href='/checkout'>Try ordering again</a>
+                <a href='/all-products'>Explore more Products!</a>
+              </div>
+            </div>
+          </section>
+        </div>
+      ) : (
+        <div className={styles.category}>
+          <h1 className={styles.categoryHeading}>
+            status<span className={styles.categoryHeadingSpan}> pending</span>
+          </h1>
+          <section className={statusStyles.statusContainer}></section>
+        </div>
+      )}
+    </>
+  );
 };
 
 export default function Status() {
   const [status, setStatus] = useState({
-    error: false,
+    error: "null",
   });
 
   useEffect(() => {
@@ -97,13 +167,13 @@ export default function Status() {
 
       if (query.get("success")) {
         setStatus({
-          error: false,
+          message: "success",
         });
       }
 
       if (query.get("canceled")) {
         setStatus({
-          error: true,
+          message: "canceled",
         });
       }
     }
@@ -114,7 +184,7 @@ export default function Status() {
 
   return (
     <>
-      {!status.error ? <SuccessMessage /> : <FailureMessage />}
+      {status.message === "success" ? <SuccessMessage /> : status.message === "canceled" ? <FailureMessage /> : null}
       <div className={styles.productListFooter}>
         <Footer />
       </div>

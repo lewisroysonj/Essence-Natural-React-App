@@ -1,5 +1,7 @@
 /** @format */
 
+$primaryColor: #6ed782;
+$secondaryColor: #3f3d56;
 .statusContainer {
   background-color: #f6f6f6;
   border-radius: 3.5vw;
@@ -13,7 +15,7 @@
 
   .statusCard {
     display: grid;
-    grid-template-columns: auto auto 49%;
+    grid-template-columns: auto auto auto;
     width: 90%;
     background-color: #fff;
     margin: 0 auto;
@@ -41,7 +43,7 @@
       display: grid;
       grid-template-columns: auto auto;
       grid-template-rows: auto auto;
-      margin: 2vw;
+      margin-right: 4vw;
       height: 50%;
       align-items: center;
 
@@ -63,6 +65,45 @@
           font-size: 1.2vw;
           font-weight: 300;
         }
+      }
+    }
+  }
+
+  .failureMessage {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    h2 {
+      font-size: 1.8vw;
+      color: rgb(255, 103, 32);
+    }
+
+    h4 {
+      font-size: 1.2vw;
+      margin-top: 1vw;
+      font-weight: 500;
+    }
+
+    .failureLinks {
+      margin-top: 2.5vw;
+      a {
+        font-size: 1.2vw;
+        background-color: $primaryColor;
+        width: fit-content;
+        padding: 1vw;
+        font-weight: 700;
+        border-radius: 0.5vw;
+        cursor: pointer;
+        text-decoration: none;
+        color: $secondaryColor;
+      }
+      & :nth-child(2) {
+        background-color: $secondaryColor;
+        color: white;
+        margin-left: 1vw;
       }
     }
   }

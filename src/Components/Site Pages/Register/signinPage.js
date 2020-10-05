@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Redirect } from "react-router-dom";
 import Cookies from "js-cookie";
 
 import "./register.css";
@@ -11,7 +11,7 @@ import WhiteBG from "./RegisterPage bg.svg";
 import RegisterArt from "./registerArt.svg";
 import MobileBG from "./mobile page bg.svg";
 import api from "../../../lib/api";
-import { loadUserFromCookies } from "../../../lib/user";
+import { checkUser, loadUserFromCookies } from "../../../lib/user";
 
 export default function SignIn(props) {
   const [currentUser, setCurrentUser] = useState({
@@ -26,13 +26,16 @@ export default function SignIn(props) {
 
   useEffect(() => {
     let mounted = true;
+    let user = checkUser();
 
-    if (mounted && props.location.state) {
+    if (!user && mounted && props.location.state) {
       setCurrentUser({
         ...currentUser,
         email: props.location.state.user,
         message: props.location.state.message,
       });
+    } else if (user) {
+      window.location.pathname="/"
     }
     return () => {
       mounted = false;

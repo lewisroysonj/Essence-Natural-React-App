@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, Redirect } from "react-router-dom";
 
 import api from "../../../lib/api";
@@ -12,6 +12,7 @@ import alertStyles from "../../UI Components/NewsletterForm.module.scss";
 import WhiteBG from "./RegisterPage bg.svg";
 import RegisterArt from "./registerArt.svg";
 import MobileBG from "./mobile page bg.svg";
+import { checkUser } from "../../../lib/user";
 
 export default function SignUp() {
   const [newUser, setNewUser] = useState({
@@ -21,10 +22,30 @@ export default function SignUp() {
     repeatPassword: "",
     error: false,
     message: null,
-    loading: false,
+    loading: true,
   });
 
   console.log(newUser);
+
+  useEffect(() => {
+    setNewUser({
+      ...newUser,
+      loading: true,
+    });
+    let mounted = false;
+    let user = checkUser();
+    if (!mounted && !user) {
+      setNewUser({
+        ...newUser,
+        loading: false,
+      });
+    } else if (user) {
+      window.location.pathname = "/";
+    }
+    return () => {
+      mounted = true;
+    };
+  }, []);
 
   function handleChange(e) {
     const target = e.target;
