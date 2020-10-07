@@ -3,8 +3,6 @@
 import React, { useEffect, useState } from "react";
 
 import Footer from "../../Footer/Footer";
-import FooterOverBG from "./footerOverBG.svg";
-
 import ProductListing from "../../UI Components/productListing";
 
 import "./SearchResults.css";
@@ -37,7 +35,6 @@ export default function SearchResults(props) {
       });
     }
   }, [props.location.state]);
-  console.log(search);
 
   function setLoadingSpinner(boolean, boolean2) {
     setProducts({
@@ -59,10 +56,8 @@ export default function SearchResults(props) {
         Search <span className={styles.searchResultsHeadingSpan}>Results</span>
       </h1>
       <div className={styles.searchResultsContainer}>
-        {/* <div className={styles.searchResultsContent}> */}
         <p className={styles.searchKeyword}>for "{search.keyword}"</p>
         <div className={styles.listingContainer}>{search.results && search.results.length > 0 ? <ProductListing products={search.results} startSpinner={setLoadingSpinner} /> : <h3 className={styles.noResultText}>Sorry! Couldn't find any products matching {search.keyword}.</h3>}</div>
-        {/* </div> */}
       </div>
       <div className={styles.productListFooter}>
         <Footer />

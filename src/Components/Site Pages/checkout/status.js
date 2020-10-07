@@ -20,9 +20,7 @@ const SuccessMessage = () => {
     });
     const paymentData = sessionStorage.getItem("paymentData");
     const session = sessionStorage.getItem("session");
-    console.log(paymentData);
     if (paymentData && session) {
-      console.log(JSON.parse(paymentData));
       const response = await api.post("/cart/checkout/placeorder", JSON.parse(paymentData));
       setSuccess({
         success: true,

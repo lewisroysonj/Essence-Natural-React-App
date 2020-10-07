@@ -82,6 +82,11 @@
   color: black;
 }
 
+.desktopNav .header_icons img {
+  margin-top: 0.5vw;
+  height: 1.5vw;
+}
+
 @media only screen and (max-width: 768px) {
   .mobileNav {
     display: flex;
@@ -199,12 +204,16 @@
     right: 1vw;
     margin-right: 4vw;
     position: absolute;
+    z-index: 10;
   }
 
   .header_icons li {
-    color: white;
-    font-size: 6vw;
     list-style: none;
+  }
+
+  .header_icons img {
+    height: 6vw;
+    margin-top: 1vw;
   }
 
   .mobileNav .searchBar {
@@ -234,5 +243,12 @@
     background-color: #6ed782;
     color: white;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .searchBar button img {
+    height: 5.5vw;
   }
 }

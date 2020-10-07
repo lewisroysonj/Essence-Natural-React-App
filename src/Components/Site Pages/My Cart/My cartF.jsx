@@ -1,14 +1,13 @@
 /** @format */
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./My cart.css";
+
 import Footer from "../../Footer/Footer";
 import CartProduct from "../../UI Components/cart product template.js";
+
 import api from "../../../lib/api";
-import { useEffect } from "react";
-import Cookies from "js-cookie";
-import { NavLink, Redirect } from "react-router-dom";
 import { checkUser } from "../../../lib/user";
 
 export default function MyCart() {
@@ -31,6 +30,7 @@ export default function MyCart() {
         productLoading: true,
         calledBy: "loadProductStartUp",
       });
+
       const user = await api.get("/cart");
 
       setCart({
@@ -55,7 +55,6 @@ export default function MyCart() {
   useEffect(() => {
     let mounted = false;
     const user = checkUser();
-    console.log(user);
 
     if (!mounted) {
       if (user) {

@@ -1,8 +1,11 @@
 /** @format */
 
 import React, { useState } from "react";
-import { NavLink, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
+
 import api from "../../lib/api";
+
+import searchIcon from "./Search Icon.svg";
 
 import "./SearchPopup.css";
 
@@ -29,7 +32,6 @@ export default function SearchPopup(props) {
       loading: true,
     });
     const searchResults = await api.get(`/search/${state.value}`);
-    console.log(searchResults);
     setSearchResults({
       results: searchResults.data.results || true,
       keyword: searchResults.data.keyword,
@@ -44,7 +46,7 @@ export default function SearchPopup(props) {
           <form className='searchBar' onSubmit={handleSearch} action='/search_results'>
             <input required id='fullName' type='text' placeholder='Search' value={state.value} onChange={handleChange} />
             <button className='searchSubmit' type='submit'>
-              <i class='fas fa-search'></i>
+              <img src={searchIcon} alt='search icon'></img>
             </button>
           </form>
 
@@ -63,7 +65,7 @@ export default function SearchPopup(props) {
             <form className='searchBar' onSubmit={handleSearch} action='/search_results'>
               <input required id='fullName' type='text' placeholder='Search' value={state.value} onChange={handleChange} />
               <button className='searchSubmit' type='submit'>
-                <i class='fas fa-search'></i>
+                <img src={searchIcon} alt='search icon'></img>
               </button>
             </form>
 

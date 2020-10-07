@@ -1,15 +1,11 @@
 /** @format */
 
-import Axios from "axios";
-import { browserRouter } from "react-router";
-
-import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
-import api from "../../lib/api";
+import React, { useState } from "react";
 import Cookies from "js-cookie";
 
+import api from "../../lib/api";
+
 import RatingsToStars from "../Util Components/RatingToStars";
-import BodyLotionImage from "./Assets/Essence body lotion.png";
 
 import styles from "./ProductList.module.scss";
 
@@ -36,7 +32,6 @@ export default function ProductList(props) {
 
     if (token) {
       const res = await api.post("/cart", productData);
-      console.log(res);
 
       props.startSpinner(false, "in");
       setProduct({
@@ -70,8 +65,6 @@ export default function ProductList(props) {
   async function buyNow(e) {
     let productID = e.target.name;
     const response = await api.post("/cart/buynow", { id: productID });
-    console.log(productID);
-    console.log(response);
     sessionStorage.setItem("buynow", JSON.stringify(response.data.product));
     window.location.pathname = "/checkout";
   }

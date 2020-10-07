@@ -5,10 +5,10 @@ import React, { useState } from "react";
 import api from "../../../lib/api";
 
 import "./Contact.css";
+
 import Footer from "../../Footer/Footer";
 
 import BG from "./contact imgs/contact bg.svg";
-// import contactCurve from "./contact imgs/contactCurve.svg";
 import ContactArt from "./contact imgs/contact art.svg";
 import MobileBG from "./contact imgs/mobile contact bg.svg";
 
@@ -40,8 +40,6 @@ export default function Contact() {
       ...contact,
       loading: true,
     });
-    console.log("clicked");
-    // alert("Thank you for contacting us, we will get back to you soon!");
     const response = await api.post("/contact", contact);
     setContact({
       ...contact,

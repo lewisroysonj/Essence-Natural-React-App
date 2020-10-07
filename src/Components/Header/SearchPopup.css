@@ -66,6 +66,13 @@
   background-color: #6ed782;
   color: white;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchBar button img {
+  height: 1.6vw;
 }
 
 .searchClose {

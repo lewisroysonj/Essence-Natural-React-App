@@ -2,25 +2,17 @@
 
 import React, { useState, useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
-import styles from "./checkout.module.scss";
-import productStyles from "../../UI Components/ProductList.module.scss";
+
 import api from "../../../lib/api";
-import Footer from "../../Footer/Footer";
-import ProductList from "../../UI Components/productListing";
-import listImage from "../CategoryListingPages/Protein bar Image.png";
-import RatingsToStars from "../../Util Components/RatingToStars";
 import { checkUser } from "../../../lib/user";
-import { Redirect } from "react-router-dom";
-import Cookies from "js-cookie";
+
+import Footer from "../../Footer/Footer";
+
+import styles from "./checkout.module.scss";
+
 const stripePromise = loadStripe("pk_test_51HY93TDKKKjugUT6tDBzGfL9LLcL8MoAg9x0wOVLa6kphoHy9FQsnEviQPZFVgC2SbiBpfhgVkliOmx0h4RR3a2W00GciVOIO3");
 
-const Message = ({ message }) => (
-  <section>
-    <p>{message}</p>
-  </section>
-);
-
-export default function Checkout(props) {
+export default function Checkout() {
   const [checkout, setCheckout] = useState({
     message: "",
     productLoading: true,
@@ -45,7 +37,6 @@ export default function Checkout(props) {
           taxes: taxes,
           total: parsedSesssionProducts.finalPrice + taxes + 0,
         };
-        console.log(summary);
         setCheckout({
           ...checkout,
           items: [parsedSesssionProducts],
@@ -74,7 +65,6 @@ export default function Checkout(props) {
   useEffect(() => {
     let mounted = false;
     const user = checkUser();
-    console.log(user);
 
     if (!mounted) {
       if (user) {
@@ -96,16 +86,11 @@ export default function Checkout(props) {
       mounted = true;
     };
   }, []);
-  console.log(checkout);
 
-  const handleClick = async (event) => {
+  const handleClick = async () => {
     const { firstName, lastName, phone, address, postalCode, city, state, country } = checkout.shippingInfo;
     if (firstName && lastName && phone && address && postalCode && city && state && country && checkout.paymentMode) {
       if (checkout.items.length > 0) {
-        setCheckout({
-          ...checkout,
-          productLoading: true,
-        });
         const stripe = await stripePromise;
 
         const paymentData = {
@@ -116,6 +101,7 @@ export default function Checkout(props) {
 
         setCheckout({
           ...checkout,
+          productLoading: true,
           paymentData: paymentData,
         });
 
@@ -124,22 +110,15 @@ export default function Checkout(props) {
         sessionStorage.setItem("paymentData", JSON.stringify(paymentData));
         sessionStorage.setItem("session", "active");
 
-        console.log(JSON.parse(sessionStorage.getItem("paymentData")));
-        console.log(response);
-
         const session = await response.data;
 
-        // When the customer clicks on the button, redirect them to Checkout.
         const result = await stripe.redirectToCheckout({
           sessionId: session.id,
         });
 
-        console.log(result);
-
         if (result.error) {
-          //   // If `redirectToCheckout` fails due to a browser or network
-          //   // error, display the localized error message to your customer
-          //   // using `result.error.message`.
+          sessionStorage.setItem("session", true);
+          window.location.pathname = "/checkout/status?canceled=true";
         }
       } else {
         alert("Please Add Items to cart to continue with the checkout process!");
@@ -159,7 +138,6 @@ export default function Checkout(props) {
       paymentMode: e.target.name === "payment" ? e.target.value : null,
     });
   }
-  console.log(checkout);
 
   return (
     <>

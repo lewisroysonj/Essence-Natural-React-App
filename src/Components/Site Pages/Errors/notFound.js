@@ -10,7 +10,7 @@ export default function NotFound() {
     try {
       const res = api.get("/404");
     } catch (err) {
-      throw err;
+      console.error("notFoundError :", err);
     }
   }
 

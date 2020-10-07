@@ -1,7 +1,9 @@
 /** @format */
 
 import React from "react";
+
 import "./Home.css";
+
 import Footer from "../../Footer/Footer";
 
 import HeroArt1 from "./hero page art.svg";
@@ -19,11 +21,9 @@ import HomeWhite4 from "./HomeWhite4.svg";
 import DottedCurveDivider from "./Dotted curve divider.svg";
 import newsletterBG from "./newsletter bg.svg";
 import newsletterBGMobile from "./Subscribe form illustration mobile.svg";
-import custReviewsBody from "./custReviews body.svg";
 import BodyLotionImage from "./Essence body lotion.png";
 import FacewashImage from "./essence facewash image.png";
 import ProteinBarImage from "./Protein bar Image.png";
-import { NavLink } from "react-router-dom";
 import NewsletterSignUpForm from "../../UI Components/NewsletterForm";
 
 export default function Home() {

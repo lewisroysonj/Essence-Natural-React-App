@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useEffect, useState } from "react";
-import { NavLink, Redirect } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Cookies from "js-cookie";
 
 import "./register.css";
@@ -11,7 +11,7 @@ import WhiteBG from "./RegisterPage bg.svg";
 import RegisterArt from "./registerArt.svg";
 import MobileBG from "./mobile page bg.svg";
 import api from "../../../lib/api";
-import { checkUser, loadUserFromCookies } from "../../../lib/user";
+import { checkUser } from "../../../lib/user";
 
 export default function SignIn(props) {
   const [currentUser, setCurrentUser] = useState({
@@ -98,7 +98,7 @@ export default function SignIn(props) {
             <input name='password' id='password' type='password' value={password} onChange={handleChange} required />
             <input id='signupSubmit' type='submit' value='Submit'></input>
           </form>
-          <div className='OAuth'>
+          {/* <div className='OAuth'>
             <p>Sign Up or Login with</p>
             <div className='loginIcons'>
               <h3>
@@ -108,7 +108,7 @@ export default function SignIn(props) {
                 <i class='fab fa-facebook'></i>
               </h3>
             </div>
-          </div>
+          </div> */}
           <p className='signupAgreement'>
             By <span className='SnUpAgmtHL'>Signing in</span> I agree the <strong>Privacy Policy</strong> and <strong>Terms and Conditions</strong> of <span className='agreementHL'>Essence</span>
           </p>

@@ -34,7 +34,6 @@ export default function ProductDetail(props) {
       productLoading: false,
     });
   }
-  console.log(productDetails);
   useEffect(() => {
     getProductData(props.match.params.id);
   }, []);
@@ -46,7 +45,6 @@ export default function ProductDetail(props) {
       addedToCart: boolean2,
     });
   }
-  console.log(products);
 
   async function addToCart(e) {
     setLoadingSpinner(true, "out");
@@ -90,8 +88,6 @@ export default function ProductDetail(props) {
   async function buyNow(e) {
     let productID = e.target.name;
     const response = await api.post("/cart/buynow", { id: productID });
-    console.log(productID);
-    console.log(response);
     sessionStorage.setItem("buynow", JSON.stringify(response.data.product));
     window.location.pathname = "/checkout";
   }

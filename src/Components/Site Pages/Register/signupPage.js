@@ -25,8 +25,6 @@ export default function SignUp() {
     loading: true,
   });
 
-  console.log(newUser);
-
   useEffect(() => {
     setNewUser({
       ...newUser,
@@ -65,16 +63,20 @@ export default function SignUp() {
       message: null,
     });
 
-    const postUser = await api.post("/auth/register", { ...newUser });
+    try {
+      const postUser = await api.post("/auth/register", { ...newUser });
 
-    setNewUser({
-      ...newUser,
-      resError: postUser.data.error,
-      message: postUser.data.message,
-      resUserEmail: postUser.data.userEmail,
-      loading: false,
-      error: false,
-    });
+      setNewUser({
+        ...newUser,
+        resError: postUser.data.error,
+        message: postUser.data.message,
+        resUserEmail: postUser.data.userEmail,
+        loading: false,
+        error: false,
+      });
+    } catch (error) {
+      console.error("Sign up Error :", error);
+    }
   }
 
   function validateForm(e) {
@@ -109,17 +111,6 @@ export default function SignUp() {
             <input name='newPassword' id='newPassword' autoComplete='new-password' minLength='8' maxLength='1000' type='password' value={newPassword} onChange={handleChange} />
             <label htmlFor='repeatPassword'>Repeat Password*</label>
             <input name='repeatPassword' id='repeatPassword' autoComplete='new-password' type='password' required value={repeatPassword} onChange={handleChange} />
-            {/* {newUser.error ? (
-              <div className='passwordUnmatchAlert'>
-                <li className='alertpointer'>
-                  <i class='fas fa-caret-up'></i>
-                </li>
-                <p>
-                  <i class='fas fa-exclamation-circle'></i>
-                </p>
-                <p>{newUser.message}</p>
-              </div>
-            ) : null} */}
 
             {newUser.resUserEmail ? (
               <Redirect
@@ -134,7 +125,7 @@ export default function SignUp() {
               Sign Up
             </button>
           </form>
-          <div className='OAuth'>
+          {/* <div className='OAuth'>
             <p>Sign Up or Login with</p>
             <div className='loginIcons'>
               <h3>
@@ -144,7 +135,7 @@ export default function SignUp() {
                 <i className='fab fa-facebook'></i>
               </h3>
             </div>
-          </div>
+          </div> */}
           <p className='signupAgreement'>
             By <span className='SnUpAgmtHL'>Signing up</span> I agree the <strong>Privacy Policy</strong> and <strong>Terms and Conditions</strong> of <span className='agreementHL'>Essence</span>
           </p>

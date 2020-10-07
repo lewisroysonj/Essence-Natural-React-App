@@ -3,10 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, Redirect } from "react-router-dom";
 
-import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement, maxStop } from "../../actions";
 import styles from "./ProductList.module.scss";
-import productImage from "./Assets/Essence body lotion.png";
 import RatingsToStars from "../Util Components/RatingToStars";
 import api from "../../lib/api";
 
@@ -20,7 +17,6 @@ export default function CartProduct(props) {
     loggedUser: true,
     products: false,
   });
-  console.log(props.isUser());
 
   useEffect(() => {
     const loggedUser = props.isUser();
@@ -66,7 +62,6 @@ export default function CartProduct(props) {
     };
 
     const res = await api.post(`/cart`, product);
-    console.log("uuu", res);
 
     props.startSpinner(false, "inverse");
 
@@ -77,13 +72,7 @@ export default function CartProduct(props) {
     }, 2000);
   }
 
-  console.log(cartProduct, "dsdsd");
-
-  console.log(cartProduct.loggedUser);
-
   function handleCheckoutItems() {
-    console.log(cartProduct.items);
-
     const cartItems = [];
     for (let i = 0; i < cartProduct.items.length; i++) {
       let product = {
@@ -99,7 +88,6 @@ export default function CartProduct(props) {
       };
       cartItems.push(product);
     }
-    console.log(cartItems);
     props.setCheckoutProducts(cartItems);
   }
 
@@ -160,9 +148,7 @@ export default function CartProduct(props) {
             state: { message: "Please Sign in to add items to your cart" },
           }}
         />
-      ) : (
-        console.log("yooo", console.log(props.isUser))
-      )}
+      ) : null}
     </>
   );
 }

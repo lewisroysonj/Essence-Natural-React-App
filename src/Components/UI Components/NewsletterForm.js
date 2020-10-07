@@ -33,7 +33,6 @@ function NewsletterSignUpForm() {
       success: response.data.success,
       loading: false,
     });
-    console.log(response);
   }
 
   return (
