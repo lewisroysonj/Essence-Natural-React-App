@@ -124,7 +124,7 @@ export default function CartProduct(props) {
                 </a>
                 <div className={styles.starRatings}>
                   <RatingsToStars rating={product.ratings} />
-                  <p id='ratingCounter'>{!product.ratedCustomers.id ? 0 : product.ratedCustomers.length} ratings</p>
+                  <p>{!product.ratedCustomers.id ? 0 : product.ratedCustomers.length} ratings</p>
                 </div>
                 <div className={styles.listPrice}>
                   <span className={styles.listItemPrice}>${product.finalPrice}</span>
@@ -150,7 +150,6 @@ export default function CartProduct(props) {
       ) : cartProduct.loggedUser && cartProduct.products && cartProduct.products.length === 0 && !props.loadingState.productLoading ? (
         <div className={styles.noCartItems}>
           <h3>Your cart is empty!</h3>
-          {console.log("broooo", console.log(props.isUser))}
 
           <NavLink to='/all-products'>Explore All Products!</NavLink>
         </div>

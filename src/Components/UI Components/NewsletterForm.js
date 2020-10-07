@@ -47,7 +47,7 @@ function NewsletterSignUpForm() {
         SUBSCRIBE TO OUR <span>NEWSLETTER</span>
       </h1>
       <p>Stay updated with all the latest News & Products from Essence</p>
-      {subscriber.loading ? <h3 className='loadingSpinner'>loading...</h3> : null}
+      {subscriber.loading ? <h3 className='loadingTextLight'>loading...</h3> : null}
       {subscriber.success ? (
         <>
           <h3 className={styles.successMessage}>{subscriber.status}</h3>{" "}

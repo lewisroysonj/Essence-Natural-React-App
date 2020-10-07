@@ -59,7 +59,7 @@ const SuccessMessage = () => {
           </h1>
           <section className={statusStyles.statusContainer}>
             <div className={statusStyles.statusCard}>
-              <img src={statusIllustrator}></img>
+              <img src={statusIllustrator} alt='status art'></img>
               <div className={statusStyles.divider}></div>
               <div className={statusStyles.statusInfo}>
                 <div className={statusStyles.infoSection}>

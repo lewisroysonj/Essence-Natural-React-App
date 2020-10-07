@@ -75,6 +75,7 @@ $cardRadius: 0.8vw;
     height: auto;
     padding-top: 3vw;
     gap: 2vw;
+    padding-bottom: 10vw;
     grid-template-areas:
       "shipping summary"
       "shipping items"
@@ -312,7 +313,7 @@ $cardRadius: 0.8vw;
 
   .productListFooter {
     width: 100vw;
-    overflow-x: hidden;
+    z-index: 10;
     position: relative;
   }
 }
@@ -334,43 +335,207 @@ $cardRadius: 0.8vw;
 // }
 
 @media only screen and (max-width: 768px) {
+  $cardRadius: 2vw;
+
   .category {
-    width: 95vw;
-    margin-top: 10vw;
-    margin-bottom: 10vw;
+    background-color: $primaryColor;
+    h3 {
+      margin-bottom: 2.5vw;
+      font-size: 4.8vw;
+    }
 
     .categoryHeading {
-      font-size: 5.2vw;
-      width: 95%;
-      border-bottom: 0.7px solid rgb(97, 97, 97);
+      font-size: 6vw;
+      padding-top: 0.7vw;
+      height: 12vw;
     }
 
-    .showMoreButton {
-      padding: 1.4vw 2vw;
-      font-size: 3vw;
+    .categoryContainer {
+      min-height: 40vw;
+      top: -1.5vw;
+      border-radius: 6vw;
+      box-shadow: 0px -5px 13px rgba(0, 0, 0, 0.192);
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-columns: 90vw;
+      padding-top: 6vw;
+      gap: 3vw;
+      padding-bottom: 10vw;
+      z-index: 10;
+      grid-template-areas:
+        "shipping"
+        "shipping"
+        "payments"
+        "items"
+        "summary";
 
-      &:hover {
-        border-bottom: 2px solid $primaryColor;
-        background-color: $secondaryColor;
-        color: white;
+      .shippingDetailsSection {
+        padding: 3vw;
+        border-radius: $cardRadius;
+
+        form {
+          width: 100%;
+
+          label {
+            margin-bottom: 1.5vw;
+            font-size: 3.5vw;
+          }
+
+          input {
+            margin-bottom: 2vw;
+            border-radius: 0.7vw;
+            padding: 0 2vw;
+            font-size: 3.5vw;
+          }
+
+          span {
+            padding-left: 1vw;
+            padding-right: 1vw;
+
+            input {
+              height: 9vw;
+              width: 100%;
+            }
+          }
+
+          .dividedInputs {
+            width: 100%;
+          }
+        }
+      }
+
+      .paymentOptionsSection {
+        border-radius: 0.8vw;
+        border-radius: $cardRadius;
+        padding: 3vw;
+
+        h3 {
+          margin-bottom: 1vw;
+        }
+
+        div {
+          width: 95%;
+          border: 0.1vw solid rgb(209, 209, 209);
+          padding: 3vw;
+          margin-bottom: 1vw;
+          border-radius: 0.4vw;
+          font-size: 3.5vw;
+
+          .checkmark {
+            width: 3.2vw;
+            height: 3.2vw;
+            border-radius: 50%;
+            border: solid 0.5vw rgb(201, 201, 201);
+            margin-right: 2vw;
+          }
+
+          input:checked ~ .checkmark {
+            border: solid 1vw $primaryColor;
+          }
+
+          input {
+            margin-right: 0.7vw;
+            border-radius: 50%;
+            opacity: 0;
+            width: 70%;
+            padding: 1vw;
+          }
+        }
+      }
+
+      .OrderSummarySection {
+        padding: 3vw;
+        width: 100%;
+        border-radius: 0.8vw;
+        border-radius: $cardRadius;
+
+        span {
+          padding: 0 1.5vw;
+          border-bottom: 1px solid #000;
+          width: 100%;
+
+          div {
+            p {
+              font-size: 3.8vw;
+              margin-bottom: 2vw;
+            }
+            h4 {
+              font-size: 4vw;
+              margin-bottom: 2vw;
+            }
+          }
+        }
+
+        button {
+          width: 100%;
+          margin-top: 4vw;
+          height: 11vw;
+          border-radius: 0.4vw;
+          font-weight: 700;
+          font-size: 4.8vw;
+        }
+      }
+
+      .OrderDetailsSection {
+        border-radius: $cardRadius;
+        padding: 3vw;
+
+        .productSection {
+          width: 100%;
+
+          a {
+            width: 50%;
+            height: 25vw;
+
+            .imageContainer {
+              width: 100%;
+              height: 100%;
+              padding: 1vw 0vw;
+
+              img {
+                height: 100%;
+              }
+            }
+          }
+
+          .productListDetails {
+            width: 50%;
+            height: 25vw;
+            padding-top: 2vw;
+
+            a {
+              height: 40%;
+              width: 90%;
+              font-size: 2.5vw;
+            }
+
+            .listPrice {
+              font-size: 3vw;
+              font-weight: 500;
+              margin-top: 2vw;
+
+              .listItemMRP {
+                font-size: 2vw;
+                font-weight: 300;
+                margin-left: 0.4vw;
+              }
+              .qty {
+                font-weight: 700;
+              }
+            }
+          }
+        }
       }
     }
+
+    .productListFooter {
+      width: 100vw;
+      z-index: 0;
+      top: -16vw;
+      position: relative;
+    }
   }
-
-  // .footerOverBGProductDetails {
-  //   height: 20vw;
-  //   position: absolute;
-  //   left: 00vw;
-  //   display: none;
-  //   top: 60vw;
-  //   z-index: 10;
-  // }
-  // .productDetailsFooter {
-  //   top: -14vw;
-  //   position: relative;
-  // }
-
-  // .productDetailsFooter .footerOverBG {
-  //   display: none;
-  // }
+  .productListFooter {
+    position: relative;
+    top: -20vw;
+  }
 }

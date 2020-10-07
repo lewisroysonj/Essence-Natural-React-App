@@ -14,10 +14,10 @@
   height: 97.5vw;
 }
 
-.bgDiv3 {
-  height: 110vw;
+/* .bgDiv3 {
+  height: 10vw;
   background-color: #3f3d56;
-}
+} */
 
 .HomeHeroArt1 {
   z-index: 2;
@@ -280,11 +280,11 @@
   display: none;
 }
 
-.customerReviews {
+/* .customerReviews {
   z-index: 5;
   position: absolute;
   top: 235vw;
-}
+} */
 
 .customerReviews :nth-child(1) {
   position: absolute;
@@ -295,7 +295,7 @@
 
 .homeFooter {
   position: absolute;
-  top: 318vw;
+  top: 270vw;
 }
 
 .homeFooter .bottomFooterBG {
@@ -306,9 +306,9 @@
 @media only screen and (max-width: 768px) {
   .homePage {
     position: relative;
-    height: 590vw;
+    height: fit-content;
     width: 100vw;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   .bgDiv1,
@@ -529,15 +529,17 @@
     position: relative;
     top: 55vw;
     left: 55vw;
+    width: 45vw;
   }
 
   .FacewashTextMobile img {
+    overflow-x: hidden;
     height: 30vw;
   }
 
   .FacewashTextMobile button {
-    left: -30vw;
-    top: 7.5vw;
+    left: 10vw;
+    top: 1.5vw;
   }
 
   .DottedCurveDivider,
@@ -550,6 +552,8 @@
     position: relative;
     top: 100vw;
     left: 0vw;
+    width: 100vw;
+    overflow: hidden;
   }
 
   .newsletterBGMobile img {
@@ -605,6 +609,6 @@
   .homeFooter {
     display: block;
     position: relative;
-    top: 156vw;
+    top: 120vw;
   }
 }

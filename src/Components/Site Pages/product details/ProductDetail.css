@@ -75,9 +75,11 @@
   position: relative;
   font-weight: 500;
   line-height: 3.7vw;
+  flex: 0.2;
 }
 
 .productPriceAndRating {
+  flex: 0.2;
   display: flex;
   justify-content: space-between;
   width: 30vw;
@@ -121,13 +123,15 @@
 }
 
 .ratingCounter {
-  font-size: 1.15vw;
-  left: 1vw;
+  font-size: 1.5vw;
+  padding-bottom: 2vw;
+  left: 1.5vw;
   position: relative;
 }
 
 .buyAndCartButtons {
-  width: 16vw;
+  flex: 0.3;
+  width: 20vw;
   height: 4vw;
   position: relative;
   top: 2vw;
@@ -138,11 +142,11 @@
 
 .buyAndCartButtons button {
   position: relative;
-  height: 2.5vw;
+  height: 4vw;
   border: none;
-  width: 7.5vw;
-  border-radius: 0.4vw;
-  font-size: 1vw;
+  width: 9.5vw;
+  border-radius: 0.2vw;
+  font-size: 1.3vw;
   background-color: #6ed782;
   color: white;
   font-weight: 700;
@@ -151,12 +155,13 @@
 }
 
 .buyAndCartButtons :nth-child(2) {
-  border: #6ed782 3px solid;
-  background-color: #ffffff;
-  color: #3f3d56;
+  background-color: #3f3d56;
+  color: #ffffff;
+  border: none;
 }
 
 .availableOptions {
+  flex: 0.5;
   height: 25vw;
   position: relative;
   top: 2.5vw;
@@ -198,11 +203,13 @@
 }
 
 .productQuantity {
+  flex: 0.2;
   position: relative;
   top: 2vw;
 }
 
 .productDescription {
+  flex: 0.8;
   position: relative;
   top: 4vw;
 }
@@ -220,9 +227,6 @@
   border-radius: 6vw 6vw 0rem 0rem;
   box-shadow: 0px -10px 13px rgba(0, 0, 0, 0.192);
   z-index: 5;
-}
-
-.productImage {
 }
 
 .productDetailsHeading {
@@ -267,7 +271,7 @@
   font-weight: 500;
 }
 
-.footerOverBGProductDetails {
+/* .footerOverBGProductDetails {
   height: 20vw;
   position: absolute;
   left: 10vw;
@@ -281,7 +285,7 @@
 
 .productDetailsFooter .footerUpperBG {
   top: -3vw;
-}
+} */
 
 @media only screen and (max-width: 768px) {
   .productDetailsSection {
@@ -291,6 +295,7 @@
     margin-top: 2vw;
     width: 85vw;
     margin: 0 auto;
+    margin-top: 3vw;
   }
 
   .productImageDisplay {
@@ -303,6 +308,7 @@
   .productMainImage {
     height: fit-content;
     width: 100%;
+    margin-bottom: 2vw;
   }
 
   .productMainImage img {
@@ -359,9 +365,9 @@
   }
 
   .productOfferPrice {
-    font-size: 4.5vw;
-    font-weight: 500;
-    margin-right: 1vw;
+    font-size: 5.5vw;
+    font-weight: 700;
+    margin-right: 0.2vw;
   }
 
   .dollarSign {
@@ -371,6 +377,7 @@
   .productActualPrice {
     font-size: 3vw;
     font-weight: 300;
+    margin-right: 2vw;
   }
 
   .ratingStars {
@@ -378,7 +385,8 @@
   }
 
   .ratingCounter {
-    font-size: 3vw;
+    margin-left: 1vw;
+    font-size: 3.5vw;
   }
 
   .buyAndCartButtons {
@@ -391,10 +399,17 @@
   }
 
   .buyAndCartButtons button {
+    background-color: #6ed782;
     height: 100%;
     width: 49%;
     border-radius: 0.4vw;
     font-size: 4vw;
+  }
+
+  .buyAndCartButtons :nth-child(2) {
+    background-color: #3f3d56;
+    color: #ffffff;
+    border: none;
   }
 
   .availableOptions {

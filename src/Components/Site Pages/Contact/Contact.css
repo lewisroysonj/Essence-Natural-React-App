@@ -215,6 +215,11 @@
     height: auto;
   }
 
+  .contact form .contactFormHeader {
+    left: -11vw;
+    top: -5vw;
+    font-size: 4vw;
+  }
   .contact form input,
   .contact form textarea {
     width: 80vw;
@@ -284,5 +289,14 @@
 
   .contactFooter {
     top: 0vw;
+  }
+
+  .contactSuccess {
+    font-size: 5vw;
+    width: 50vw;
+  }
+
+  .contactSuccess h3 {
+    font-size: 2vw;
   }
 }

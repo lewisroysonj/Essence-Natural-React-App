@@ -92,7 +92,7 @@ export default function ProductList(props) {
                   </a>
                   <div className={styles.starRatings}>
                     <RatingsToStars rating={product.ratings} />
-                    <p id='ratingCounter'>{product.ratedCustomers.length} ratings</p>
+                    <p>{product.ratedCustomers.length} ratings</p>
                   </div>
                   <div className={styles.listPrice}>
                     <span className={styles.listItemPrice}>${product.finalPrice}</span>

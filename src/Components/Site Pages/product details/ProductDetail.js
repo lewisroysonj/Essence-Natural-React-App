@@ -114,17 +114,19 @@ export default function ProductDetail(props) {
             <div className='productDetailsSection'>
               <div className='productImageDisplay'>
                 <div className='productMainImage'>
-                  <img src={productDetails.data.featuredImage} alt='essence body lotion' />
+                  <img src={productDetails.data.featuredImage} alt={productDetails.data.name} />
                 </div>
-                <div className='productSubImagesContainer'>
-                  {productDetails.data.images.map((image) => {
-                    return (
-                      <div key={image} className='productSubImages'>
-                        <img src={image} alt='essence body lotion' />
-                      </div>
-                    );
-                  })}
-                </div>
+                {productDetails.data.images[0] ? (
+                  <div className='productSubImagesContainer'>
+                    {productDetails.data.images.map((image) => {
+                      return (
+                        <div key={image} className='productSubImages'>
+                          <img src={image} alt={productDetails.data.name} />
+                        </div>
+                      );
+                    })}
+                  </div>
+                ) : null}
               </div>
               <div className='productDetailsInfo'>
                 <h1 className='productName'>{productDetails.data.name}</h1>
@@ -154,23 +156,21 @@ export default function ProductDetail(props) {
                     Add to Cart
                   </button>
                 </div>
-                <div className='availableOptions'>
-                  <h2>Available Options:</h2>
-                  {productDetails.data.options[0].name.length !== 0 && productDetails.data.options[0].EPIN.length !== 0
-                    ? productDetails.data.options[0].name.map((name) => {
-                        return (
-                          <div
-                            key={productDetails.data.options[0].EPIN.map((epin) => {
-                              return epin;
-                            })}
-                            className='optionContents1'>
-                            <div className='colorBox'></div>
-                            <h3>{name}</h3>
-                          </div>
-                        );
-                      })
-                    : null}
-                </div>
+                {productDetails.data.options[0].EPIN[0] ? (
+                  <div className='availableOptions'>
+                    <h2>Available Options:</h2>
+                    {productDetails.data.options[0].name.length !== 0 && productDetails.data.options[0].EPIN.length !== 0
+                      ? productDetails.data.options[0].name.map((name) => {
+                          return (
+                            <div key={name} className='optionContents1'>
+                              <div className='colorBox'></div>
+                              <h3>{name}</h3>
+                            </div>
+                          );
+                        })
+                      : null}
+                  </div>
+                ) : null}
                 <div className='productQuantity'>
                   <h2>Quantity:</h2>
                   <h3>

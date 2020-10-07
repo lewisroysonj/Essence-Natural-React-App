@@ -61,3 +61,6 @@
 .cartSuccessMessageOut {
   transform: translate(-50%, 150%);
 }
+
+@media only screen and (max-width: 768px) {
+}

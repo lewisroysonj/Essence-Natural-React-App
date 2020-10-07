@@ -35,7 +35,7 @@ export default function SignIn(props) {
         message: props.location.state.message,
       });
     } else if (user) {
-      window.location.pathname="/"
+      window.location.pathname = "/";
     }
     return () => {
       mounted = false;
@@ -66,7 +66,7 @@ export default function SignIn(props) {
       });
 
       if (verifiedUser.data.accessToken) {
-        Cookies.set("token", verifiedUser.data.accessToken, { expires: 7 * 24 * 60 * 60 });
+        Cookies.set("token", verifiedUser.data.accessToken, { expires: 60 });
         const token = Cookies.get("token");
         if (token) {
           window.location.pathname = "/";
@@ -90,8 +90,8 @@ export default function SignIn(props) {
           </h3>
           <h1 className='signUpHeading'>Sign In</h1>
           <form onSubmit={handleSubmit}>
-            {currentUser.error || currentUser.resError ? <div className='formErrorAlert'>{currentUser.message}</div> : <div className='formErrorAlert'>{currentUser.message}</div>}
-            {currentUser.loading ? <div className='loadingSpinner'>loading...</div> : null}
+            {(currentUser.error || currentUser.resError) && currentUser.message ? <div className='errorMessage'>{currentUser.message}</div> : currentUser.message ? <div className='successMessage'>{currentUser.message}</div> : null}
+            {currentUser.loading ? <div className='loadingTextDark'>loading...</div> : null}
             <label htmlFor='email'>Email*</label>
             <input name='email' id='email' type='email' value={email} onChange={handleChange} required />
             <label htmlFor='password'>Password*</label>

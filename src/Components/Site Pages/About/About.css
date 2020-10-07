@@ -12,7 +12,7 @@
   z-index: 9;
   height: 118vw;
   background-color: #6ed782;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .aboutArt {
@@ -69,17 +69,28 @@
   }
 
   .about {
-    height: 303vw;
+    height: fit-content;
     background-color: #6ed782;
   }
 
-  .aboutBGMobile {
+  .aboutBGMobileContainer {
+    width: 100vw;
+    height: 160vw;
+    top: 0vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     position: absolute;
+  }
+
+  .aboutBGMobile {
     display: block;
+    position: absolute;
     z-index: 8;
-    height: 191vw;
-    top: -10vw;
-    left: -8.5vw;
+    margin-top: 13vw;
+    height: 123%;
+    margin-right: 2.7vw;
   }
 
   .aboutArtMobile {

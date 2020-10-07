@@ -34,13 +34,14 @@ export default function Home() {
       <img className='HomeHeroArt1' src={HeroArt1} alt='Home Illustration' />
       <div className='HomeHeroEclipseGreenMobile'>
         <div>
+          <br></br>
+          <br></br>
           <h2>
             <span>Find</span> the Nature you
           </h2>
           <h1>LOVE</h1>
           <hr></hr>
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
-          <button>Know More</button>
         </div>
       </div>
       <div className='HomeHeroEclipseGreyMobile'></div>
@@ -124,9 +125,9 @@ export default function Home() {
           <NewsletterSignUpForm />
         </div>
       </div>
-      <div className='customerReviews'>
+      {/* <div className='customerReviews'>
         <img src={custReviewsBody} alt='text' />
-      </div>
+      </div> */}
       <div className='homeFooter'>
         <Footer />
       </div>

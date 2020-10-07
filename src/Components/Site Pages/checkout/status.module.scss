@@ -108,3 +108,115 @@ $secondaryColor: #3f3d56;
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .statusContainer {
+    z-index: 10;
+    border-radius: 3.5vw;
+    top: -1vw;
+    padding: 6vw 2vw;
+    padding-bottom: 15vw;
+
+    .statusCard {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      width: 95%;
+      background-color: #fff;
+      margin: 0 auto;
+      height: fit-content;
+      border-radius: 2vw;
+      align-items: center;
+      grid-template-areas:
+        "image"
+        "info";
+
+      img {
+        display: none;
+        grid-area: image;
+        width: 90%;
+      }
+
+      .divider {
+        display: none;
+        grid-area: auto;
+        width: 1.5px;
+        height: 80%;
+        margin-right: 2vw;
+      }
+
+      .statusInfo {
+        grid-area: info;
+        display: grid;
+        place-self: center;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        margin-right: 0;
+        padding: 3vw;
+        height: auto;
+        gap: 2vw;
+        align-items: center;
+
+        grid-template-areas:
+          "number delivery"
+          "address null";
+
+        .infoSection {
+          width: 50%;
+          height: fit-content;
+          padding: 1vw;
+          width: fit-content;
+
+          h2 {
+            font-size: 3.7vw;
+            font-weight: 500;
+          }
+          h4 {
+            font-size: 2.8vw;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+
+    .failureMessage {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+
+      h2 {
+        font-size: 5vw;
+        margin-bottom: 2vw;
+        color: rgb(255, 103, 32);
+      }
+
+      h4 {
+        font-size: 4vw;
+        margin-top: 1vw;
+        font-weight: 500;
+      }
+
+      .failureLinks {
+        margin-top: 7.5vw;
+        a {
+          font-size: 3.5vw;
+          background-color: $primaryColor;
+          width: fit-content;
+          padding: 3vw;
+          font-weight: 700;
+          border-radius: 0.7vw;
+          cursor: pointer;
+          text-decoration: none;
+          color: $secondaryColor;
+        }
+        & :nth-child(2) {
+          background-color: $secondaryColor;
+          color: white;
+          margin-left: 2vw;
+        }
+      }
+    }
+  }
+}

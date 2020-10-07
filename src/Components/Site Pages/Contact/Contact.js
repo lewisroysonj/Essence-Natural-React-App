@@ -63,7 +63,7 @@ export default function Contact() {
             </div>
           ) : (
             <>
-              {contact.loading ? <h3 className='contactFormHeader'>Loading...</h3> : <h3 className='contactFormHeader'>Drop us a Message</h3>}
+              {contact.loading ? <h3 className='loadingTextDark'>Loading...</h3> : <h3 className='contactFormHeader'>Drop us a Message</h3>}
               <input name='fullName' required maxLength='100' type='text' value={contact.fullName} onChange={handleChange} placeholder='Full Name*' />
               <input name='email' type='email' onChange={handleChange} required value={contact.email} maxLength='320' placeholder='Email*' />
               <input name='phone' maxLength='20' value={contact.phone} onChange={handleChange} minLength='6' type='tel' placeholder='Phone' />

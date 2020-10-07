@@ -70,11 +70,10 @@ export default function SignUp() {
     setNewUser({
       ...newUser,
       resError: postUser.data.error,
-      resMessage: postUser.data.message,
+      message: postUser.data.message,
       resUserEmail: postUser.data.userEmail,
       loading: false,
       error: false,
-      message: null,
     });
   }
 
@@ -100,8 +99,8 @@ export default function SignUp() {
           </h3>
           <h1 className='signUpHeading'>Sign Up</h1>
           <form onSubmit={validateForm} action='/'>
-            {newUser.resError ? <h3 className={alertStyles.errorMessage}>{newUser.resMessage}</h3> : <h3 className={alertStyles.successMessage}>{newUser.resMessage}</h3>}
-            {newUser.loading ? <div className='loadingSpinner'>Loading...</div> : null}
+            {(newUser.error || newUser.resError) && newUser.message ? <div className='errorMessage'>{newUser.message}</div> : newUser.message ? <div className='successMessage'>{newUser.message}</div> : null}
+            {newUser.loading ? <div className='loadingTextDark'>Loading...</div> : null}
             <label htmlFor='fullName'>Full Name*</label>
             <input name='fullName' autoComplete='name' id='fullName' type='text' maxLength='100' required value={fullName} onChange={handleChange} />
             <label htmlFor='email'>Email*</label>
@@ -110,7 +109,7 @@ export default function SignUp() {
             <input name='newPassword' id='newPassword' autoComplete='new-password' minLength='8' maxLength='1000' type='password' value={newPassword} onChange={handleChange} />
             <label htmlFor='repeatPassword'>Repeat Password*</label>
             <input name='repeatPassword' id='repeatPassword' autoComplete='new-password' type='password' required value={repeatPassword} onChange={handleChange} />
-            {newUser.error ? (
+            {/* {newUser.error ? (
               <div className='passwordUnmatchAlert'>
                 <li className='alertpointer'>
                   <i class='fas fa-caret-up'></i>
@@ -120,7 +119,7 @@ export default function SignUp() {
                 </p>
                 <p>{newUser.message}</p>
               </div>
-            ) : null}
+            ) : null} */}
 
             {newUser.resUserEmail ? (
               <Redirect

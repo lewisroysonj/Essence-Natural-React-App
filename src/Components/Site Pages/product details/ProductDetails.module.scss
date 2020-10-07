@@ -95,6 +95,11 @@ $secondaryColor: #3f3d56;
     }
   }
 
+  .productDetailsFooter {
+    top: -20vw;
+    position: relative;
+  }
+
   // .footerOverBGProductDetails {
   //   height: 20vw;
   //   position: absolute;
@@ -102,10 +107,6 @@ $secondaryColor: #3f3d56;
   //   display: none;
   //   top: 60vw;
   //   z-index: 10;
-  // }
-  // .productDetailsFooter {
-  //   top: -14vw;
-  //   position: relative;
   // }
 
   // .productDetailsFooter .footerOverBG {

@@ -22,6 +22,10 @@ export default function SearchResults(props) {
   });
 
   useEffect(() => {
+    setProducts({
+      ...products,
+      productLoading: true,
+    });
     if (props.location.state.search) {
       setResults({
         results: props.location.state.search.results,
@@ -55,13 +59,14 @@ export default function SearchResults(props) {
         Search <span className={styles.searchResultsHeadingSpan}>Results</span>
       </h1>
       <div className={styles.searchResultsContainer}>
-        <div className={styles.searchResultsContent}>
-          <p className={styles.searchKeyword}>for "{search.keyword}"</p>
-          <div className={styles.listingContainer}>{search.results && search.results.length > 0 ? <ProductListing products={search.results} startSpinner={setLoadingSpinner} /> : <h3 className={styles.noResultText}>Sorry! Couldn't find any products matching {search.keyword}.</h3>}</div>
-        </div>
+        {/* <div className={styles.searchResultsContent}> */}
+        <p className={styles.searchKeyword}>for "{search.keyword}"</p>
+        <div className={styles.listingContainer}>{search.results && search.results.length > 0 ? <ProductListing products={search.results} startSpinner={setLoadingSpinner} /> : <h3 className={styles.noResultText}>Sorry! Couldn't find any products matching {search.keyword}.</h3>}</div>
+        {/* </div> */}
       </div>
-
-      <Footer />
+      <div className={styles.productListFooter}>
+        <Footer />
+      </div>
     </div>
   );
 }

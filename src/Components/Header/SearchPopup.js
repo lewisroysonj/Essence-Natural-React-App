@@ -47,7 +47,6 @@ export default function SearchPopup(props) {
               <i class='fas fa-search'></i>
             </button>
           </form>
-          {search.loading ? <div className='loadingSpinner'>loading...</div> : null}
 
           {search.results && search.results.length >= 0 ? (
             <Redirect

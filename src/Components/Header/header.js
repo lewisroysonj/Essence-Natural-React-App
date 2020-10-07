@@ -10,6 +10,9 @@ import logo from "./essence logo.svg";
 import MobLogo from "./Essence Mob Logo@2x.png";
 import { loadUserFromCookies, logOut } from "../../lib/user";
 
+import cartIcon from "./Shopping cart.svg";
+import searchIcon from "./Search Icon.svg";
+
 export default function Header() {
   const [searchPopup, toggleSearhPopup] = useState({
     open: false,
@@ -53,7 +56,6 @@ export default function Header() {
       open: !searchPopup.open,
     });
   }
-  console.log(searchPopup);
 
   // toggleBurgerPopup() {
   //   this.setState ({
@@ -67,6 +69,7 @@ export default function Header() {
   // }
 
   // }
+  console.log(user);
 
   const burgerNavOpen = useSelector((state) => state.burgerToggle);
   const dispatch = useDispatch();
@@ -113,12 +116,12 @@ export default function Header() {
         </ul>
         <ul className='header_icons'>
           <li onClick={togglePopup}>
-            <i className='fas fa-search'></i>
+            <img src={searchIcon} alt="search icon" ></img>
           </li>
 
           <NavLink exact activeClassName='navIconCurrent' to='/cart'>
             <li>
-              <i className='fas fa-shopping-cart'></i>
+              <img src={cartIcon} alt='cart Icon'></img>
             </li>
           </NavLink>
         </ul>

@@ -82,9 +82,7 @@ export default function CategoryListing(props) {
         Essence <span className={styles.categoryHeadingSpan}>{products.category}</span>
       </h1>
 
-      <div className={styles.categoryContainer}>
-        <div className={styles.categoryContent}>{products.loading ? <h1>Loading...</h1> : products.data ? <ProductListing products={products.data} startSpinner={setLoadingSpinner} /> : <h1>No items Available!</h1>}</div>
-      </div>
+      <div className={styles.categoryContainer}>{products.loading ? null : products.data ? <ProductListing products={products.data} startSpinner={setLoadingSpinner} /> : <h1>No items Available!</h1>}</div>
 
       <div className={styles.productListFooter}>
         <Footer />

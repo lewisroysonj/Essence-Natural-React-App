@@ -114,6 +114,11 @@
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.274);
 }
 
+.cartTotalSection a {
+  text-decoration: none;
+  color: #3f3d56;
+}
+
 .limitAlertStyle {
   font-size: 1.5vw;
   color: Orange;
@@ -164,9 +169,9 @@
   }
 
   .cartTotalSection button {
-    width: 27vw;
-    height: 8vw;
-    font-size: 3vw;
+    width: 32vw;
+    height: 10vw;
+    font-size: 3.7vw;
     color: #3f3d56;
     font-family: Poppins, "sans-serif";
   }

@@ -2,6 +2,8 @@
 
 import React, { useEffect } from "react";
 import api from "../../../lib/api";
+import styles from "./notFound.module.scss";
+import Footer from "../../Footer/Footer";
 
 export default function NotFound() {
   function throw404Err() {
@@ -22,10 +24,15 @@ export default function NotFound() {
     };
   }, []);
   return (
-    <div>
-      <h1>404</h1>
-      <h3>The Page you are looking for can't be found!</h3>
-      <a href='/'>Return Home</a>
-    </div>
+    <>
+      <div className={styles.notFound}>
+        <h1>404!</h1>
+        <h3>The Page you are looking for can't be found!</h3>
+        <a href='/'>Return Home</a>
+      </div>
+      <div className={styles.footer}>
+        <Footer />
+      </div>
+    </>
   );
 }
