@@ -10,6 +10,7 @@ import styles from "./categoryListing.module.scss";
 import Footer from "../../Footer/Footer";
 import api from "../../../lib/api";
 import Axios from "axios";
+import { NavLink } from "react-router-dom";
 
 export default function CategoryListing(props) {
   const [products, setProducts] = useState({
@@ -28,7 +29,7 @@ export default function CategoryListing(props) {
       console.log("ddf", categoryProducts);
       setProducts({
         ...products,
-        data: categoryProducts.data.product[0].name ? categoryProducts.data.product : null,
+        data: categoryProducts.data.product[0] && categoryProducts.data.product[0].name ? categoryProducts.data.product : null,
         category: categoryProducts.data.categoryName,
         loading: false,
         productLoading: false,
@@ -36,7 +37,7 @@ export default function CategoryListing(props) {
       console.log(category);
       console.log(categoryProducts);
     } catch (err) {
-      if (err.response.status) {
+      if (err.response && err.response.status) {
         window.location.pathname = "/notFound";
       }
 
@@ -82,7 +83,17 @@ export default function CategoryListing(props) {
         Essence <span className={styles.categoryHeadingSpan}>{products.category}</span>
       </h1>
 
-      <div className={styles.categoryContainer}>{products.loading ? null : products.data ? <ProductListing products={products.data} startSpinner={setLoadingSpinner} /> : <h1>No items Available!</h1>}</div>
+      <div className={styles.categoryContainer}>
+        {products.loading ? null : products.data ? (
+          <ProductListing products={products.data} startSpinner={setLoadingSpinner} />
+        ) : (
+          <div className={styles.noItems}>
+            <h1>No products Available!</h1>
+            <h3>Sorry, the products in this category are coming soon!</h3>
+            <a href='/all-products'>Explore all products</a>
+          </div>
+        )}
+      </div>
 
       <div className={styles.productListFooter}>
         <Footer />

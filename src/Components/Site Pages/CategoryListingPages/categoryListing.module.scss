@@ -34,6 +34,33 @@ $secondaryColor: #3f3d56;
     border-radius: 6vw 6vw 0rem 0rem;
     box-shadow: 0px -10px 13px rgba(0, 0, 0, 0.192);
 
+    .noItems {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 30vw;
+
+      h1 {
+        font-size: 2.5vw;
+        font-weight: 600;
+        color: $secondaryColor;
+      }
+      h3 {
+        font-size: 2vw;
+        font-weight: 300;
+      }
+
+      a {
+        font-size: 2vw;
+        margin-top: 1vw;
+        color: $secondaryColor;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 1vw 2vw;
+        background-color: $primaryColor;
+      }
+    }
+
     .categoryContent {
       display: grid;
       width: 90vw;
@@ -136,6 +163,10 @@ $secondaryColor: #3f3d56;
       align-items: center;
       padding: 2vw 0vw;
       border-radius: 6vw;
+
+      h1 {
+        font-size: 2vw;
+      }
 
       // .categoryContent {
       //   display: grid;
