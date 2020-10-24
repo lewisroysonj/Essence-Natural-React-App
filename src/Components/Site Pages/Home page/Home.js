@@ -41,7 +41,7 @@ export default function Home() {
           </h2>
           <h1>LOVE</h1>
           <hr></hr>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
+          <p>Explore products purely inspired from nature, with quality ingredients curated to provide the best benefits to you and nature itself.</p>
         </div>
       </div>
       <div className='HomeHeroEclipseGreyMobile'></div>
