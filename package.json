@@ -45,7 +45,7 @@
     "js-cookie": "^2.2.1",
     "mini-css-extract-plugin": "0.9.0",
     "mongodb": "^3.5.9",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "npx": "^10.2.2",
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "pnp-webpack-plugin": "1.6.4",
